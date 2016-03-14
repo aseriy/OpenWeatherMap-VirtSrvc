@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><a3Message _version="1.1" createdTimestamp="1457107487971" createdUser="rational" id="-70bdf138:1534257a94b:-74c8" type="message_resource" updatedTimestamp="1457107487971" updatedUser="rational" version="1.2">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <transport name="3ef6394d:153247ac697:-7eb5"/>
+   <formatter name="HTTP_Message"/>
+   <headerMessage type="12" version="1.2">
+      <fieldActionGroup>
+         <fieldAction enabled="false" type="1">
+            <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+         </fieldAction>
+      </fieldActionGroup>
+      <_c name="httpDetails" type="12" version="1.2">
+         <fieldActionGroup>
+            <fieldAction enabled="false" type="1">
+               <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+            </fieldAction>
+         </fieldActionGroup>
+         <_c name="httpHeaders" type="12" version="1.2">
+            <fieldActionGroup>
+               <fieldAction enabled="false" type="1">
+                  <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+               </fieldAction>
+            </fieldActionGroup>
+         </_c>
+      </_c>
+   </headerMessage>
+   <bodyMessage assocdefid="Text" name="Text" sch="Text" type="12" version="1.2">
+      <fieldActionGroup>
+         <fieldAction type="1">
+            <fieldAction anyOrder="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+         </fieldAction>
+      </fieldActionGroup>
+      <_c coreTypeInt="7" coreTypeName="String" name="text" nodeFormatter="XML" sch="Text" type="12" version="1.2">
+         <fieldExpander fieldExpanderID="XML_EXPANDER" fieldSchema="XML" fieldSchemaRoot="xml.Element">
+            <property name="XML.cdata" value="false"/>
+            <property name="XML.space" value="false"/>
+            <property name="XML.encoding" value="UTF-8"/>
+            <property name="XML.declaration" value="true"/>
+            <property name="XML.nullvalues" value="false"/>
+            <property name="XML.xmlFormat" value="Multi-line indented"/>
+            <property name="XML.normalise" value="true"/>
+         </fieldExpander>
+         <contentTree>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;root&gt;&lt;![CDATA[null]]&gt;&lt;/root&gt;<defaultActions>
+               <defaultMessageActions>
+                  <fieldActionGroup>
+                     <fieldAction type="1">
+                        <fieldAction anyOrder="false" ignoreExtra="false" ignoreNonPresent="false" matching="PREFERENCE" type="101"/>
+                     </fieldAction>
+                     <fieldAction type="1">
+                        <fieldAction type="5"/>
+                     </fieldAction>
+                     <fieldAction type="1">
+                        <fieldAction type="6" typeActionAllType="true" typeActionMetaType="false"/>
+                     </fieldAction>
+                  </fieldActionGroup>
+               </defaultMessageActions>
+               <defaultScalarActions>
+                  <fieldActionGroup>
+                     <fieldAction type="1">
+                        <fieldAction type="0"/>
+                     </fieldAction>
+                     <fieldAction type="1">
+                        <fieldAction type="5"/>
+                     </fieldAction>
+                     <fieldAction type="1">
+                        <fieldAction type="6" typeActionAllType="true" typeActionMetaType="false"/>
+                     </fieldAction>
+                  </fieldActionGroup>
+               </defaultScalarActions>
+            </defaultActions>
+            <updates>
+               <updateField path="/text/root">
+                  <_c assocdefid="xml.Element"/>
+               </updateField>
+               <setAction index="0" path="/text/root/{}" replaceActionType="0" replaceOuterType="1">
+                  <fieldAction type="1">
+                     <fieldAction type="0"/>
+                  </fieldAction>
+               </setAction>
+            </updates>
+         </contentTree>
+         <fieldActionGroup>
+            <fieldAction type="1">
+               <fieldAction type="7"/>
+            </fieldAction>
+         </fieldActionGroup>
+      </_c>
+   </bodyMessage>
+   <tagDataStore inputMode="NONE" outputMode="NONE"/>
+</a3Message>

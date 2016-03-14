@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><_c buildID="I20150924_1355" comments="This project virtualizes OpenWeatherMap API http://openweathermap.org" creationVersion="8.7.1" domain="default" extDocPrefix="" name="OpenWeatherMap" owner="rational" rulesCacheUri="%%PROJECT/ROOT%%Rules" uuid="00000153-247a-c5be-0000-02cec71bed50">
+   <dateTimeConfig date="yyyy/MM/dd" dateTime="dd-MMM-yyyy HH:mm:ss" time="HH:mm:ss.SSS"/>
+   <serverSettings ghRepositoryURL="http://localhost:7819/RTCP" resultsServerURL="">
+      <dbConnectionParameters maxConnections="1" poolName="DefaultPoolName">
+         <connectionParams CICSEnv="false" MVSEnv="false" ZOSEnv="false" driverClass="com.ibm.db2.jcc.DB2Driver" password="#com.ghc.1!8537A2CD7263112255700CB36A5940E1210A" recordFilters="" url="jdbc:db2://localhost:50000/resultdb" user="db2inst1">
+            <stubSettings maxProcCallCount="10000" maxResultSetRowCount="10000" maxRowCount="10000" password="#com.ghc.1!4665" procedureLearningBehaviour="1" schema="" url="" useIntegratedDB="true" user=""/>
+            <storedProcedureFilter catalogFilterEnabled="false" catalogFilterPattern="" procedureFilterEnabled="false" procedureFilterPattern="" schemaFilterEnabled="true" schemaFilterPattern="db2inst1" storedProceduresRetrievalEnabled="false" useConnectionUsername="true"/>
+            <timestampFormatting timestampFormatZero="false" timestampFormattingEnabled="false" timestampPrecision="9"/>
+         </connectionParams>
+      </dbConnectionParameters>
+   </serverSettings>
+   <permissionsSettings autoLogin="true" host="" permFactId="ldap.permissions.factory.none" port="389" pswd="2jmj7l5rSw0yVb/vlWAYkK/YBwk="/>
+   <publishedResourceInfo>
+      <info domain="default" serverUrl="http://localhost:7819/RTCP" vMajor="1" vMinor="0">
+         <resource id="-fbdd4ef:1532ae26c6c:-7aca"/>
+      </info>
+   </publishedResourceInfo>
+</_c>

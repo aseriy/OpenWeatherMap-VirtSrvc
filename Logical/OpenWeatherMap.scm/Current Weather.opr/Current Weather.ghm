@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?><a3Message _version="1.1" createdTimestamp="1457107326075" createdUser="rational" id="-70bdf138:1534257a94b:-7a17" type="message_resource" updatedTimestamp="1457107345734" updatedUser="rational" version="1.2">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <transport name="3ef6394d:153247ac697:-7eb5"/>
+   <formatter name="HTTP_Message"/>
+   <headerMessage type="12" version="1.2">
+      <fieldActionGroup>
+         <fieldAction enabled="false" type="1">
+            <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+         </fieldAction>
+      </fieldActionGroup>
+      <_c name="httpDetails" type="12" version="1.2">
+         <fieldActionGroup>
+            <fieldAction enabled="false" type="1">
+               <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+            </fieldAction>
+         </fieldActionGroup>
+         <_c name="httpHeaders" type="12" version="1.2">
+            <fieldActionGroup>
+               <fieldAction enabled="false" type="1">
+                  <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+               </fieldAction>
+            </fieldActionGroup>
+         </_c>
+         <_c meTy="Boolean" name="followRedirects" type="8" value="true" version="1.2">
+            <fieldActionGroup>
+               <fieldAction type="0">
+                  <fieldAction exp="true" type="0"/>
+               </fieldAction>
+            </fieldActionGroup>
+         </_c>
+      </_c>
+      <_c meTy="String" name="MessageType" type="7" value="http.text.message.type" version="1.2">
+         <fieldActionGroup>
+            <fieldAction type="0">
+               <fieldAction exp="http.text.message.type" type="0"/>
+            </fieldAction>
+         </fieldActionGroup>
+      </_c>
+      <_c meTy="String" name="Method" type="7" value="POST" version="1.2">
+         <fieldActionGroup>
+            <fieldAction type="0">
+               <fieldAction exp="POST" type="0"/>
+            </fieldAction>
+         </fieldActionGroup>
+      </_c>
+      <_c meTy="String" name="URL" type="7" value="" version="1.2">
+         <fieldActionGroup>
+            <fieldAction type="0">
+               <fieldAction type="0"/>
+            </fieldAction>
+         </fieldActionGroup>
+      </_c>
+   </headerMessage>
+   <bodyMessage assocdefid="Text" name="Text" sch="Text" type="12" version="1.2">
+      <fieldActionGroup>
+         <fieldAction enabled="false" type="1">
+            <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+         </fieldAction>
+      </fieldActionGroup>
+      <_c coreTypeInt="7" coreTypeName="String" name="text" nodeFormatter="XML" sch="Text" type="12" version="1.2">
+         <fieldExpander fieldExpanderID="XML_EXPANDER" fieldSchema="XML">
+            <property name="XML.cdata" value="false"/>
+            <property name="XML.space" value="false"/>
+            <property name="Multi-line indented" value="Single line"/>
+            <property name="XML.declaration" value="false"/>
+            <property name="XML.encoding" value="UTF-8"/>
+            <property name="XML.nullvalues" value="false"/>
+            <property name="XML.xmlFormat" value="Single line"/>
+            <property name="XML.normalise" value="true"/>
+         </fieldExpander>
+         <contentTree>&lt;current&gt;&lt;city id="%%city_id%%" name="%%city_name%%"&gt;&lt;coord lat="%%coord_lat%%" lon="%%coord_lon%%"/&gt;&lt;country&gt;%%country%%&lt;/country&gt;&lt;sun rise="%%sun_rise%%" set="%%sun_set%%"/&gt;&lt;/city&gt;&lt;temperature max="%%temperature_max%%" min="%%temperature_min%%" unit="%%temperature_unit%%" value="%%temperature%%"/&gt;&lt;humidity unit="%%humidity_unit%%" value="%%huminity%%"/&gt;&lt;pressure unit="%%pressure_unit%%" value="%%pressure%%"/&gt;&lt;wind&gt;&lt;speed name="%%wind_speed_name%%" value="%%wind_speed%%"/&gt;&lt;gusts/&gt;&lt;direction code="%%wind_direction_code%%" name="%%wind_direction_name%%" value="%%wind_direction%%"/&gt;&lt;/wind&gt;&lt;clouds name="%%clouds_name%%" value="%%clouds%%"/&gt;&lt;visibility value="%%visibility%%"/&gt;&lt;precipitation mode="%%precipitation_mode%%" unit="%%precipitation_unit%%" value="%%precipitation%%"/&gt;&lt;weather icon="%%weather_icon%%" number="%%weather_number%%" value="%%weather%%"/&gt;&lt;lastupdate value="%%last_update%%"/&gt;&lt;/current&gt;<defaultActions>
+               <defaultMessageActions>
+                  <fieldActionGroup>
+                     <fieldAction enabled="false" type="1">
+                        <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" matching="PREFERENCE" type="101"/>
+                     </fieldAction>
+                     <fieldAction type="0">
+                        <fieldAction type="100"/>
+                     </fieldAction>
+                     <fieldAction enabled="false" type="1">
+                        <fieldAction enabled="false" type="5"/>
+                     </fieldAction>
+                     <fieldAction enabled="false" type="1">
+                        <fieldAction enabled="false" type="6" typeActionAllType="true" typeActionMetaType="false"/>
+                     </fieldAction>
+                  </fieldActionGroup>
+               </defaultMessageActions>
+               <defaultScalarActions>
+                  <fieldActionGroup>
+                     <fieldAction enabled="false" type="1">
+                        <fieldAction enabled="false" type="0"/>
+                     </fieldAction>
+                     <fieldAction type="0">
+                        <fieldAction type="0"/>
+                     </fieldAction>
+                     <fieldAction enabled="false" type="1">
+                        <fieldAction enabled="false" type="5"/>
+                     </fieldAction>
+                     <fieldAction enabled="false" type="1">
+                        <fieldAction enabled="false" type="6" typeActionAllType="true" typeActionMetaType="false"/>
+                     </fieldAction>
+                  </fieldActionGroup>
+               </defaultScalarActions>
+            </defaultActions>
+            <updates>
+               <updateField path="/text/current">
+                  <_c assocdefid="xml.Element"/>
+               </updateField>
+               <setAction index="2" path="/text/current/city/coord/{}" replaceActionType="0" replaceOuterType="0">
+                  <fieldAction type="0">
+                     <fieldAction type="0"/>
+                  </fieldAction>
+               </setAction>
+               <setAction index="2" path="/text/current/city/sun/{}" replaceActionType="0" replaceOuterType="0">
+                  <fieldAction type="0">
+                     <fieldAction type="0"/>
+                  </fieldAction>
+               </setAction>
+               <setAction index="4" path="/text/current/temperature/{}" replaceActionType="0" replaceOuterType="0">
+                  <fieldAction type="0">
+                     <fieldAction type="0"/>
+                  </fieldAction>
+               </setAction>
+               <setAction index="2" path="/text/current/humidity/{}" replaceActionType="0" replaceOuterType="0">
+                  <fieldAction type="0">
+                     <fieldAction type="0"/>
+                  </fieldAction>
+               </setAction>
+               <setAction index="2" path="/text/current/pressure/{}" replaceActionType="0" replaceOuterType="0">
+                  <fieldAction type="0">
+                     <fieldAction type="0"/>
+                  </fieldAction>
+               </setAction>
+               <setAction index="2" path="/text/current/wind/speed/{}" replaceActionType="0" replaceOuterType="0">
+                  <fieldAction type="0">
+                     <fieldAction type="0"/>
+                  </fieldAction>
+               </setAction>
+               <setAction index="0" path="/text/current/wind/gusts/{}" replaceActionType="0" replaceOuterType="0">
+                  <fieldAction type="0">
+                     <fieldAction type="0"/>
+                  </fieldAction>
+               </setAction>
+               <setAction index="3" path="/text/current/wind/direction/{}" replaceActionType="0" replaceOuterType="0">
+                  <fieldAction type="0">
+                     <fieldAction type="0"/>
+                  </fieldAction>
+               </setAction>
+               <setAction index="2" path="/text/current/clouds/{}" replaceActionType="0" replaceOuterType="0">
+                  <fieldAction type="0">
+                     <fieldAction type="0"/>
+                  </fieldAction>
+               </setAction>
+               <setAction index="6" path="/text/current/visibility" replaceActionType="101" replaceOuterType="1">
+                  <fieldAction enabled="false" type="1">
+                     <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="true" matching="PREFERENCE" type="101"/>
+                  </fieldAction>
+               </setAction>
+               <updateField path="/text/current/visibility/value">
+                  <_c optional="true"/>
+               </updateField>
+               <setAction index="1" path="/text/current/visibility/{}" replaceActionType="0" replaceOuterType="0">
+                  <fieldAction type="0">
+                     <fieldAction type="0"/>
+                  </fieldAction>
+               </setAction>
+               <setAction index="7" path="/text/current/precipitation" replaceActionType="101" replaceOuterType="1">
+                  <fieldAction enabled="false" type="1">
+                     <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="true" matching="PREFERENCE" type="101"/>
+                  </fieldAction>
+               </setAction>
+               <updateField path="/text/current/precipitation/unit">
+                  <_c optional="true"/>
+               </updateField>
+               <updateField path="/text/current/precipitation/value">
+                  <_c optional="true"/>
+               </updateField>
+               <setAction index="3" path="/text/current/precipitation/{}" replaceActionType="0" replaceOuterType="0">
+                  <fieldAction type="0">
+                     <fieldAction type="0"/>
+                  </fieldAction>
+               </setAction>
+               <setAction index="3" path="/text/current/weather/{}" replaceActionType="0" replaceOuterType="0">
+                  <fieldAction type="0">
+                     <fieldAction type="0"/>
+                  </fieldAction>
+               </setAction>
+               <setAction index="1" path="/text/current/lastupdate/{}" replaceActionType="0" replaceOuterType="0">
+                  <fieldAction type="0">
+                     <fieldAction type="0"/>
+                  </fieldAction>
+               </setAction>
+            </updates>
+         </contentTree>
+         <fieldActionGroup>
+            <fieldAction type="0">
+               <fieldAction type="4"/>
+            </fieldAction>
+            <fieldAction enabled="false" type="1">
+               <fieldAction enabled="false" type="7"/>
+            </fieldAction>
+         </fieldActionGroup>
+      </_c>
+   </bodyMessage>
+   <tagDataStore inputMode="NONE" outputMode="NONE">
+      <tag defaultValue="" description="" name="visibility"/>
+      <tag defaultValue="" description="" name="huminity"/>
+      <tag defaultValue="" description="" name="sun_set"/>
+      <tag defaultValue="" description="" name="temperature"/>
+      <tag defaultValue="" description="" name="coord_lon"/>
+      <tag defaultValue="" description="" name="temperature_unit"/>
+      <tag defaultValue="" description="" name="humidity_unit"/>
+      <tag defaultValue="" description="" name="wind_speed_name"/>
+      <tag defaultValue="" description="" name="weather"/>
+      <tag defaultValue="" description="" name="clouds_name"/>
+      <tag defaultValue="" description="" name="precipitation_unit"/>
+      <tag defaultValue="" description="" name="pressure_unit"/>
+      <tag defaultValue="" description="" name="country"/>
+      <tag defaultValue="" description="" name="precipitation_mode"/>
+      <tag defaultValue="" description="" name="wind_direction_code"/>
+      <tag defaultValue="" description="" name="sun_rise"/>
+      <tag defaultValue="" description="" name="city_name"/>
+      <tag defaultValue="" description="" name="city_id"/>
+      <tag defaultValue="" description="" name="last_update"/>
+      <tag defaultValue="" description="" name="wind_direction_name"/>
+      <tag defaultValue="" description="" name="weather_number"/>
+      <tag defaultValue="" description="" name="clouds"/>
+      <tag defaultValue="" description="" name="pressure"/>
+      <tag defaultValue="" description="" name="coord_lat"/>
+      <tag defaultValue="" description="" name="wind_direction"/>
+      <tag defaultValue="" description="" name="temperature_max"/>
+      <tag defaultValue="" description="" name="temperature_min"/>
+      <tag defaultValue="" description="" name="wind_speed"/>
+      <tag defaultValue="" description="" name="weather_icon"/>
+      <tag defaultValue="" description="" name="precipitation"/>
+   </tagDataStore>
+</a3Message>

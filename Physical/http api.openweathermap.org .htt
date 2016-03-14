@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1456606560870" createdUser="rational" id="3ef6394d:153247ac697:-7e6d" selfDescribing="http api.openweathermap.org " type="http_transport" updatedTimestamp="1456606664387" updatedUser="rational" version="1.0">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig transportName="" transportTemplateName="HTTP">
+      <messageProperties ReasonPhrase="No Stub available that matches the request" clientConnectionsPerHost="100" credDomain="" credPassword="#com.ghc.1!453a" credType="0" credUser="" httpHost="api.openweathermap.org" httpNtlmDomain="" httpPort="" httpProxyHost="" httpProxyPassword="#com.ghc.1!8708" httpProxyPort="" httpProxyUsername="" httpResourceRoot="" httpServerSocketBindAddressOverride="" httpServerSocketPortOverride="" httpSocketTimeout="" httpTimeoutResponseCode="503" httpVirtualHost="" recType="PROXY" useSsl="false" version="4">
+         <kerberos Anon="false" CStyle="Username / Password" Conf="false" Enabled="true" Integ="false" Loc="" MutAuth="false" Principal="" Pwd="#com.ghc.1!710b" RepDet="false" SeqCheck="false" User=""/>
+         <serverAuthentication>
+            <authenticationConfig enabled="false" realm="" type="1"/>
+            <authenticationConfig algorithm="" authParams="" domain="" enabled="false" nonce="false" opaque="" qop="" realm="" stale="" type="2"/>
+            <authenticationConfig enabled="false" type="3"/>
+            <authenticationConfig enabled="false" type="5"/>
+         </serverAuthentication>
+      </messageProperties>
+   </resourceConfig>
+</editableResource>

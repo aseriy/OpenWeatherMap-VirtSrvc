@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1456606664585" createdUser="rational" id="3ef6394d:153247ac697:-7e43" selfDescribing="api.openweathermap.org (192.241.169.168) - JMX (default)" type="probe_resource" updatedTimestamp="1456606664585" updatedUser="rational" version="1.0">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig defaultFlag="true" name="default" physicalResourceID="3ef6394d:153247ac697:-7e52" probeID="ghviewer.plugin.jmx">
+      <JmxDatasource configuration="default"/>
+   </resourceConfig>
+</editableResource>
