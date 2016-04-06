@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?><a3Message _version="1.1" createdTimestamp="1458759226584" createdUser="rational" id="320e336e:1539c43e9a8:-4e1e" type="message_resource" updatedTimestamp="1459721586184" updatedUser="rational" version="1.2">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <transport name="3ef6394d:153247ac697:-7eb5"/>
+   <formatter name="HTTP_Message"/>
+   <headerMessage assocdefid="Http Publish" meTy="Message" name="" sch="Http Publish" type="12" version="1.2">
+      <fieldActionGroup>
+         <fieldAction enabled="false" type="1">
+            <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+         </fieldAction>
+      </fieldActionGroup>
+      <_c meTy="String" name="Method" sch="Http Publish" type="7" value="POST" version="1.2">
+         <fieldActionGroup>
+            <fieldAction type="0">
+               <fieldAction exp="POST" type="0"/>
+            </fieldAction>
+         </fieldActionGroup>
+      </_c>
+      <_c meTy="String" name="URL" sch="Http Publish" type="7" value="" version="1.2">
+         <fieldActionGroup>
+            <fieldAction type="0">
+               <fieldAction type="0"/>
+            </fieldAction>
+         </fieldActionGroup>
+      </_c>
+      <_c meTy="Message" name="httpDetails" sch="Http Publish" type="12" version="1.2">
+         <fieldActionGroup>
+            <fieldAction enabled="false" type="1">
+               <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+            </fieldAction>
+         </fieldActionGroup>
+         <_c meTy="String" name="Version" sch="Http Publish" type="7" version="1.2">
+            <fieldActionGroup>
+               <fieldAction type="0">
+                  <fieldAction type="0"/>
+               </fieldAction>
+            </fieldActionGroup>
+         </_c>
+         <_c meTy="Message" name="httpHeaders" sch="Http Publish" type="12" version="1.2">
+            <fieldActionGroup>
+               <fieldAction enabled="false" type="1">
+                  <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+               </fieldAction>
+            </fieldActionGroup>
+            <_c meTy="String" name="content-type" sch="Http Publish" type="7" value="text/xml; charset=utf-8" version="1.2">
+               <fieldActionGroup>
+                  <fieldAction type="0">
+                     <fieldAction exp="text/xml; charset=utf-8" type="0"/>
+                  </fieldAction>
+               </fieldActionGroup>
+            </_c>
+         </_c>
+         <_c meTy="Boolean" name="followRedirects" sch="Http Publish" type="8" value="true" version="1.2">
+            <fieldActionGroup>
+               <fieldAction type="0">
+                  <fieldAction exp="true" type="0"/>
+               </fieldAction>
+            </fieldActionGroup>
+         </_c>
+      </_c>
+      <_c meTy="String" name="MessageType" sch="Http Publish" type="7" value="http.text.message.type" version="1.2">
+         <fieldActionGroup>
+            <fieldAction type="0">
+               <fieldAction exp="http.text.message.type" type="0"/>
+            </fieldAction>
+         </fieldActionGroup>
+      </_c>
+   </headerMessage>
+   <bodyMessage assocdefid="Text" name="Text" sch="Text" type="12" version="1.2">
+      <fieldActionGroup>
+         <fieldAction enabled="false" type="1">
+            <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+         </fieldAction>
+      </fieldActionGroup>
+      <_c coreTypeInt="7" coreTypeName="String" name="text" nodeFormatter="XML" sch="Text" type="12" version="1.2">
+         <fieldExpander fieldExpanderID="XML_EXPANDER" fieldSchema="XML" fieldSchemaRoot="xml.Element">
+            <property name="XML.cdata" value="false"/>
+            <property name="XML.space" value="false"/>
+            <property name="Multi-line indented" value="Single line"/>
+            <property name="XML.encoding" value="UTF-8"/>
+            <property name="XML.declaration" value="false"/>
+            <property name="XML.nullvalues" value="false"/>
+            <property name="XML.xmlFormat" value="Single line"/>
+            <property name="XML.normalise" value="true"/>
+         </fieldExpander>
+         <contentTree>&lt;weatherdata&gt;&lt;location&gt;&lt;name&gt;%%city_name%%&lt;/name&gt;&lt;type/&gt;&lt;country&gt;%%country%%&lt;/country&gt;&lt;timezone/&gt;&lt;location altitude="%%altitude%%" geobase="%%geobase%%" geobaseid="%%city_id%%" latitude="%%latitude%%" longitude="%%longitude%%"/&gt;&lt;/location&gt;&lt;credit/&gt;&lt;meta&gt;&lt;lastupdate/&gt;&lt;calctime&gt;%%calctime%%&lt;/calctime&gt;&lt;nextupdate/&gt;&lt;/meta&gt;&lt;sun rise="%%sun_rise%%" set="%%sun_set%%"/&gt;&lt;forecast&gt;&lt;time day="%%forecast_day%%"&gt;&lt;symbol name="%%symbol_name%%" number="%%symbol_number%%" var="%%symbol_var%%"/&gt;&lt;precipitation type="%%precipitation_type%%" value="%%precipitation%%"/&gt;&lt;windDirection code="%%wind_direction_code%%" deg="%%wind_direction_deg%%" name="%%wind_direction%%"/&gt;&lt;windSpeed mps="%%wind_speed_mps%%" name="%%wind_speed%%"/&gt;&lt;temperature day="%%temp_day%%" eve="%%temp_eve%%" max="%%temp_max%%" min="%%temp_min%%" morn="%%temp_morn%%" night="%%temp_night%%"/&gt;&lt;pressure unit="%%pressure_unit%%" value="%%pressure%%"/&gt;&lt;humidity unit="%%humidity_unit%%" value="%%humidity%%"/&gt;&lt;clouds all="%%humidity_all%%" unit="%%humidity_unit%%" value="%%clouds%%"/&gt;&lt;/time&gt;&lt;/forecast&gt;&lt;/weatherdata&gt;<defaultActions>
+               <defaultMessageActions>
+                  <fieldActionGroup>
+                     <fieldAction enabled="false" type="1">
+                        <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" matching="PREFERENCE" type="101"/>
+                     </fieldAction>
+                     <fieldAction type="0">
+                        <fieldAction type="100"/>
+                     </fieldAction>
+                     <fieldAction enabled="false" type="1">
+                        <fieldAction enabled="false" type="5"/>
+                     </fieldAction>
+                     <fieldAction enabled="false" type="1">
+                        <fieldAction enabled="false" type="6" typeActionAllType="true" typeActionMetaType="false"/>
+                     </fieldAction>
+                  </fieldActionGroup>
+               </defaultMessageActions>
+               <defaultScalarActions>
+                  <fieldActionGroup>
+                     <fieldAction enabled="false" type="1">
+                        <fieldAction enabled="false" type="0"/>
+                     </fieldAction>
+                     <fieldAction type="0">
+                        <fieldAction type="0"/>
+                     </fieldAction>
+                     <fieldAction enabled="false" type="1">
+                        <fieldAction enabled="false" type="5"/>
+                     </fieldAction>
+                     <fieldAction enabled="false" type="1">
+                        <fieldAction enabled="false" type="6" typeActionAllType="true" typeActionMetaType="false"/>
+                     </fieldAction>
+                  </fieldActionGroup>
+               </defaultScalarActions>
+            </defaultActions>
+            <updates>
+               <updateField path="/text/weatherdata">
+                  <_c assocdefid="xml.Element"/>
+               </updateField>
+               <setAction index="0" path="/text/weatherdata/location/type/{}" replaceActionType="0" replaceOuterType="0">
+                  <fieldAction type="0">
+                     <fieldAction type="0"/>
+                  </fieldAction>
+               </setAction>
+               <setAction index="0" path="/text/weatherdata/location/timezone/{}" replaceActionType="0" replaceOuterType="0">
+                  <fieldAction type="0">
+                     <fieldAction type="0"/>
+                  </fieldAction>
+               </setAction>
+               <setAction index="5" path="/text/weatherdata/location/location/{}" replaceActionType="0" replaceOuterType="0">
+                  <fieldAction type="0">
+                     <fieldAction type="0"/>
+                  </fieldAction>
+               </setAction>
+               <setAction index="0" path="/text/weatherdata/credit/{}" replaceActionType="0" replaceOuterType="0">
+                  <fieldAction type="0">
+                     <fieldAction type="0"/>
+                  </fieldAction>
+               </setAction>
+               <setAction index="0" path="/text/weatherdata/meta/lastupdate/{}" replaceActionType="0" replaceOuterType="0">
+                  <fieldAction type="0">
+                     <fieldAction type="0"/>
+                  </fieldAction>
+               </setAction>
+               <setAction index="0" path="/text/weatherdata/meta/nextupdate/{}" replaceActionType="0" replaceOuterType="0">
+                  <fieldAction type="0">
+                     <fieldAction type="0"/>
+                  </fieldAction>
+               </setAction>
+               <setAction index="2" path="/text/weatherdata/sun/{}" replaceActionType="0" replaceOuterType="0">
+                  <fieldAction type="0">
+                     <fieldAction type="0"/>
+                  </fieldAction>
+               </setAction>
+               <updateField path="/text/weatherdata/forecast/time">
+                  <_c repeating="true"/>
+               </updateField>
+               <setAction index="3" path="/text/weatherdata/forecast/time/symbol/{}" replaceActionType="0" replaceOuterType="0">
+                  <fieldAction type="0">
+                     <fieldAction type="0"/>
+                  </fieldAction>
+               </setAction>
+               <updateField path="/text/weatherdata/forecast/time/precipitation/type">
+                  <_c optional="true"/>
+               </updateField>
+               <updateField path="/text/weatherdata/forecast/time/precipitation/value">
+                  <_c optional="true"/>
+               </updateField>
+               <setAction index="2" path="/text/weatherdata/forecast/time/precipitation/{}" replaceActionType="0" replaceOuterType="0">
+                  <fieldAction type="0">
+                     <fieldAction type="0"/>
+                  </fieldAction>
+               </setAction>
+               <setAction index="3" path="/text/weatherdata/forecast/time/windDirection/{}" replaceActionType="0" replaceOuterType="0">
+                  <fieldAction type="0">
+                     <fieldAction type="0"/>
+                  </fieldAction>
+               </setAction>
+               <updateField path="/text/weatherdata/forecast/time/windSpeed/mps">
+                  <_c optional="true"/>
+               </updateField>
+               <updateField path="/text/weatherdata/forecast/time/windSpeed/name">
+                  <_c optional="true"/>
+               </updateField>
+               <setAction index="2" path="/text/weatherdata/forecast/time/windSpeed/{}" replaceActionType="0" replaceOuterType="0">
+                  <fieldAction type="0">
+                     <fieldAction type="0"/>
+                  </fieldAction>
+               </setAction>
+               <setAction index="6" path="/text/weatherdata/forecast/time/temperature/{}" replaceActionType="0" replaceOuterType="0">
+                  <fieldAction type="0">
+                     <fieldAction type="0"/>
+                  </fieldAction>
+               </setAction>
+               <setAction index="2" path="/text/weatherdata/forecast/time/pressure/{}" replaceActionType="0" replaceOuterType="0">
+                  <fieldAction type="0">
+                     <fieldAction type="0"/>
+                  </fieldAction>
+               </setAction>
+               <setAction index="2" path="/text/weatherdata/forecast/time/humidity/{}" replaceActionType="0" replaceOuterType="0">
+                  <fieldAction type="0">
+                     <fieldAction type="0"/>
+                  </fieldAction>
+               </setAction>
+               <setAction index="3" path="/text/weatherdata/forecast/time/clouds/{}" replaceActionType="0" replaceOuterType="0">
+                  <fieldAction type="0">
+                     <fieldAction type="0"/>
+                  </fieldAction>
+               </setAction>
+            </updates>
+         </contentTree>
+         <fieldActionGroup>
+            <fieldAction type="0">
+               <fieldAction type="4"/>
+            </fieldAction>
+            <fieldAction enabled="false" type="1">
+               <fieldAction enabled="false" type="7"/>
+            </fieldAction>
+         </fieldActionGroup>
+      </_c>
+   </bodyMessage>
+   <tagDataStore inputMode="NONE" outputMode="NONE">
+      <tag defaultValue="" description="" name="forecast_day">
+         <tagProps>
+            <prop key="interfaceOutput" value="true"/>
+         </tagProps>
+      </tag>
+      <tag defaultValue="" description="" name="altitude">
+         <tagProps>
+            <prop key="interfaceOutput" value="true"/>
+         </tagProps>
+      </tag>
+      <tag defaultValue="" description="" name="sun_set">
+         <tagProps>
+            <prop key="interfaceOutput" value="true"/>
+         </tagProps>
+      </tag>
+      <tag defaultValue="" description="" name="wind_speed_mps">
+         <tagProps>
+            <prop key="interfaceOutput" value="true"/>
+         </tagProps>
+      </tag>
+      <tag defaultValue="" description="" name="humidity_unit">
+         <tagProps>
+            <prop key="interfaceOutput" value="true"/>
+         </tagProps>
+      </tag>
+      <tag defaultValue="" description="" name="longitude">
+         <tagProps>
+            <prop key="interfaceOutput" value="true"/>
+         </tagProps>
+      </tag>
+      <tag defaultValue="" description="" name="pressure_unit">
+         <tagProps>
+            <prop key="interfaceOutput" value="true"/>
+         </tagProps>
+      </tag>
+      <tag defaultValue="" description="" name="temp_night">
+         <tagProps>
+            <prop key="interfaceOutput" value="true"/>
+         </tagProps>
+      </tag>
+      <tag defaultValue="" description="" name="country">
+         <tagProps>
+            <prop key="interfaceOutput" value="true"/>
+         </tagProps>
+      </tag>
+      <tag defaultValue="" description="" name="symbol_var">
+         <tagProps>
+            <prop key="interfaceOutput" value="true"/>
+         </tagProps>
+      </tag>
+      <tag defaultValue="" description="" name="humidity">
+         <tagProps>
+            <prop key="interfaceOutput" value="true"/>
+         </tagProps>
+      </tag>
+      <tag defaultValue="" description="" name="calctime">
+         <tagProps>
+            <prop key="interfaceOutput" value="true"/>
+         </tagProps>
+      </tag>
+      <tag defaultValue="" description="" name="wind_direction_deg">
+         <tagProps>
+            <prop key="interfaceOutput" value="true"/>
+         </tagProps>
+      </tag>
+      <tag defaultValue="" description="" name="wind_direction_code">
+         <tagProps>
+            <prop key="interfaceOutput" value="true"/>
+         </tagProps>
+      </tag>
+      <tag defaultValue="" description="" name="sun_rise">
+         <tagProps>
+            <prop key="interfaceOutput" value="true"/>
+         </tagProps>
+      </tag>
+      <tag defaultValue="" description="" name="latitude">
+         <tagProps>
+            <prop key="interfaceOutput" value="true"/>
+         </tagProps>
+      </tag>
+      <tag defaultValue="" description="" name="humidity_all">
+         <tagProps>
+            <prop key="interfaceOutput" value="true"/>
+         </tagProps>
+      </tag>
+      <tag defaultValue="" description="" name="city_name">
+         <tagProps>
+            <prop key="interfaceOutput" value="true"/>
+         </tagProps>
+      </tag>
+      <tag defaultValue="" description="" name="temp_day">
+         <tagProps>
+            <prop key="interfaceOutput" value="true"/>
+         </tagProps>
+      </tag>
+      <tag defaultValue="" description="" name="temp_eve">
+         <tagProps>
+            <prop key="interfaceOutput" value="true"/>
+         </tagProps>
+      </tag>
+      <tag defaultValue="" description="" name="city_id">
+         <tagProps>
+            <prop key="interfaceOutput" value="true"/>
+         </tagProps>
+      </tag>
+      <tag defaultValue="" description="" name="precipitation_type">
+         <tagProps>
+            <prop key="interfaceOutput" value="true"/>
+         </tagProps>
+      </tag>
+      <tag defaultValue="" description="" name="geobase">
+         <tagProps>
+            <prop key="interfaceOutput" value="true"/>
+         </tagProps>
+      </tag>
+      <tag defaultValue="" description="" name="clouds">
+         <tagProps>
+            <prop key="interfaceOutput" value="true"/>
+         </tagProps>
+      </tag>
+      <tag defaultValue="" description="" name="pressure">
+         <tagProps>
+            <prop key="interfaceOutput" value="true"/>
+         </tagProps>
+      </tag>
+      <tag defaultValue="" description="" name="wind_direction">
+         <tagProps>
+            <prop key="interfaceOutput" value="true"/>
+         </tagProps>
+      </tag>
+      <tag defaultValue="" description="" name="symbol_name">
+         <tagProps>
+            <prop key="interfaceOutput" value="true"/>
+         </tagProps>
+      </tag>
+      <tag defaultValue="" description="" name="wind_speed">
+         <tagProps>
+            <prop key="interfaceOutput" value="true"/>
+         </tagProps>
+      </tag>
+      <tag defaultValue="" description="" name="temp_morn">
+         <tagProps>
+            <prop key="interfaceOutput" value="true"/>
+         </tagProps>
+      </tag>
+      <tag defaultValue="" description="" name="symbol_number">
+         <tagProps>
+            <prop key="interfaceOutput" value="true"/>
+         </tagProps>
+      </tag>
+      <tag defaultValue="" description="" name="temp_max">
+         <tagProps>
+            <prop key="interfaceOutput" value="true"/>
+         </tagProps>
+      </tag>
+      <tag defaultValue="" description="" name="precipitation">
+         <tagProps>
+            <prop key="interfaceOutput" value="true"/>
+         </tagProps>
+      </tag>
+      <tag defaultValue="" description="" name="temp_min">
+         <tagProps>
+            <prop key="interfaceOutput" value="true"/>
+         </tagProps>
+      </tag>
+   </tagDataStore>
+</a3Message>

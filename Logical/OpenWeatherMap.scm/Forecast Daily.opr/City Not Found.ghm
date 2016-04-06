@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?><a3Message _version="1.1" createdTimestamp="1459711738114" createdUser="rational" id="79c1b397:153c59ada52:-6b" type="message_resource" updatedTimestamp="1459712148885" updatedUser="rational" version="1.2">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <transport name="3ef6394d:153247ac697:-7eb5"/>
+   <formatter name="HTTP_Message"/>
+   <headerMessage assocdefid="Http Publish" meTy="Message" name="" sch="Http Publish" type="12" version="1.2">
+      <fieldActionGroup>
+         <fieldAction enabled="false" type="1">
+            <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+         </fieldAction>
+      </fieldActionGroup>
+      <_c meTy="String" name="StatusCode" sch="Http Publish" type="7" value="200" version="1.2">
+         <fieldActionGroup>
+            <fieldAction type="0">
+               <fieldAction exp="200" type="0"/>
+            </fieldAction>
+            <fieldAction enabled="false" type="1">
+               <fieldAction enabled="false" exp="200" type="0"/>
+            </fieldAction>
+         </fieldActionGroup>
+      </_c>
+      <_c meTy="String" name="ReasonPhrase" sch="Http Publish" type="7" value="OK" version="1.2">
+         <fieldActionGroup>
+            <fieldAction type="0">
+               <fieldAction exp="OK" type="0"/>
+            </fieldAction>
+            <fieldAction enabled="false" type="1">
+               <fieldAction enabled="false" exp="OK" type="0"/>
+            </fieldAction>
+         </fieldActionGroup>
+      </_c>
+      <_c meTy="Message" name="httpDetails" sch="Http Publish" type="12" version="1.2">
+         <fieldActionGroup>
+            <fieldAction enabled="false" type="1">
+               <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+            </fieldAction>
+         </fieldActionGroup>
+         <_c meTy="String" name="Version" sch="Http Publish" type="7" value="1.1" version="1.2">
+            <fieldActionGroup>
+               <fieldAction type="0">
+                  <fieldAction exp="1.1" type="0"/>
+               </fieldAction>
+               <fieldAction enabled="false" type="1">
+                  <fieldAction enabled="false" exp="1.1" type="0"/>
+               </fieldAction>
+            </fieldActionGroup>
+         </_c>
+         <_c meTy="Message" name="httpHeaders" sch="Http Publish" type="12" version="1.2">
+            <fieldActionGroup>
+               <fieldAction enabled="false" type="1">
+                  <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+               </fieldAction>
+            </fieldActionGroup>
+            <_c meTy="String" name="Server" sch="Http Publish" type="7" value="openresty" version="1.2">
+               <fieldActionGroup>
+                  <fieldAction type="0">
+                     <fieldAction exp="openresty" type="0"/>
+                  </fieldAction>
+                  <fieldAction enabled="false" type="1">
+                     <fieldAction enabled="false" exp="openresty" type="0"/>
+                  </fieldAction>
+               </fieldActionGroup>
+            </_c>
+            <_c meTy="String" name="Date" sch="Http Publish" type="7" value="Sun, 03 Apr 2016 19:18:50 GMT" version="1.2">
+               <fieldActionGroup>
+                  <fieldAction type="0">
+                     <fieldAction exp="Sun, 03 Apr 2016 19:18:50 GMT" type="0"/>
+                  </fieldAction>
+                  <fieldAction enabled="false" type="1">
+                     <fieldAction enabled="false" exp="Sun, 03 Apr 2016 19:18:50 GMT" type="0"/>
+                  </fieldAction>
+               </fieldActionGroup>
+            </_c>
+            <_c meTy="String" name="Content-Type" sch="Http Publish" type="7" value="application/json; charset=utf-8" version="1.2">
+               <fieldActionGroup>
+                  <fieldAction type="0">
+                     <fieldAction exp="application/json; charset=utf-8" type="0"/>
+                  </fieldAction>
+                  <fieldAction enabled="false" type="1">
+                     <fieldAction enabled="false" exp="application/json; charset=utf-8" type="0"/>
+                  </fieldAction>
+               </fieldActionGroup>
+            </_c>
+            <_c meTy="String" name="Content-Length" sch="Http Publish" type="7" value="47" version="1.2">
+               <fieldActionGroup>
+                  <fieldAction type="0">
+                     <fieldAction exp="47" type="0"/>
+                  </fieldAction>
+                  <fieldAction enabled="false" type="1">
+                     <fieldAction enabled="false" exp="47" type="0"/>
+                  </fieldAction>
+               </fieldActionGroup>
+            </_c>
+            <_c meTy="String" name="Connection" sch="Http Publish" type="7" value="keep-alive" version="1.2">
+               <fieldActionGroup>
+                  <fieldAction type="0">
+                     <fieldAction exp="keep-alive" type="0"/>
+                  </fieldAction>
+                  <fieldAction enabled="false" type="1">
+                     <fieldAction enabled="false" exp="keep-alive" type="0"/>
+                  </fieldAction>
+               </fieldActionGroup>
+            </_c>
+            <_c meTy="String" name="X-Cache-Key" sch="Http Publish" type="7" value="/data/2.5/forecast/daily?APPID=%%apikey%%&amp;lang=%%lang%%&amp;mode=%%mode%%&amp;units=%%units%%" version="1.2">
+               <fieldActionGroup>
+                  <fieldAction type="0">
+                     <fieldAction exp="/data/2.5/forecast/daily?APPID=%%apikey%%&amp;lang=%%lang%%&amp;mode=%%mode%%&amp;units=%%units%%" type="0"/>
+                  </fieldAction>
+                  <fieldAction enabled="false" type="1">
+                     <fieldAction enabled="false" exp="/data/2.5/weather?APPID=50b2ae8523a458183982bf56254556dc&amp;cnt=1&amp;id=1&amp;lang=en&amp;mode=xml&amp;units=imperial" type="0"/>
+                  </fieldAction>
+               </fieldActionGroup>
+            </_c>
+            <_c meTy="String" name="Access-Control-Allow-Origin" sch="Http Publish" type="7" value="*" version="1.2">
+               <fieldActionGroup>
+                  <fieldAction type="0">
+                     <fieldAction exp="*" type="0"/>
+                  </fieldAction>
+                  <fieldAction enabled="false" type="1">
+                     <fieldAction enabled="false" exp="*" type="0"/>
+                  </fieldAction>
+               </fieldActionGroup>
+            </_c>
+            <_c meTy="String" name="Access-Control-Allow-Credentials" sch="Http Publish" type="7" value="true" version="1.2">
+               <fieldActionGroup>
+                  <fieldAction type="0">
+                     <fieldAction exp="true" type="0"/>
+                  </fieldAction>
+                  <fieldAction enabled="false" type="1">
+                     <fieldAction enabled="false" exp="true" type="0"/>
+                  </fieldAction>
+               </fieldActionGroup>
+            </_c>
+            <_c meTy="String" name="Access-Control-Allow-Methods" sch="Http Publish" type="7" value="GET, POST" version="1.2">
+               <fieldActionGroup>
+                  <fieldAction type="0">
+                     <fieldAction exp="GET, POST" type="0"/>
+                  </fieldAction>
+                  <fieldAction enabled="false" type="1">
+                     <fieldAction enabled="false" exp="GET, POST" type="0"/>
+                  </fieldAction>
+               </fieldActionGroup>
+            </_c>
+         </_c>
+         <_c meTy="Boolean" name="followRedirects" sch="Http Publish" type="8" value="true" version="1.2">
+            <fieldActionGroup>
+               <fieldAction type="0">
+                  <fieldAction exp="true" type="0"/>
+               </fieldAction>
+            </fieldActionGroup>
+         </_c>
+      </_c>
+      <_c meTy="String" name="MessageType" sch="Http Publish" type="7" value="http.text.message.type" version="1.2">
+         <fieldActionGroup>
+            <fieldAction type="0">
+               <fieldAction exp="http.text.message.type" type="0"/>
+            </fieldAction>
+            <fieldAction enabled="false" type="1">
+               <fieldAction enabled="false" exp="http.text.message.type" type="0"/>
+            </fieldAction>
+         </fieldActionGroup>
+      </_c>
+      <_c meTy="Date-Time" name="rcvdTimestamp" sch="Http Publish" type="11" value="20:18:50.612 2016/04/03" version="1.2">
+         <fieldActionGroup>
+            <fieldAction type="0">
+               <fieldAction exp="20:18:50.612 2016/04/03" type="0"/>
+            </fieldAction>
+            <fieldAction enabled="false" type="1">
+               <fieldAction enabled="false" exp="20:18:50.612 2016/04/03" type="0"/>
+            </fieldAction>
+         </fieldActionGroup>
+      </_c>
+      <_c meTy="String" name="Method" sch="Http Publish" type="7" value="POST" version="1.2">
+         <fieldActionGroup>
+            <fieldAction type="0">
+               <fieldAction exp="POST" type="0"/>
+            </fieldAction>
+         </fieldActionGroup>
+      </_c>
+      <_c meTy="String" name="URL" sch="Http Publish" type="7" value="" version="1.2">
+         <fieldActionGroup>
+            <fieldAction type="0">
+               <fieldAction type="0"/>
+            </fieldAction>
+         </fieldActionGroup>
+      </_c>
+   </headerMessage>
+   <bodyMessage assocdefid="Text" name="Text" sch="Text" type="12" version="1.2">
+      <fieldActionGroup>
+         <fieldAction enabled="false" type="1">
+            <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+         </fieldAction>
+      </fieldActionGroup>
+      <_c coreTypeInt="7" coreTypeName="String" name="text" nodeFormatter="JSON.nodeformatter" sch="Text" type="12" version="1.2">
+         <fieldExpander fieldExpanderID="JSON.fieldexpander" fieldSchema="JSON" fieldSchemaRoot="Object"/>
+         <contentTree>{"cod":"404","message":"Error: Not found city"}<defaultActions>
+               <defaultMessageActions>
+                  <fieldActionGroup>
+                     <fieldAction enabled="false" type="1">
+                        <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+                     </fieldAction>
+                     <fieldAction type="0">
+                        <fieldAction type="100"/>
+                     </fieldAction>
+                     <fieldAction enabled="false" type="1">
+                        <fieldAction enabled="false" type="5"/>
+                     </fieldAction>
+                     <fieldAction enabled="false" type="1">
+                        <fieldAction enabled="false" type="6" typeActionAllType="true" typeActionMetaType="false"/>
+                     </fieldAction>
+                  </fieldActionGroup>
+               </defaultMessageActions>
+               <defaultScalarActions>
+                  <fieldActionGroup>
+                     <fieldAction enabled="false" type="1">
+                        <fieldAction enabled="false" type="0"/>
+                     </fieldAction>
+                     <fieldAction type="0">
+                        <fieldAction type="0"/>
+                     </fieldAction>
+                     <fieldAction enabled="false" type="1">
+                        <fieldAction enabled="false" type="5"/>
+                     </fieldAction>
+                     <fieldAction enabled="false" type="1">
+                        <fieldAction enabled="false" type="6" typeActionAllType="true" typeActionMetaType="false"/>
+                     </fieldAction>
+                  </fieldActionGroup>
+               </defaultScalarActions>
+            </defaultActions>
+            <updates>
+               <updateField path="/text/Object">
+                  <_c assocdefid="Object"/>
+               </updateField>
+            </updates>
+         </contentTree>
+         <fieldActionGroup>
+            <fieldAction type="0">
+               <fieldAction type="4"/>
+            </fieldAction>
+            <fieldAction enabled="false" type="1">
+               <fieldAction enabled="false" type="7"/>
+            </fieldAction>
+         </fieldActionGroup>
+      </_c>
+   </bodyMessage>
+   <tagDataStore inputMode="NONE" outputMode="NONE"/>
+</a3Message>
