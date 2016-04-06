@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><a3Message _version="1.1" createdTimestamp="1457107326075" createdUser="rational" id="-70bdf138:1534257a94b:-7a17" type="message_resource" updatedTimestamp="1457107345734" updatedUser="rational" version="1.2">
+<?xml version="1.0" encoding="UTF-8"?><a3Message _version="1.1" createdTimestamp="1457107326075" createdUser="rational" id="-70bdf138:1534257a94b:-7a17" type="message_resource" updatedTimestamp="1459275189218" updatedUser="rational" version="1.2">
    <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
    <transport name="3ef6394d:153247ac697:-7eb5"/>
    <formatter name="HTTP_Message"/>
@@ -20,6 +20,13 @@
                   <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
                </fieldAction>
             </fieldActionGroup>
+            <_c meTy="String" name="Content-Type" type="7" value="text/xml; charset=utf-8" version="1.2">
+               <fieldActionGroup>
+                  <fieldAction type="0">
+                     <fieldAction exp="text/xml; charset=utf-8" type="0"/>
+                  </fieldAction>
+               </fieldActionGroup>
+            </_c>
          </_c>
          <_c meTy="Boolean" name="followRedirects" type="8" value="true" version="1.2">
             <fieldActionGroup>
@@ -58,17 +65,17 @@
          </fieldAction>
       </fieldActionGroup>
       <_c coreTypeInt="7" coreTypeName="String" name="text" nodeFormatter="XML" sch="Text" type="12" version="1.2">
-         <fieldExpander fieldExpanderID="XML_EXPANDER" fieldSchema="XML">
+         <fieldExpander fieldExpanderID="XML_EXPANDER" fieldSchema="XML" fieldSchemaRoot="xml.Element">
             <property name="XML.cdata" value="false"/>
             <property name="XML.space" value="false"/>
             <property name="Multi-line indented" value="Single line"/>
-            <property name="XML.declaration" value="false"/>
             <property name="XML.encoding" value="UTF-8"/>
+            <property name="XML.declaration" value="false"/>
             <property name="XML.nullvalues" value="false"/>
             <property name="XML.xmlFormat" value="Single line"/>
             <property name="XML.normalise" value="true"/>
          </fieldExpander>
-         <contentTree>&lt;current&gt;&lt;city id="%%city_id%%" name="%%city_name%%"&gt;&lt;coord lat="%%coord_lat%%" lon="%%coord_lon%%"/&gt;&lt;country&gt;%%country%%&lt;/country&gt;&lt;sun rise="%%sun_rise%%" set="%%sun_set%%"/&gt;&lt;/city&gt;&lt;temperature max="%%temperature_max%%" min="%%temperature_min%%" unit="%%temperature_unit%%" value="%%temperature%%"/&gt;&lt;humidity unit="%%humidity_unit%%" value="%%huminity%%"/&gt;&lt;pressure unit="%%pressure_unit%%" value="%%pressure%%"/&gt;&lt;wind&gt;&lt;speed name="%%wind_speed_name%%" value="%%wind_speed%%"/&gt;&lt;gusts/&gt;&lt;direction code="%%wind_direction_code%%" name="%%wind_direction_name%%" value="%%wind_direction%%"/&gt;&lt;/wind&gt;&lt;clouds name="%%clouds_name%%" value="%%clouds%%"/&gt;&lt;visibility value="%%visibility%%"/&gt;&lt;precipitation mode="%%precipitation_mode%%" unit="%%precipitation_unit%%" value="%%precipitation%%"/&gt;&lt;weather icon="%%weather_icon%%" number="%%weather_number%%" value="%%weather%%"/&gt;&lt;lastupdate value="%%last_update%%"/&gt;&lt;/current&gt;<defaultActions>
+         <contentTree>&lt;current&gt;&lt;city id="%%city_id%%" name="%%city_name%%"&gt;&lt;coord lon="%%longitude%%" lat="%%latitude%%"/&gt;&lt;country&gt;%%country%%&lt;/country&gt;&lt;sun rise="%%sun_rise%%" set="%%sun_set%%"/&gt;&lt;/city&gt;&lt;temperature value="%%temp%%" max="%%temp_max%%" min="%%temp_min%%" unit="%%temp_unit%%"/&gt;&lt;humidity value="%%humidity%%" unit="%%humidity_unit%%"/&gt;&lt;pressure value="%%pressure%%" unit="%%pressure_unit%%"/&gt;&lt;wind&gt;&lt;speed name="%%wind_speed_name%%" value="%%wind_speed%%"/&gt;&lt;gusts/&gt;&lt;direction code="%%wind_direction_code%%" name="%%wind_direction_name%%" value="%%wind_direction%%"/&gt;&lt;/wind&gt;&lt;clouds name="%%clouds_name%%" value="%%clouds%%"/&gt;&lt;visibility value="%%visibility%%"/&gt;&lt;precipitation mode="%%precipitation_mode%%" unit="%%precipitation_unit%%" value="%%precipitation%%"/&gt;&lt;weather icon="%%weather_icon%%" number="%%weather_number%%" value="%%weather%%"/&gt;&lt;lastupdate value="%%last_update%%"/&gt;&lt;/current&gt;<defaultActions>
                <defaultMessageActions>
                   <fieldActionGroup>
                      <fieldAction enabled="false" type="1">
@@ -204,34 +211,34 @@
    </bodyMessage>
    <tagDataStore inputMode="NONE" outputMode="NONE">
       <tag defaultValue="" description="" name="visibility"/>
-      <tag defaultValue="" description="" name="huminity"/>
       <tag defaultValue="" description="" name="sun_set"/>
-      <tag defaultValue="" description="" name="temperature"/>
-      <tag defaultValue="" description="" name="coord_lon"/>
-      <tag defaultValue="" description="" name="temperature_unit"/>
       <tag defaultValue="" description="" name="humidity_unit"/>
       <tag defaultValue="" description="" name="wind_speed_name"/>
       <tag defaultValue="" description="" name="weather"/>
+      <tag defaultValue="" description="" name="longitude"/>
       <tag defaultValue="" description="" name="clouds_name"/>
       <tag defaultValue="" description="" name="precipitation_unit"/>
       <tag defaultValue="" description="" name="pressure_unit"/>
       <tag defaultValue="" description="" name="country"/>
       <tag defaultValue="" description="" name="precipitation_mode"/>
+      <tag defaultValue="" description="" name="humidity"/>
       <tag defaultValue="" description="" name="wind_direction_code"/>
+      <tag defaultValue="" description="" name="temp"/>
       <tag defaultValue="" description="" name="sun_rise"/>
+      <tag defaultValue="" description="" name="latitude"/>
       <tag defaultValue="" description="" name="city_name"/>
       <tag defaultValue="" description="" name="city_id"/>
       <tag defaultValue="" description="" name="last_update"/>
       <tag defaultValue="" description="" name="wind_direction_name"/>
       <tag defaultValue="" description="" name="weather_number"/>
       <tag defaultValue="" description="" name="clouds"/>
+      <tag defaultValue="" description="" name="temp_unit"/>
       <tag defaultValue="" description="" name="pressure"/>
-      <tag defaultValue="" description="" name="coord_lat"/>
       <tag defaultValue="" description="" name="wind_direction"/>
-      <tag defaultValue="" description="" name="temperature_max"/>
-      <tag defaultValue="" description="" name="temperature_min"/>
       <tag defaultValue="" description="" name="wind_speed"/>
       <tag defaultValue="" description="" name="weather_icon"/>
+      <tag defaultValue="" description="" name="temp_max"/>
       <tag defaultValue="" description="" name="precipitation"/>
+      <tag defaultValue="" description="" name="temp_min"/>
    </tagDataStore>
 </a3Message>

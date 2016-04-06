@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1456605939766" createdUser="rational" id="3ef6394d:153247ac697:-7f5d" type="environment_resource" updatedTimestamp="1456745261850" updatedUser="rational" version="1.0">
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1456605939766" createdUser="rational" id="3ef6394d:153247ac697:-7f5d" type="environment_resource" updatedTimestamp="1458760098947" updatedUser="rational" version="1.0">
    <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
    <resourceConfig>
       <evbindings>
+         <evbinding evLogicalItemId="320e336e:1539c43e9a8:-4c86" evPhysicalItemId="320e336e:1539c43e9a8:-4c85"/>
          <evbinding evLogicalItemId="3ef6394d:153247ac697:-7eb5" evPhysicalItemId="3ef6394d:153247ac697:-7e6d"/>
       </evbindings>
    </resourceConfig>
