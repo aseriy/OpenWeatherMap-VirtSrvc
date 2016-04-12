@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><a3Message _version="1.1" createdTimestamp="1457107326075" createdUser="rational" id="-70bdf138:1534257a94b:-7a17" type="message_resource" updatedTimestamp="1459275189218" updatedUser="rational" version="1.2">
+<?xml version="1.0" encoding="UTF-8"?><a3Message _version="1.1" createdTimestamp="1457107326075" createdUser="rational" id="-70bdf138:1534257a94b:-7a17" type="message_resource" updatedTimestamp="1460326582748" updatedUser="rational" version="1.2">
    <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
    <transport name="3ef6394d:153247ac697:-7eb5"/>
    <formatter name="HTTP_Message"/>
@@ -75,7 +75,7 @@
             <property name="XML.xmlFormat" value="Single line"/>
             <property name="XML.normalise" value="true"/>
          </fieldExpander>
-         <contentTree>&lt;current&gt;&lt;city id="%%city_id%%" name="%%city_name%%"&gt;&lt;coord lon="%%longitude%%" lat="%%latitude%%"/&gt;&lt;country&gt;%%country%%&lt;/country&gt;&lt;sun rise="%%sun_rise%%" set="%%sun_set%%"/&gt;&lt;/city&gt;&lt;temperature value="%%temp%%" max="%%temp_max%%" min="%%temp_min%%" unit="%%temp_unit%%"/&gt;&lt;humidity value="%%humidity%%" unit="%%humidity_unit%%"/&gt;&lt;pressure value="%%pressure%%" unit="%%pressure_unit%%"/&gt;&lt;wind&gt;&lt;speed name="%%wind_speed_name%%" value="%%wind_speed%%"/&gt;&lt;gusts/&gt;&lt;direction code="%%wind_direction_code%%" name="%%wind_direction_name%%" value="%%wind_direction%%"/&gt;&lt;/wind&gt;&lt;clouds name="%%clouds_name%%" value="%%clouds%%"/&gt;&lt;visibility value="%%visibility%%"/&gt;&lt;precipitation mode="%%precipitation_mode%%" unit="%%precipitation_unit%%" value="%%precipitation%%"/&gt;&lt;weather icon="%%weather_icon%%" number="%%weather_number%%" value="%%weather%%"/&gt;&lt;lastupdate value="%%last_update%%"/&gt;&lt;/current&gt;<defaultActions>
+         <contentTree>&lt;current&gt;&lt;city id="%%city_id%%" name="%%city_name%%"&gt;&lt;coord lat="%%latitude%%" lon="%%longitude%%"/&gt;&lt;country&gt;%%country%%&lt;/country&gt;&lt;sun rise="%%sun_rise%%" set="%%sun_set%%"/&gt;&lt;/city&gt;&lt;temperature max="%%temp_max%%" min="%%temp_min%%" unit="%%temp_unit%%" value="%%temp%%"/&gt;&lt;humidity unit="%%humidity_unit%%" value="%%humidity%%"/&gt;&lt;pressure unit="%%pressure_unit%%" value="%%pressure%%"/&gt;&lt;wind&gt;&lt;speed name="%%wind_speed_name%%" value="%%wind_speed%%"/&gt;&lt;gusts value="%%wind_gusts%%"/&gt;&lt;direction code="%%wind_direction_code%%" name="%%wind_direction_name%%" value="%%wind_direction%%"/&gt;&lt;/wind&gt;&lt;clouds name="%%clouds_name%%" value="%%clouds%%"/&gt;&lt;visibility value="%%visibility%%"/&gt;&lt;precipitation mode="%%precipitation_mode%%" unit="%%precipitation_unit%%" value="%%precipitation%%"/&gt;&lt;weather icon="%%weather_icon%%" number="%%weather_number%%" value="%%weather%%"/&gt;&lt;lastupdate value="%%last_update%%"/&gt;&lt;/current&gt;<defaultActions>
                <defaultMessageActions>
                   <fieldActionGroup>
                      <fieldAction enabled="false" type="1">
@@ -143,7 +143,10 @@
                      <fieldAction type="0"/>
                   </fieldAction>
                </setAction>
-               <setAction index="0" path="/text/current/wind/gusts/{}" replaceActionType="0" replaceOuterType="0">
+               <updateField path="/text/current/wind/gusts/value">
+                  <_c optional="true"/>
+               </updateField>
+               <setAction index="1" path="/text/current/wind/gusts/{}" replaceActionType="0" replaceOuterType="0">
                   <fieldAction type="0">
                      <fieldAction type="0"/>
                   </fieldAction>
@@ -231,6 +234,7 @@
       <tag defaultValue="" description="" name="last_update"/>
       <tag defaultValue="" description="" name="wind_direction_name"/>
       <tag defaultValue="" description="" name="weather_number"/>
+      <tag defaultValue="" description="" name="wind_gusts"/>
       <tag defaultValue="" description="" name="clouds"/>
       <tag defaultValue="" description="" name="temp_unit"/>
       <tag defaultValue="" description="" name="pressure"/>

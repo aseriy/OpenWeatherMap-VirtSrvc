@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?><a3Message _version="1.1" createdTimestamp="1460293463979" createdUser="rational" id="3ab6a11c:153fdb0ffc5:-75b7" type="message_resource" updatedTimestamp="1460298946807" updatedUser="rational" version="1.2">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <transport name="3ef6394d:153247ac697:-7eb5"/>
+   <formatter name="HTTP_Message"/>
+   <headerMessage assocdefid="Http Publish" meTy="Message" name="" sch="Http Publish" type="12" version="1.2">
+      <fieldActionGroup>
+         <fieldAction enabled="false" type="1">
+            <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+         </fieldAction>
+      </fieldActionGroup>
+      <_c meTy="String" name="Method" sch="Http Publish" type="7" value="POST" version="1.2">
+         <fieldActionGroup>
+            <fieldAction type="0">
+               <fieldAction exp="POST" type="0"/>
+            </fieldAction>
+         </fieldActionGroup>
+      </_c>
+      <_c meTy="String" name="URL" sch="Http Publish" type="7" value="" version="1.2">
+         <fieldActionGroup>
+            <fieldAction type="0">
+               <fieldAction type="0"/>
+            </fieldAction>
+         </fieldActionGroup>
+      </_c>
+      <_c meTy="Message" name="httpDetails" sch="Http Publish" type="12" version="1.2">
+         <fieldActionGroup>
+            <fieldAction enabled="false" type="1">
+               <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+            </fieldAction>
+         </fieldActionGroup>
+         <_c meTy="String" name="Version" sch="Http Publish" type="7" version="1.2">
+            <fieldActionGroup>
+               <fieldAction type="0">
+                  <fieldAction type="0"/>
+               </fieldAction>
+            </fieldActionGroup>
+         </_c>
+         <_c meTy="Message" name="httpHeaders" sch="Http Publish" type="12" version="1.2">
+            <fieldActionGroup>
+               <fieldAction enabled="false" type="1">
+                  <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+               </fieldAction>
+            </fieldActionGroup>
+            <_c meTy="String" name="Content-Type" sch="Http Publish" type="7" value="application/json; charset=utf-8" version="1.2">
+               <fieldActionGroup>
+                  <fieldAction type="0">
+                     <fieldAction exp="application/json; charset=utf-8" type="0"/>
+                  </fieldAction>
+               </fieldActionGroup>
+            </_c>
+         </_c>
+         <_c meTy="Boolean" name="followRedirects" sch="Http Publish" type="8" value="true" version="1.2">
+            <fieldActionGroup>
+               <fieldAction type="0">
+                  <fieldAction exp="true" type="0"/>
+               </fieldAction>
+            </fieldActionGroup>
+         </_c>
+      </_c>
+      <_c meTy="String" name="MessageType" sch="Http Publish" type="7" value="http.text.message.type" version="1.2">
+         <fieldActionGroup>
+            <fieldAction type="0">
+               <fieldAction exp="http.text.message.type" type="0"/>
+            </fieldAction>
+         </fieldActionGroup>
+      </_c>
+   </headerMessage>
+   <bodyMessage assocdefid="Text" name="Text" sch="Text" type="12" version="1.2">
+      <fieldActionGroup>
+         <fieldAction enabled="false" type="1">
+            <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+         </fieldAction>
+      </fieldActionGroup>
+      <_c coreTypeInt="7" coreTypeName="String" name="text" nodeFormatter="JSON.nodeformatter" sch="Text" type="12" version="1.2">
+         <fieldExpander fieldExpanderID="JSON.fieldexpander" fieldSchema="JSON" fieldSchemaRoot="Object"/>
+         <contentTree>{"coord":{"lon":0.0,"lat":0.0},"weather":[{"id":800,"main":"Clear","description":"ясно","icon":"01d"}],"base":"cmc stations","main":{"temp":31.01,"pressure":1027,"humidity":54,"temp_min":28.4,"temp_max":33.8},"wind":{"speed":3.36,"deg":340},"clouds":{"all":1},"dt":1460291700,"sys":{"type":1,"id":2361,"message":0.0038,"country":"%%country%%","sunrise":0,"sunset":0},"id":0,"name":"%%city_name%%","cod":200}<defaultActions>
+               <defaultMessageActions>
+                  <fieldActionGroup>
+                     <fieldAction enabled="false" type="1">
+                        <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+                     </fieldAction>
+                     <fieldAction type="0">
+                        <fieldAction type="100"/>
+                     </fieldAction>
+                     <fieldAction enabled="false" type="1">
+                        <fieldAction enabled="false" type="5"/>
+                     </fieldAction>
+                     <fieldAction enabled="false" type="1">
+                        <fieldAction enabled="false" type="6" typeActionAllType="true" typeActionMetaType="false"/>
+                     </fieldAction>
+                  </fieldActionGroup>
+               </defaultMessageActions>
+               <defaultScalarActions>
+                  <fieldActionGroup>
+                     <fieldAction enabled="false" type="1">
+                        <fieldAction enabled="false" type="0"/>
+                     </fieldAction>
+                     <fieldAction type="0">
+                        <fieldAction type="0"/>
+                     </fieldAction>
+                     <fieldAction enabled="false" type="1">
+                        <fieldAction enabled="false" type="5"/>
+                     </fieldAction>
+                     <fieldAction enabled="false" type="1">
+                        <fieldAction enabled="false" type="6" typeActionAllType="true" typeActionMetaType="false"/>
+                     </fieldAction>
+                  </fieldActionGroup>
+               </defaultScalarActions>
+            </defaultActions>
+            <updates>
+               <updateField path="/text/Object">
+                  <_c assocdefid="Object"/>
+               </updateField>
+               <setAction index="0" path="/text/Object/coord/lon" replaceActionType="0" replaceOuterType="0">
+                  <fieldAction type="0">
+                     <fieldAction exp="%%longitude%%" type="0"/>
+                  </fieldAction>
+               </setAction>
+               <setAction index="1" path="/text/Object/coord/lat" replaceActionType="0" replaceOuterType="0">
+                  <fieldAction type="0">
+                     <fieldAction exp="%%latitude%%" type="0"/>
+                  </fieldAction>
+               </setAction>
+               <updateField path="/text/Object/weather">
+                  <_c assocdefid="Array"/>
+               </updateField>
+               <updateField path="/text/Object/weather/0">
+                  <_c name="0"/>
+               </updateField>
+               <setAction index="4" path="/text/Object/sys/sunrise" replaceActionType="0" replaceOuterType="0">
+                  <fieldAction type="0">
+                     <fieldAction exp="%%sun_rise_epoch%%" type="0"/>
+                  </fieldAction>
+               </setAction>
+               <setAction index="5" path="/text/Object/sys/sunset" replaceActionType="0" replaceOuterType="0">
+                  <fieldAction type="0">
+                     <fieldAction exp="%%sun_set_epoch%%" type="0"/>
+                  </fieldAction>
+               </setAction>
+               <setAction index="8" path="/text/Object/id" replaceActionType="0" replaceOuterType="0">
+                  <fieldAction type="0">
+                     <fieldAction exp="%%city_id%%" type="0"/>
+                  </fieldAction>
+               </setAction>
+            </updates>
+         </contentTree>
+         <fieldActionGroup>
+            <fieldAction type="0">
+               <fieldAction type="4"/>
+            </fieldAction>
+            <fieldAction enabled="false" type="1">
+               <fieldAction enabled="false" type="7"/>
+            </fieldAction>
+         </fieldActionGroup>
+      </_c>
+   </bodyMessage>
+   <tagDataStore inputMode="NONE" outputMode="NONE">
+      <tag defaultValue="" description="" name="visibility"/>
+      <tag defaultValue="" description="" name="sun_set"/>
+      <tag defaultValue="" description="" name="humidity_unit"/>
+      <tag defaultValue="" description="" name="wind_speed_name"/>
+      <tag defaultValue="" description="" name="weather"/>
+      <tag defaultValue="" description="" name="longitude"/>
+      <tag defaultValue="" description="" name="sun_rise_epoch"/>
+      <tag defaultValue="" description="" name="clouds_name"/>
+      <tag defaultValue="" description="" name="precipitation_unit"/>
+      <tag defaultValue="" description="" name="pressure_unit"/>
+      <tag defaultValue="" description="" name="country"/>
+      <tag defaultValue="" description="" name="precipitation_mode"/>
+      <tag defaultValue="" description="" name="humidity"/>
+      <tag defaultValue="" description="" name="wind_direction_code"/>
+      <tag defaultValue="" description="" name="temp"/>
+      <tag defaultValue="" description="" name="sun_rise"/>
+      <tag defaultValue="" description="" name="latitude"/>
+      <tag defaultValue="" description="" name="city_name"/>
+      <tag defaultValue="" description="" name="city_id"/>
+      <tag defaultValue="" description="" name="last_update"/>
+      <tag defaultValue="" description="" name="wind_direction_name"/>
+      <tag defaultValue="" description="" name="weather_number"/>
+      <tag defaultValue="" description="" name="clouds"/>
+      <tag defaultValue="" description="" name="temp_unit"/>
+      <tag defaultValue="" description="" name="pressure"/>
+      <tag defaultValue="" description="" name="wind_direction"/>
+      <tag defaultValue="" description="" name="wind_speed"/>
+      <tag defaultValue="" description="" name="weather_icon"/>
+      <tag defaultValue="" description="" name="temp_max"/>
+      <tag defaultValue="" description="" name="precipitation"/>
+      <tag defaultValue="" description="" name="temp_min"/>
+      <tag defaultValue="" description="" name="sun_set_epoch"/>
+   </tagDataStore>
+</a3Message>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1456838106185" createdUser="rational" id="-70bdf138:1532d24338b:-4049" type="stub_resource" updatedTimestamp="1459311907911" updatedUser="rational" version="1.1">
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1456838106185" createdUser="rational" id="-70bdf138:1532d24338b:-4049" type="stub_resource" updatedTimestamp="1460388777251" updatedUser="rational" version="1.1">
    <loggingConfiguration debug="true" writeStubEventsToDB="true"/>
    <resourceConfig description="" name="">
       <testTree>
@@ -327,7 +327,7 @@
                   </editableResource>
                   <editableResource id="-70bdf138:1532d24338b:-403a" selfDescribing="Configure the filtering and validation for this Case action" type="message_case_action" version="1.0">
                      <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
-                     <resourceConfig description="by city name" name="&quot;Text&quot; using schema &quot;Text&quot;">
+                     <resourceConfig description="by city name, xml" name="&quot;Text&quot; using schema &quot;Text&quot;">
                         <FilterExpressions option="NOTHING" type="script:ECMAScript"/>
                         <bodyfilters assocdefid="Text" name="Text" sch="Text" type="12" version="1.2">
                            <fieldActionGroup>
@@ -368,11 +368,11 @@
                                     </filterActionGroup>
                                  </_c>
                                  <_c name="mode" sch="-70bdf138:1532d24338b:-7b04" type="7" version="1.2">
-                                    <fieldActionGroup>
-                                       <fieldAction description="Store copy of field in tag 'mode'" tN="mode" type="2">
-                                          <dataAction type="Copy"/>
+                                    <filterActionGroup>
+                                       <fieldAction type="1">
+                                          <fieldAction exp="xml" type="0"/>
                                        </fieldAction>
-                                    </fieldActionGroup>
+                                    </filterActionGroup>
                                  </_c>
                                  <_c name="units" sch="-70bdf138:1532d24338b:-7b04" type="7" version="1.2">
                                     <fieldActionGroup>
@@ -467,15 +467,25 @@
                            <_c meTy="Date-Time" name="rcvdTimestamp" sch="Http Subscribe" type="11" version="1.2"/>
                         </headerfilters>
                         <childActions>
+                           <editableResource id="-3af80750:15405511ab7:-6c34" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+                              <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                              <resourceConfig description="" eval_type="Mozilla Rhino" function="tags[&quot;lang&quot;].toLowerCase()" name="Run &quot;tags[&quot;lang&quot;].toLowerCase()&quot;, store into&quot;lang&quot; (2)">
+                                 <fieldActionGroup>
+                                    <fieldAction description="Store copy of field in tag 'lang'" tN="lang" type="2">
+                                       <dataAction type="Copy"/>
+                                    </fieldAction>
+                                 </fieldActionGroup>
+                              </resourceConfig>
+                           </editableResource>
                            <editableResource id="-70bdf138:1532d24338b:6c70" selfDescribing="Use a value from the current run to extract information from a test data set." type="test_data_lookup_action" version="1.0">
                               <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
-                              <resourceConfig description="" name="Search &quot;OWM&quot; in &quot;apikey&quot; and in &quot;lang&quot; and for &quot;%%city%%&quot; in &quot;query&quot; and in &quot;units&quot;">
+                              <resourceConfig description="" name="Search &quot;Current Weather&quot; in &quot;apikey&quot; and in &quot;lang&quot; and for &quot;%%city%%&quot; in &quot;query&quot; and in &quot;units&quot;">
                                  <true id="-70bdf138:1532d24338b:6c71" selfDescribing="Found" type="test_data_lookup_path_action" version="1.0">
                                     <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
                                     <resourceConfig description="" name="" path="0">
                                        <editableResource id="2198a20a:153b550dfd7:-7586" selfDescribing="Respond to a previously received request message.  Select the relevant request from the drop-down and edit the content of the message to send." type="send_reply_action" version="1.0">
                                           <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
-                                          <resourceConfig bodyLinkId="-70bdf138:1534257a94b:-7a17" description="" formatter="HTTP_Message" headerLinkId="-70bdf138:1534257a94b:-7a17" isBodyLinked="true" isHeaderLinked="false" name="Body linked to &quot;Current Weather&quot;, &quot;Text&quot; using schema &quot;Text&quot;" receiverequestid="-70bdf138:1532d24338b:-403e">
+                                          <resourceConfig bodyLinkId="-70bdf138:1534257a94b:-7a17" description="" formatter="HTTP_Message" headerLinkId="-70bdf138:1534257a94b:-7a17" isBodyLinked="true" isHeaderLinked="false" name="Body linked to &quot;Current Weather XML&quot;, &quot;Text&quot; using schema &quot;Text&quot;" receiverequestid="-70bdf138:1532d24338b:-403e">
                                              <replyHeaderMessage type="12" version="1.2">
                                                 <fieldActionGroup>
                                                    <fieldAction enabled="false" type="1">
@@ -562,7 +572,224 @@
                                     <resourceConfig description="" name="" path="1">
                                        <editableResource id="-70bdf138:1532d24338b:729f" selfDescribing="Respond to a previously received request message.  Select the relevant request from the drop-down and edit the content of the message to send." type="send_reply_action" version="1.0">
                                           <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
-                                          <resourceConfig bodyLinkId="-70bdf138:1534257a94b:-74c8" description="" headerLinkId="-70bdf138:1534257a94b:-74c8" isBodyLinked="true" isHeaderLinked="true" name="Linked to &quot;Current Weather, City Not Found&quot;, &quot;Text&quot; using schema &quot;Text&quot; (2)" receiverequestid="-70bdf138:1532d24338b:-403e"/>
+                                          <resourceConfig bodyLinkId="-70bdf138:1534257a94b:-74c8" description="" headerLinkId="-70bdf138:1534257a94b:-74c8" isBodyLinked="true" isHeaderLinked="true" name="Linked to &quot;City Not Found&quot;, &quot;Text&quot; using schema &quot;Text&quot;" receiverequestid="-70bdf138:1532d24338b:-403e"/>
+                                       </editableResource>
+                                    </resourceConfig>
+                                 </false>
+                                 <props allMatches="false">
+                                    <tdsref id="-47e24a82:153a9130a57:-5ad5" lkname="Current Weather" lkpath="OpenWeatherMap/Current Weather/Current Weather" type="db_test_data"/>
+                                    <lookups column="apikey" lookupValue="%%apikey%%"/>
+                                    <lookups column="lang" lookupValue="%%lang%%"/>
+                                    <lookups column="query" lookupValue="%%city%%"/>
+                                    <lookups column="units" lookupValue="%%units%%"/>
+                                 </props>
+                                 <mapper disableFiltersWhenEmpty="false" knownColumns="city_name,visibility,query,sun_set,lang,apikey,city_id,last_update,wind_direction_name,humidity_unit,wind_speed_name,weather,longitude,weather_number,sun_rise_epoch,wind_gusts,clouds,temp_unit,pressure,wind_direction,clouds_name,precipitation_unit,wind_speed,pressure_unit,units,country,humidity,precipitation_mode,weather_icon,temp_max,precipitation,temp_min,wind_direction_code,sun_rise,temp,latitude,sun_set_epoch">
+                                    <mapping columnName="last_update" tagName="last_update" type="4"/>
+                                    <mapping columnName="city_id" tagName="city_id" type="4"/>
+                                    <mapping columnName="city_name" tagName="city_name" type="4"/>
+                                    <mapping columnName="country" tagName="country" type="4"/>
+                                    <mapping columnName="longitude" tagName="longitude" type="4"/>
+                                    <mapping columnName="latitude" tagName="latitude" type="4"/>
+                                    <mapping columnName="apikey" tagName="apikey" type="4"/>
+                                    <mapping columnName="units" tagName="units" type="4"/>
+                                    <mapping columnName="lang" tagName="lang" type="4"/>
+                                    <mapping columnName="sun_rise" tagName="sun_rise" type="4"/>
+                                    <mapping columnName="sun_rise_epoch" tagName="sun_rise_epoch" type="4"/>
+                                    <mapping columnName="sun_set" tagName="sun_set" type="4"/>
+                                    <mapping columnName="sun_set_epoch" tagName="sun_set_epoch" type="4"/>
+                                    <mapping columnName="temp" tagName="temp" type="4"/>
+                                    <mapping columnName="temp_min" tagName="temp_min" type="4"/>
+                                    <mapping columnName="temp_max" tagName="temp_max" type="4"/>
+                                    <mapping columnName="temp_unit" tagName="temp_unit" type="4"/>
+                                    <mapping columnName="humidity" tagName="humidity" type="4"/>
+                                    <mapping columnName="pressure" tagName="pressure" type="4"/>
+                                    <mapping columnName="wind_speed" tagName="wind_speed" type="4"/>
+                                    <mapping columnName="wind_speed_name" tagName="wind_speed_name" type="4"/>
+                                    <mapping columnName="wind_gusts" tagName="wind_gusts" type="4"/>
+                                    <mapping columnName="wind_direction" tagName="wind_direction" type="4"/>
+                                    <mapping columnName="wind_direction_code" tagName="wind_direction_code" type="4"/>
+                                    <mapping columnName="wind_direction_name" tagName="wind_direction_name" type="4"/>
+                                    <mapping columnName="clouds" tagName="clouds" type="4"/>
+                                    <mapping columnName="clouds_name" tagName="clouds_name" type="4"/>
+                                    <mapping columnName="visibility" tagName="visibility" type="4"/>
+                                    <mapping columnName="precipitation" tagName="precipitation" type="4"/>
+                                    <mapping columnName="precipitation_mode" tagName="precipitation_mode" type="4"/>
+                                    <mapping columnName="precipitation_unit" tagName="precipitation_unit" type="4"/>
+                                    <mapping columnName="weather_number" tagName="weather_number" type="4"/>
+                                    <mapping columnName="weather" tagName="weather" type="4"/>
+                                    <mapping columnName="weather_icon" tagName="weather_icon" type="4"/>
+                                    <mapping columnName="humidity_unit" tagName="humidity_unit" type="4"/>
+                                    <mapping columnName="pressure_unit" tagName="pressure_unit" type="4"/>
+                                    <mapping columnName="city" tagName="city" type="5"/>
+                                 </mapper>
+                              </resourceConfig>
+                           </editableResource>
+                        </childActions>
+                     </resourceConfig>
+                  </editableResource>
+                  <editableResource id="3ab6a11c:153fdb0ffc5:-69d9" selfDescribing="Configure the filtering and validation for this Case action" type="message_case_action" version="1.0">
+                     <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                     <resourceConfig description="by city name, json" name="&quot;Text&quot; using schema &quot;Text&quot; (4)">
+                        <FilterExpressions option="NOTHING" type="script:ECMAScript"/>
+                        <bodyfilters assocdefid="Text" name="Text" sch="Text" type="12" version="1.2">
+                           <fieldActionGroup>
+                              <fieldAction enabled="false" type="1">
+                                 <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+                              </fieldAction>
+                           </fieldActionGroup>
+                           <_c coreTypeInt="7" coreTypeName="String" name="text" nodeFormatter="rest_nodeformatter" sch="Text" type="12" version="1.2">
+                              <fieldExpander fieldExpanderID="rest_fieldexpander" fieldSchema="-70bdf138:1532d24338b:-7b04" fieldSchemaRoot="Current Weather"/>
+                              <fieldActionGroup>
+                                 <fieldAction enabled="false" type="1">
+                                    <fieldAction enabled="false" type="7"/>
+                                 </fieldAction>
+                              </fieldActionGroup>
+                              <_c assocdefid="Current Weather" name="Current Weather" sch="-70bdf138:1532d24338b:-7b04" type="12" version="1.2">
+                                 <fieldActionGroup>
+                                    <fieldAction enabled="false" type="1">
+                                       <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+                                    </fieldAction>
+                                 </fieldActionGroup>
+                                 <_c name="apikey" sch="-70bdf138:1532d24338b:-7b04" type="7" version="1.2">
+                                    <fieldActionGroup>
+                                       <fieldAction description="Store copy of field in tag 'apikey'" tN="apikey" type="2">
+                                          <dataAction type="Copy"/>
+                                       </fieldAction>
+                                    </fieldActionGroup>
+                                 </_c>
+                                 <_c name="city" sch="-70bdf138:1532d24338b:-7b04" type="7" version="1.2">
+                                    <fieldActionGroup>
+                                       <fieldAction description="Store copy of field in tag 'city'" tN="city" type="2">
+                                          <dataAction type="Copy"/>
+                                       </fieldAction>
+                                    </fieldActionGroup>
+                                    <filterActionGroup>
+                                       <fieldAction type="1">
+                                          <fieldAction type="10"/>
+                                       </fieldAction>
+                                    </filterActionGroup>
+                                 </_c>
+                                 <_c name="units" sch="-70bdf138:1532d24338b:-7b04" type="7" version="1.2">
+                                    <fieldActionGroup>
+                                       <fieldAction description="Store copy of field in tag 'units'" tN="units" type="2">
+                                          <dataAction type="Copy"/>
+                                       </fieldAction>
+                                    </fieldActionGroup>
+                                 </_c>
+                                 <_c name="lang" sch="-70bdf138:1532d24338b:-7b04" type="7" version="1.2">
+                                    <fieldActionGroup>
+                                       <fieldAction description="Store copy of field in tag 'lang'" tN="lang" type="2">
+                                          <dataAction type="Copy"/>
+                                       </fieldAction>
+                                    </fieldActionGroup>
+                                 </_c>
+                                 <_c name="body" sch="-70bdf138:1532d24338b:-7b04" type="12" version="1.2">
+                                    <fieldActionGroup>
+                                       <fieldAction enabled="false" type="1">
+                                          <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+                                       </fieldAction>
+                                    </fieldActionGroup>
+                                    <filterActionGroup>
+                                       <fieldAction type="1">
+                                          <fieldAction type="10"/>
+                                       </fieldAction>
+                                    </filterActionGroup>
+                                    <_c name="text" sch="-70bdf138:1532d24338b:-7b04" type="7" version="1.2"/>
+                                 </_c>
+                              </_c>
+                           </_c>
+                        </bodyfilters>
+                        <headerfilters assocdefid="Http Subscribe" meTy="Message" name="" sch="Http Subscribe" type="12" version="1.2">
+                           <fieldActionGroup>
+                              <fieldAction enabled="false" type="1">
+                                 <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+                              </fieldAction>
+                           </fieldActionGroup>
+                           <_c meTy="String" name="Method" sch="Http Subscribe" type="7" version="1.2">
+                              <filterActionGroup>
+                                 <fieldAction enabled="false" type="1">
+                                    <fieldAction enabled="false" exp="GET" type="0"/>
+                                 </fieldAction>
+                              </filterActionGroup>
+                           </_c>
+                           <_c meTy="String" name="URL" sch="Http Subscribe" type="7" version="1.2">
+                              <filterActionGroup>
+                                 <fieldAction enabled="false" type="1">
+                                    <fieldAction enabled="false" exp="/data/2.5/weather?q={city}&amp;units={units}&amp;lang={lang}&amp;mode={mode}&amp;APPID={apikey}" type="0"/>
+                                 </fieldAction>
+                              </filterActionGroup>
+                           </_c>
+                           <_c meTy="Message" name="httpDetails" sch="Http Subscribe" type="12" version="1.2">
+                              <fieldActionGroup>
+                                 <fieldAction enabled="false" type="1">
+                                    <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+                                 </fieldAction>
+                              </fieldActionGroup>
+                              <_c meTy="String" name="Version" sch="Http Subscribe" type="7" version="1.2">
+                                 <filterActionGroup>
+                                    <fieldAction enabled="false" type="1">
+                                       <fieldAction enabled="false" exp="1.1" type="0"/>
+                                    </fieldAction>
+                                 </filterActionGroup>
+                              </_c>
+                              <_c meTy="Message" name="httpHeaders" sch="Http Subscribe" type="12" version="1.2">
+                                 <fieldActionGroup>
+                                    <fieldAction enabled="false" type="1">
+                                       <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+                                    </fieldAction>
+                                 </fieldActionGroup>
+                                 <filterActionGroup>
+                                    <fieldAction enabled="false" type="1">
+                                       <fieldAction enabled="false" type="10"/>
+                                    </fieldAction>
+                                 </filterActionGroup>
+                                 <_c meTy="String" name="Accept" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="Referer" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="Accept-Language" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="Accept-Encoding" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="If-Modified-Since" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="If-None-Match" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="User-Agent" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="Content-Type" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="SOAPAction" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="Host" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="Connection" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="Cookie" sch="Http Subscribe" type="7" version="1.2"/>
+                              </_c>
+                              <_c meTy="Boolean" name="followRedirects" sch="Http Subscribe" type="8" version="1.2"/>
+                           </_c>
+                           <_c meTy="String" name="MessageType" sch="Http Subscribe" type="7" version="1.2"/>
+                           <_c meTy="Date-Time" name="rcvdTimestamp" sch="Http Subscribe" type="11" version="1.2"/>
+                        </headerfilters>
+                        <childActions>
+                           <editableResource id="-3af80750:15405511ab7:-7638" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+                              <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                              <resourceConfig description="" eval_type="Mozilla Rhino" function="tags[&quot;lang&quot;].toLowerCase()" name="Run &quot;tags[&quot;lang&quot;].toLowerCase()&quot;, store into&quot;lang&quot;">
+                                 <fieldActionGroup>
+                                    <fieldAction description="Store copy of field in tag 'lang'" tN="lang" type="2">
+                                       <dataAction type="Copy"/>
+                                    </fieldAction>
+                                 </fieldActionGroup>
+                              </resourceConfig>
+                           </editableResource>
+                           <editableResource id="3ab6a11c:153fdb0ffc5:-69d8" selfDescribing="Use a value from the current run to extract information from a test data set." type="test_data_lookup_action" version="1.0">
+                              <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                              <resourceConfig description="" name="Search &quot;Current Weather&quot; in &quot;apikey&quot; and in &quot;lang&quot; and for &quot;%%city%%&quot; in &quot;query&quot; and in &quot;units&quot;">
+                                 <true id="3ab6a11c:153fdb0ffc5:-69d7" selfDescribing="Found" type="test_data_lookup_path_action" version="1.0">
+                                    <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                                    <resourceConfig description="" name="" path="0">
+                                       <editableResource id="3ab6a11c:153fdb0ffc5:-503a" selfDescribing="Respond to a previously received request message.  Select the relevant request from the drop-down and edit the content of the message to send." type="send_reply_action" version="1.0">
+                                          <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                                          <resourceConfig bodyLinkId="3ab6a11c:153fdb0ffc5:-75b7" description="" headerLinkId="3ab6a11c:153fdb0ffc5:-75b7" isBodyLinked="true" isHeaderLinked="true" name="Linked to &quot;Current Weather JSON&quot;, &quot;Text&quot; using schema &quot;Text&quot;" receiverequestid="-70bdf138:1532d24338b:-403e"/>
+                                       </editableResource>
+                                    </resourceConfig>
+                                 </true>
+                                 <false id="3ab6a11c:153fdb0ffc5:-69d5" selfDescribing="Not Found" type="test_data_lookup_path_action" version="1.0">
+                                    <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                                    <resourceConfig description="" name="" path="1">
+                                       <editableResource id="3ab6a11c:153fdb0ffc5:-69d4" selfDescribing="Respond to a previously received request message.  Select the relevant request from the drop-down and edit the content of the message to send." type="send_reply_action" version="1.0">
+                                          <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                                          <resourceConfig bodyLinkId="-70bdf138:1534257a94b:-74c8" description="" headerLinkId="-70bdf138:1534257a94b:-74c8" isBodyLinked="true" isHeaderLinked="true" name="Linked to &quot;City Not Found&quot;, &quot;Text&quot; using schema &quot;Text&quot;" receiverequestid="-70bdf138:1532d24338b:-403e"/>
                                        </editableResource>
                                     </resourceConfig>
                                  </false>
@@ -573,7 +800,7 @@
                                     <lookups column="query" lookupValue="%%city%%"/>
                                     <lookups column="units" lookupValue="%%units%%"/>
                                  </props>
-                                 <mapper disableFiltersWhenEmpty="false" knownColumns="visibility,query,percipitation_unit,sun_set,lang,city,apikey,id,city_id,wind_direction_name,humidity_unit,wind_speed_name,weather,longitude,weather_number,clouds,temp_unit,pressure,wind_direction,clouds_name,wind_speed,pressure_unit,units,country,humidity,weather_icon,temp_max,percipitation,temp_min,wind_direction_code,sun_rise,temp,latitude,percipitation_mode">
+                                 <mapper disableFiltersWhenEmpty="false" knownColumns="visibility,query,percipitation_unit,sun_set,lang,apikey,city,city_id,id,humidity_unit,wind_direction_name,wind_speed_name,weather,weather_number,longitude,clouds,temp_unit,pressure,wind_direction,clouds_name,pressure_unit,wind_speed,units,country,humidity,weather_icon,percipitation,temp_max,wind_direction_code,temp_min,temp,sun_rise,latitude,percipitation_mode">
                                     <mapping columnName="city" tagName="city" type="4"/>
                                     <mapping columnName="country" tagName="country" type="4"/>
                                     <mapping columnName="longitude" tagName="longitude" type="4"/>
@@ -615,7 +842,7 @@
                   </editableResource>
                   <editableResource id="-70bdf138:1532d24338b:-2118" selfDescribing="Configure the filtering and validation for this Case action" type="message_case_action" version="1.0">
                      <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
-                     <resourceConfig description="by city id" name="exists() AND &quot;Text&quot; using schema &quot;Text&quot;">
+                     <resourceConfig description="by city id, xml" name="exists() AND &quot;Text&quot; using schema &quot;Text&quot;">
                         <FilterExpressions option="NOTHING" type="script:ECMAScript"/>
                         <bodyfilters assocdefid="Text" name="Text" sch="Text" type="12" version="1.2">
                            <fieldActionGroup>
@@ -670,8 +897,193 @@
                                     </fieldActionGroup>
                                  </_c>
                                  <_c name="mode" sch="-70bdf138:1532d24338b:-7b04" type="7" version="1.2">
+                                    <filterActionGroup>
+                                       <fieldAction type="1">
+                                          <fieldAction exp="xml" type="0"/>
+                                       </fieldAction>
+                                    </filterActionGroup>
+                                 </_c>
+                                 <_c name="body" sch="-70bdf138:1532d24338b:-7b04" type="12" version="1.2">
                                     <fieldActionGroup>
-                                       <fieldAction description="Store copy of field 'mode' in tag 'mode'" tN="mode" type="2">
+                                       <fieldAction enabled="false" type="1">
+                                          <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+                                       </fieldAction>
+                                    </fieldActionGroup>
+                                    <filterActionGroup>
+                                       <fieldAction type="1">
+                                          <fieldAction type="10"/>
+                                       </fieldAction>
+                                    </filterActionGroup>
+                                    <_c name="text" sch="-70bdf138:1532d24338b:-7b04" type="7" version="1.2"/>
+                                 </_c>
+                              </_c>
+                           </_c>
+                        </bodyfilters>
+                        <headerfilters assocdefid="Http Subscribe" meTy="Message" name="" sch="Http Subscribe" type="12" version="1.2">
+                           <fieldActionGroup>
+                              <fieldAction enabled="false" type="1">
+                                 <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+                              </fieldAction>
+                           </fieldActionGroup>
+                           <_c meTy="String" name="Method" sch="Http Subscribe" type="7" version="1.2"/>
+                           <_c meTy="String" name="URL" sch="Http Subscribe" type="7" version="1.2"/>
+                           <_c meTy="Message" name="httpDetails" sch="Http Subscribe" type="12" version="1.2">
+                              <fieldActionGroup>
+                                 <fieldAction enabled="false" type="1">
+                                    <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+                                 </fieldAction>
+                              </fieldActionGroup>
+                              <_c meTy="String" name="Version" sch="Http Subscribe" type="7" version="1.2"/>
+                              <_c meTy="Message" name="httpHeaders" sch="Http Subscribe" type="12" version="1.2">
+                                 <fieldActionGroup>
+                                    <fieldAction enabled="false" type="1">
+                                       <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+                                    </fieldAction>
+                                 </fieldActionGroup>
+                                 <_c meTy="String" name="Accept" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="Referer" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="Accept-Language" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="Accept-Encoding" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="If-Modified-Since" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="If-None-Match" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="User-Agent" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="Content-Type" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="SOAPAction" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="Host" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="Connection" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="Cookie" sch="Http Subscribe" type="7" version="1.2"/>
+                              </_c>
+                              <_c meTy="Boolean" name="followRedirects" sch="Http Subscribe" type="8" version="1.2"/>
+                           </_c>
+                           <_c meTy="String" name="MessageType" sch="Http Subscribe" type="7" version="1.2"/>
+                           <_c meTy="Date-Time" name="rcvdTimestamp" sch="Http Subscribe" type="11" version="1.2"/>
+                        </headerfilters>
+                        <childActions>
+                           <editableResource id="-3af80750:15405511ab7:-6670" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+                              <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                              <resourceConfig description="" eval_type="Mozilla Rhino" function="tags[&quot;lang&quot;].toLowerCase()" name="Run &quot;tags[&quot;lang&quot;].toLowerCase()&quot;, store into&quot;lang&quot;">
+                                 <fieldActionGroup>
+                                    <fieldAction description="Store copy of field in tag 'lang'" tN="lang" type="2">
+                                       <dataAction type="Copy"/>
+                                    </fieldAction>
+                                 </fieldActionGroup>
+                              </resourceConfig>
+                           </editableResource>
+                           <editableResource id="-70bdf138:1534257a94b:-7f4e" selfDescribing="Use a value from the current run to extract information from a test data set." type="test_data_lookup_action" version="1.0">
+                              <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                              <resourceConfig description="" name="Search &quot;Recorded&quot; in &quot;apikey&quot; and for &quot;%%id%%&quot; in &quot;city_id&quot; and in &quot;lang&quot; and in &quot;units&quot; (2)">
+                                 <true id="-70bdf138:1534257a94b:-7f4d" selfDescribing="Found" type="test_data_lookup_path_action" version="1.0">
+                                    <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                                    <resourceConfig description="" name="" path="0">
+                                       <editableResource id="-70bdf138:1534257a94b:-7f4c" selfDescribing="Respond to a previously received request message.  Select the relevant request from the drop-down and edit the content of the message to send." type="send_reply_action" version="1.0">
+                                          <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                                          <resourceConfig bodyLinkId="-70bdf138:1534257a94b:-7a17" description="" headerLinkId="-70bdf138:1534257a94b:-7a17" isBodyLinked="true" isHeaderLinked="true" name="Linked to &quot;Current Weather XML&quot;, &quot;Text&quot; using schema &quot;Text&quot;" receiverequestid="-70bdf138:1532d24338b:-403e"/>
+                                       </editableResource>
+                                    </resourceConfig>
+                                 </true>
+                                 <false id="-70bdf138:1534257a94b:-7f4b" selfDescribing="Not Found" type="test_data_lookup_path_action" version="1.0">
+                                    <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                                    <resourceConfig description="" name="" path="1">
+                                       <editableResource id="-70bdf138:1534257a94b:-7f4a" selfDescribing="Respond to a previously received request message.  Select the relevant request from the drop-down and edit the content of the message to send." type="send_reply_action" version="1.0">
+                                          <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                                          <resourceConfig bodyLinkId="-70bdf138:1534257a94b:-74c8" description="" headerLinkId="-70bdf138:1534257a94b:-74c8" isBodyLinked="true" isHeaderLinked="true" name="Linked to &quot;City Not Found&quot;, &quot;Text&quot; using schema &quot;Text&quot;" receiverequestid="-70bdf138:1532d24338b:-403e"/>
+                                       </editableResource>
+                                    </resourceConfig>
+                                 </false>
+                                 <props allMatches="false">
+                                    <tdsref id="-70bdf138:1532d24338b:-4043" lkname="Recorded" lkpath="OpenWeatherMap/Current Weather/Recorded" type="simple_test_data"/>
+                                    <lookups column="apikey" lookupValue="%%apikey%%"/>
+                                    <lookups column="city_id" lookupValue="%%id%%"/>
+                                    <lookups column="lang" lookupValue="%%lang%%"/>
+                                    <lookups column="units" lookupValue="%%units%%"/>
+                                 </props>
+                                 <mapper disableFiltersWhenEmpty="false" knownColumns="city_name,visibility,huminity,sun_set,lang,city,mode,apikey,temperature,city_id,coord_lon,temperature_unit,last_update,wind_direction_name,humidity_unit,wind_speed_name,weather,weather_number,clouds,pressure,coord_lat,wind_direction,temperature_max,clouds_name,precipitation_unit,temperature_min,wind_speed,pressure_unit,units,country,precipitation_mode,weather_icon,precipitation,wind_direction_code,sun_rise,replyId">
+                                    <mapping columnName="city" tagName="city" type="4"/>
+                                    <mapping columnName="units" tagName="units" type="4"/>
+                                    <mapping columnName="lang" tagName="lang" type="4"/>
+                                    <mapping columnName="mode" tagName="mode" type="4"/>
+                                    <mapping columnName="apikey" tagName="apikey" type="4"/>
+                                    <mapping columnName="city_id" tagName="city_id" type="4"/>
+                                    <mapping columnName="city_name" tagName="city_name" type="4"/>
+                                    <mapping columnName="country" tagName="country" type="4"/>
+                                    <mapping columnName="sun_rise" tagName="sun_rise" type="4"/>
+                                    <mapping columnName="sun_set" tagName="sun_set" type="4"/>
+                                    <mapping columnName="pressure" tagName="pressure" type="4"/>
+                                    <mapping columnName="wind_speed" tagName="wind_speed" type="4"/>
+                                    <mapping columnName="wind_speed_name" tagName="wind_speed_name" type="4"/>
+                                    <mapping columnName="wind_direction" tagName="wind_direction" type="4"/>
+                                    <mapping columnName="wind_direction_code" tagName="wind_direction_code" type="4"/>
+                                    <mapping columnName="wind_direction_name" tagName="wind_direction_name" type="4"/>
+                                    <mapping columnName="clouds" tagName="clouds" type="4"/>
+                                    <mapping columnName="clouds_name" tagName="clouds_name" type="4"/>
+                                    <mapping columnName="visibility" tagName="visibility" type="4"/>
+                                    <mapping columnName="precipitation" tagName="precipitation" type="4"/>
+                                    <mapping columnName="precipitation_mode" tagName="precipitation_mode" type="4"/>
+                                    <mapping columnName="precipitation_unit" tagName="precipitation_unit" type="4"/>
+                                    <mapping columnName="weather_number" tagName="weather_number" type="4"/>
+                                    <mapping columnName="weather" tagName="weather" type="4"/>
+                                    <mapping columnName="weather_icon" tagName="weather_icon" type="4"/>
+                                    <mapping columnName="last_update" tagName="last_update" type="4"/>
+                                    <mapping columnName="humidity_unit" tagName="humidity_unit" type="4"/>
+                                    <mapping columnName="pressure_unit" tagName="pressure_unit" type="4"/>
+                                 </mapper>
+                              </resourceConfig>
+                           </editableResource>
+                        </childActions>
+                     </resourceConfig>
+                  </editableResource>
+                  <editableResource id="-3af80750:15405511ab7:-5be7" selfDescribing="Configure the filtering and validation for this Case action" type="message_case_action" version="1.0">
+                     <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                     <resourceConfig description="by city id, json" name="&quot;Text&quot; using schema &quot;Text&quot; (5)">
+                        <FilterExpressions option="NOTHING" type="script:ECMAScript"/>
+                        <bodyfilters assocdefid="Text" name="Text" sch="Text" type="12" version="1.2">
+                           <fieldActionGroup>
+                              <fieldAction enabled="false" type="1">
+                                 <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+                              </fieldAction>
+                           </fieldActionGroup>
+                           <_c coreTypeInt="7" coreTypeName="String" name="text" nodeFormatter="rest_nodeformatter" sch="Text" type="12" version="1.2">
+                              <fieldExpander fieldExpanderID="rest_fieldexpander" fieldSchema="-70bdf138:1532d24338b:-7b04" fieldSchemaRoot="Current Weather"/>
+                              <fieldActionGroup>
+                                 <fieldAction enabled="false" type="1">
+                                    <fieldAction enabled="false" type="7"/>
+                                 </fieldAction>
+                              </fieldActionGroup>
+                              <_c assocdefid="Current Weather" name="Current Weather" sch="-70bdf138:1532d24338b:-7b04" type="12" version="1.2">
+                                 <fieldActionGroup>
+                                    <fieldAction enabled="false" type="1">
+                                       <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+                                    </fieldAction>
+                                 </fieldActionGroup>
+                                 <_c name="apikey" sch="-70bdf138:1532d24338b:-7b04" type="7" version="1.2">
+                                    <fieldActionGroup>
+                                       <fieldAction description="Store copy of field 'apikey' in tag 'apikey'" tN="apikey" type="2">
+                                          <dataAction type="Copy"/>
+                                       </fieldAction>
+                                    </fieldActionGroup>
+                                 </_c>
+                                 <_c name="id" sch="-70bdf138:1532d24338b:-7b04" type="3" version="1.2">
+                                    <fieldActionGroup>
+                                       <fieldAction description="Store copy of field in tag 'id'" tN="id" type="2">
+                                          <dataAction type="Copy"/>
+                                       </fieldAction>
+                                    </fieldActionGroup>
+                                    <filterActionGroup>
+                                       <fieldAction type="1">
+                                          <fieldAction type="10"/>
+                                       </fieldAction>
+                                    </filterActionGroup>
+                                 </_c>
+                                 <_c name="units" sch="-70bdf138:1532d24338b:-7b04" type="7" version="1.2">
+                                    <fieldActionGroup>
+                                       <fieldAction description="Store copy of field 'units' in tag 'units'" tN="units" type="2">
+                                          <dataAction type="Copy"/>
+                                       </fieldAction>
+                                    </fieldActionGroup>
+                                 </_c>
+                                 <_c name="lang" sch="-70bdf138:1532d24338b:-7b04" type="7" version="1.2">
+                                    <fieldActionGroup>
+                                       <fieldAction description="Store copy of field 'lang' in tag 'lang'" tN="lang" type="2">
                                           <dataAction type="Copy"/>
                                        </fieldAction>
                                     </fieldActionGroup>
@@ -732,33 +1144,42 @@
                            <_c meTy="Date-Time" name="rcvdTimestamp" sch="Http Subscribe" type="11" version="1.2"/>
                         </headerfilters>
                         <childActions>
-                           <editableResource id="-70bdf138:1534257a94b:-7f4e" selfDescribing="Use a value from the current run to extract information from a test data set." type="test_data_lookup_action" version="1.0">
+                           <editableResource id="-3af80750:15405511ab7:-5be6" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
                               <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
-                              <resourceConfig description="" name="Search &quot;Current Weather&quot; in &quot;apikey&quot; and for &quot;%%id%%&quot; in &quot;city_id&quot; and in &quot;lang&quot; and in &quot;mode&quot; and in &quot;units&quot;">
-                                 <true id="-70bdf138:1534257a94b:-7f4d" selfDescribing="Found" type="test_data_lookup_path_action" version="1.0">
+                              <resourceConfig description="" eval_type="Mozilla Rhino" function="tags[&quot;lang&quot;].toLowerCase()" name="Run &quot;tags[&quot;lang&quot;].toLowerCase()&quot;, store into&quot;lang&quot; (4)">
+                                 <fieldActionGroup>
+                                    <fieldAction description="Store copy of field in tag 'lang'" tN="lang" type="2">
+                                       <dataAction type="Copy"/>
+                                    </fieldAction>
+                                 </fieldActionGroup>
+                              </resourceConfig>
+                           </editableResource>
+                           <editableResource id="-3af80750:15405511ab7:-5be5" selfDescribing="Use a value from the current run to extract information from a test data set." type="test_data_lookup_action" version="1.0">
+                              <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                              <resourceConfig description="" name="Search &quot;Recorded&quot; in &quot;apikey&quot; and for &quot;%%id%%&quot; in &quot;city_id&quot; and in &quot;lang&quot; and in &quot;units&quot;">
+                                 <true id="-3af80750:15405511ab7:-5be4" selfDescribing="Found" type="test_data_lookup_path_action" version="1.0">
                                     <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
-                                    <resourceConfig description="" name="" path="0">
-                                       <editableResource id="-70bdf138:1534257a94b:-7f4c" selfDescribing="Respond to a previously received request message.  Select the relevant request from the drop-down and edit the content of the message to send." type="send_reply_action" version="1.0">
+                                    <resourceConfig description="" name=" (2)" path="0">
+                                       <editableResource id="-3af80750:15405511ab7:-5be3" selfDescribing="Respond to a previously received request message.  Select the relevant request from the drop-down and edit the content of the message to send." type="send_reply_action" version="1.0">
                                           <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
-                                          <resourceConfig bodyLinkId="-70bdf138:1534257a94b:-7a17" description="" headerLinkId="-70bdf138:1534257a94b:-7a17" isBodyLinked="true" isHeaderLinked="true" name="Linked to &quot;Current Weather&quot;, &quot;Text&quot; using schema &quot;Text&quot; (2)" receiverequestid="-70bdf138:1532d24338b:-403e"/>
+                                          <resourceConfig bodyLinkId="3ab6a11c:153fdb0ffc5:-75b7" description="" headerLinkId="3ab6a11c:153fdb0ffc5:-75b7" isBodyLinked="true" isHeaderLinked="true" name="Linked to &quot;Current Weather JSON&quot;, &quot;Text&quot; using schema &quot;Text&quot; (2)" receiverequestid="-70bdf138:1532d24338b:-403e"/>
                                        </editableResource>
                                     </resourceConfig>
                                  </true>
-                                 <false id="-70bdf138:1534257a94b:-7f4b" selfDescribing="Not Found" type="test_data_lookup_path_action" version="1.0">
+                                 <false id="-3af80750:15405511ab7:-5be2" selfDescribing="Not Found" type="test_data_lookup_path_action" version="1.0">
                                     <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
-                                    <resourceConfig description="" name="" path="1">
-                                       <editableResource id="-70bdf138:1534257a94b:-7f4a" selfDescribing="Respond to a previously received request message.  Select the relevant request from the drop-down and edit the content of the message to send." type="send_reply_action" version="1.0">
+                                    <resourceConfig description="" name=" (3)" path="1">
+                                       <editableResource id="-3af80750:15405511ab7:-5be1" selfDescribing="Respond to a previously received request message.  Select the relevant request from the drop-down and edit the content of the message to send." type="send_reply_action" version="1.0">
                                           <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
-                                          <resourceConfig bodyLinkId="-70bdf138:1534257a94b:-74c8" description="" headerLinkId="-70bdf138:1534257a94b:-74c8" isBodyLinked="true" isHeaderLinked="true" name="Linked to &quot;Current Weather, City Not Found&quot;, &quot;Text&quot; using schema &quot;Text&quot;" receiverequestid="-70bdf138:1532d24338b:-403e"/>
+                                          <resourceConfig bodyLinkId="-70bdf138:1534257a94b:-74c8" description="" headerLinkId="-70bdf138:1534257a94b:-74c8" isBodyLinked="true" isHeaderLinked="true" name="Linked to &quot;City Not Found&quot;, &quot;Text&quot; using schema &quot;Text&quot; (2)" receiverequestid="-70bdf138:1532d24338b:-403e"/>
                                        </editableResource>
                                     </resourceConfig>
                                  </false>
                                  <props allMatches="false">
-                                    <tdsref id="-70bdf138:1532d24338b:-4043" lkname="Current Weather" lkpath="OpenWeatherMap/Current Weather/Current Weather" type="simple_test_data"/>
+                                    <tdsref id="-70bdf138:1532d24338b:-4043" lkname="Recorded" lkpath="OpenWeatherMap/Current Weather/Recorded" type="simple_test_data"/>
                                     <lookups column="apikey" lookupValue="%%apikey%%"/>
                                     <lookups column="city_id" lookupValue="%%id%%"/>
                                     <lookups column="lang" lookupValue="%%lang%%"/>
-                                    <lookups column="mode" lookupValue="%%mode%%"/>
                                     <lookups column="units" lookupValue="%%units%%"/>
                                  </props>
                                  <mapper disableFiltersWhenEmpty="false" knownColumns="city_name,visibility,huminity,sun_set,lang,city,mode,apikey,temperature,city_id,coord_lon,temperature_unit,last_update,wind_direction_name,humidity_unit,wind_speed_name,weather,weather_number,clouds,pressure,coord_lat,wind_direction,temperature_max,clouds_name,precipitation_unit,temperature_min,wind_speed,pressure_unit,units,country,precipitation_mode,weather_icon,precipitation,wind_direction_code,sun_rise,replyId">
@@ -769,16 +1190,9 @@
                                     <mapping columnName="apikey" tagName="apikey" type="4"/>
                                     <mapping columnName="city_id" tagName="city_id" type="4"/>
                                     <mapping columnName="city_name" tagName="city_name" type="4"/>
-                                    <mapping columnName="coord_lon" tagName="coord_lon" type="4"/>
-                                    <mapping columnName="coord_lat" tagName="coord_lat" type="4"/>
                                     <mapping columnName="country" tagName="country" type="4"/>
                                     <mapping columnName="sun_rise" tagName="sun_rise" type="4"/>
                                     <mapping columnName="sun_set" tagName="sun_set" type="4"/>
-                                    <mapping columnName="temperature" tagName="temperature" type="4"/>
-                                    <mapping columnName="temperature_min" tagName="temperature_min" type="4"/>
-                                    <mapping columnName="temperature_max" tagName="temperature_max" type="4"/>
-                                    <mapping columnName="temperature_unit" tagName="temperature_unit" type="4"/>
-                                    <mapping columnName="huminity" tagName="huminity" type="4"/>
                                     <mapping columnName="pressure" tagName="pressure" type="4"/>
                                     <mapping columnName="wind_speed" tagName="wind_speed" type="4"/>
                                     <mapping columnName="wind_speed_name" tagName="wind_speed_name" type="4"/>
@@ -805,7 +1219,7 @@
                   </editableResource>
                   <editableResource id="-70bdf138:1532d24338b:-190" selfDescribing="Configure the filtering and validation for this Case action" type="message_case_action" version="1.0">
                      <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
-                     <resourceConfig description="by city geo coordinates" name="exists() AND &quot;Text&quot; using schema &quot;Text&quot; (2)">
+                     <resourceConfig description="by city geo coordinates, xml" name="exists() AND &quot;Text&quot; using schema &quot;Text&quot; (2)">
                         <FilterExpressions option="NOTHING" type="script:ECMAScript"/>
                         <bodyfilters assocdefid="Text" name="Text" sch="Text" type="12" version="1.2">
                            <fieldActionGroup>
@@ -848,8 +1262,206 @@
                                     </fieldActionGroup>
                                  </_c>
                                  <_c name="mode" sch="-70bdf138:1532d24338b:-7b04" type="7" version="1.2">
+                                    <filterActionGroup>
+                                       <fieldAction type="1">
+                                          <fieldAction exp="xml" type="0"/>
+                                       </fieldAction>
+                                    </filterActionGroup>
+                                 </_c>
+                                 <_c name="lon" sch="-70bdf138:1532d24338b:-7b04" type="4" version="1.2">
                                     <fieldActionGroup>
-                                       <fieldAction description="Store copy of field 'mode' in tag 'mode'" tN="mode" type="2">
+                                       <fieldAction description="Store copy of field in tag 'lon'" tN="lon" type="2">
+                                          <dataAction type="Copy"/>
+                                       </fieldAction>
+                                    </fieldActionGroup>
+                                    <filterActionGroup>
+                                       <fieldAction type="1">
+                                          <fieldAction type="10"/>
+                                       </fieldAction>
+                                    </filterActionGroup>
+                                 </_c>
+                                 <_c name="lat" sch="-70bdf138:1532d24338b:-7b04" type="4" version="1.2">
+                                    <fieldActionGroup>
+                                       <fieldAction description="Store copy of field in tag 'lat'" tN="lat" type="2">
+                                          <dataAction type="Copy"/>
+                                       </fieldAction>
+                                    </fieldActionGroup>
+                                    <filterActionGroup>
+                                       <fieldAction type="1">
+                                          <fieldAction type="10"/>
+                                       </fieldAction>
+                                    </filterActionGroup>
+                                 </_c>
+                                 <_c name="body" sch="-70bdf138:1532d24338b:-7b04" type="12" version="1.2">
+                                    <fieldActionGroup>
+                                       <fieldAction enabled="false" type="1">
+                                          <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+                                       </fieldAction>
+                                    </fieldActionGroup>
+                                    <filterActionGroup>
+                                       <fieldAction type="1">
+                                          <fieldAction type="10"/>
+                                       </fieldAction>
+                                    </filterActionGroup>
+                                    <_c name="text" sch="-70bdf138:1532d24338b:-7b04" type="7" version="1.2"/>
+                                 </_c>
+                              </_c>
+                           </_c>
+                        </bodyfilters>
+                        <headerfilters assocdefid="Http Subscribe" meTy="Message" name="" sch="Http Subscribe" type="12" version="1.2">
+                           <fieldActionGroup>
+                              <fieldAction enabled="false" type="1">
+                                 <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+                              </fieldAction>
+                           </fieldActionGroup>
+                           <_c meTy="String" name="Method" sch="Http Subscribe" type="7" version="1.2"/>
+                           <_c meTy="String" name="URL" sch="Http Subscribe" type="7" version="1.2"/>
+                           <_c meTy="Message" name="httpDetails" sch="Http Subscribe" type="12" version="1.2">
+                              <fieldActionGroup>
+                                 <fieldAction enabled="false" type="1">
+                                    <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+                                 </fieldAction>
+                              </fieldActionGroup>
+                              <_c meTy="String" name="Version" sch="Http Subscribe" type="7" version="1.2"/>
+                              <_c meTy="Message" name="httpHeaders" sch="Http Subscribe" type="12" version="1.2">
+                                 <fieldActionGroup>
+                                    <fieldAction enabled="false" type="1">
+                                       <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+                                    </fieldAction>
+                                 </fieldActionGroup>
+                                 <_c meTy="String" name="Accept" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="Referer" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="Accept-Language" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="Accept-Encoding" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="If-Modified-Since" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="If-None-Match" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="User-Agent" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="Content-Type" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="SOAPAction" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="Host" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="Connection" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="Cookie" sch="Http Subscribe" type="7" version="1.2"/>
+                              </_c>
+                              <_c meTy="Boolean" name="followRedirects" sch="Http Subscribe" type="8" version="1.2"/>
+                           </_c>
+                           <_c meTy="String" name="MessageType" sch="Http Subscribe" type="7" version="1.2"/>
+                           <_c meTy="Date-Time" name="rcvdTimestamp" sch="Http Subscribe" type="11" version="1.2"/>
+                        </headerfilters>
+                        <childActions>
+                           <editableResource id="-3af80750:15405511ab7:-6504" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+                              <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                              <resourceConfig description="" eval_type="Mozilla Rhino" function="tags[&quot;lang&quot;].toLowerCase()" name="Run &quot;tags[&quot;lang&quot;].toLowerCase()&quot;, store into&quot;lang&quot; (3)">
+                                 <fieldActionGroup>
+                                    <fieldAction description="Store copy of field in tag 'lang'" tN="lang" type="2">
+                                       <dataAction type="Copy"/>
+                                    </fieldAction>
+                                 </fieldActionGroup>
+                              </resourceConfig>
+                           </editableResource>
+                           <editableResource id="-70bdf138:1534257a94b:-6e6e" selfDescribing="Use a value from the current run to extract information from a test data set." type="test_data_lookup_action" version="1.0">
+                              <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                              <resourceConfig description="" name="Search &quot;Recorded&quot; in &quot;apikey&quot; and for &quot;%%lat%%&quot; in &quot;coord_lat&quot; and for &quot;%%lon%%&quot; in &quot;coord_lon&quot; and in &quot;lang&quot; and in &quot;units&quot; (2)">
+                                 <true id="-70bdf138:1534257a94b:-6e6d" selfDescribing="Found" type="test_data_lookup_path_action" version="1.0">
+                                    <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                                    <resourceConfig description="" name="" path="0">
+                                       <editableResource id="-70bdf138:1534257a94b:-6e6c" selfDescribing="Respond to a previously received request message.  Select the relevant request from the drop-down and edit the content of the message to send." type="send_reply_action" version="1.0">
+                                          <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                                          <resourceConfig bodyLinkId="-70bdf138:1534257a94b:-7a17" description="" headerLinkId="-70bdf138:1534257a94b:-7a17" isBodyLinked="true" isHeaderLinked="true" name="Linked to &quot;Current Weather XML&quot;, &quot;Text&quot; using schema &quot;Text&quot;" receiverequestid="-70bdf138:1532d24338b:-403e"/>
+                                       </editableResource>
+                                    </resourceConfig>
+                                 </true>
+                                 <false id="-70bdf138:1534257a94b:-6e6b" selfDescribing="Not Found" type="test_data_lookup_path_action" version="1.0">
+                                    <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                                    <resourceConfig description="" name="" path="1">
+                                       <editableResource id="-70bdf138:1534257a94b:-6e6a" selfDescribing="Respond to a previously received request message.  Select the relevant request from the drop-down and edit the content of the message to send." type="send_reply_action" version="1.0">
+                                          <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                                          <resourceConfig bodyLinkId="-70bdf138:1534257a94b:-74c8" description="" headerLinkId="-70bdf138:1534257a94b:-74c8" isBodyLinked="true" isHeaderLinked="true" name="Linked to &quot;City Not Found&quot;, &quot;Text&quot; using schema &quot;Text&quot;" receiverequestid="-70bdf138:1532d24338b:-403e"/>
+                                       </editableResource>
+                                    </resourceConfig>
+                                 </false>
+                                 <props allMatches="false">
+                                    <tdsref id="-70bdf138:1532d24338b:-4043" lkname="Recorded" lkpath="OpenWeatherMap/Current Weather/Recorded" type="simple_test_data"/>
+                                    <lookups column="apikey" lookupValue="%%apikey%%"/>
+                                    <lookups column="coord_lat" lookupValue="%%lat%%"/>
+                                    <lookups column="coord_lon" lookupValue="%%lon%%"/>
+                                    <lookups column="lang" lookupValue="%%lang%%"/>
+                                    <lookups column="units" lookupValue="%%units%%"/>
+                                 </props>
+                                 <mapper disableFiltersWhenEmpty="false" knownColumns="city_name,visibility,huminity,sun_set,lang,city,mode,apikey,temperature,city_id,coord_lon,temperature_unit,last_update,wind_direction_name,humidity_unit,wind_speed_name,weather,weather_number,clouds,pressure,coord_lat,wind_direction,temperature_max,clouds_name,precipitation_unit,temperature_min,wind_speed,pressure_unit,units,country,precipitation_mode,weather_icon,precipitation,wind_direction_code,sun_rise,replyId">
+                                    <mapping columnName="city" tagName="city" type="4"/>
+                                    <mapping columnName="units" tagName="units" type="4"/>
+                                    <mapping columnName="lang" tagName="lang" type="4"/>
+                                    <mapping columnName="mode" tagName="mode" type="4"/>
+                                    <mapping columnName="apikey" tagName="apikey" type="4"/>
+                                    <mapping columnName="city_id" tagName="city_id" type="4"/>
+                                    <mapping columnName="city_name" tagName="city_name" type="4"/>
+                                    <mapping columnName="country" tagName="country" type="4"/>
+                                    <mapping columnName="sun_rise" tagName="sun_rise" type="4"/>
+                                    <mapping columnName="sun_set" tagName="sun_set" type="4"/>
+                                    <mapping columnName="pressure" tagName="pressure" type="4"/>
+                                    <mapping columnName="wind_speed" tagName="wind_speed" type="4"/>
+                                    <mapping columnName="wind_speed_name" tagName="wind_speed_name" type="4"/>
+                                    <mapping columnName="wind_direction" tagName="wind_direction" type="4"/>
+                                    <mapping columnName="wind_direction_code" tagName="wind_direction_code" type="4"/>
+                                    <mapping columnName="wind_direction_name" tagName="wind_direction_name" type="4"/>
+                                    <mapping columnName="clouds" tagName="clouds" type="4"/>
+                                    <mapping columnName="clouds_name" tagName="clouds_name" type="4"/>
+                                    <mapping columnName="visibility" tagName="visibility" type="4"/>
+                                    <mapping columnName="precipitation" tagName="precipitation" type="4"/>
+                                    <mapping columnName="precipitation_mode" tagName="precipitation_mode" type="4"/>
+                                    <mapping columnName="precipitation_unit" tagName="precipitation_unit" type="4"/>
+                                    <mapping columnName="weather_number" tagName="weather_number" type="4"/>
+                                    <mapping columnName="weather" tagName="weather" type="4"/>
+                                    <mapping columnName="weather_icon" tagName="weather_icon" type="4"/>
+                                    <mapping columnName="last_update" tagName="last_update" type="4"/>
+                                    <mapping columnName="humidity_unit" tagName="humidity_unit" type="4"/>
+                                    <mapping columnName="pressure_unit" tagName="pressure_unit" type="4"/>
+                                 </mapper>
+                              </resourceConfig>
+                           </editableResource>
+                        </childActions>
+                     </resourceConfig>
+                  </editableResource>
+                  <editableResource id="-3af80750:15405511ab7:-57a1" selfDescribing="Configure the filtering and validation for this Case action" type="message_case_action" version="1.0">
+                     <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                     <resourceConfig description="by city geo coordinates, json" name="&quot;Text&quot; using schema &quot;Text&quot; (6)">
+                        <FilterExpressions option="NOTHING" type="script:ECMAScript"/>
+                        <bodyfilters assocdefid="Text" name="Text" sch="Text" type="12" version="1.2">
+                           <fieldActionGroup>
+                              <fieldAction enabled="false" type="1">
+                                 <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+                              </fieldAction>
+                           </fieldActionGroup>
+                           <_c coreTypeInt="7" coreTypeName="String" name="text" nodeFormatter="rest_nodeformatter" sch="Text" type="12" version="1.2">
+                              <fieldExpander fieldExpanderID="rest_fieldexpander" fieldSchema="-70bdf138:1532d24338b:-7b04" fieldSchemaRoot="Current Weather"/>
+                              <fieldActionGroup>
+                                 <fieldAction enabled="false" type="1">
+                                    <fieldAction enabled="false" type="7"/>
+                                 </fieldAction>
+                              </fieldActionGroup>
+                              <_c assocdefid="Current Weather" name="Current Weather" sch="-70bdf138:1532d24338b:-7b04" type="12" version="1.2">
+                                 <fieldActionGroup>
+                                    <fieldAction enabled="false" type="1">
+                                       <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+                                    </fieldAction>
+                                 </fieldActionGroup>
+                                 <_c name="apikey" sch="-70bdf138:1532d24338b:-7b04" type="7" version="1.2">
+                                    <fieldActionGroup>
+                                       <fieldAction description="Store copy of field 'apikey' in tag 'apikey'" tN="apikey" type="2">
+                                          <dataAction type="Copy"/>
+                                       </fieldAction>
+                                    </fieldActionGroup>
+                                 </_c>
+                                 <_c name="units" sch="-70bdf138:1532d24338b:-7b04" type="7" version="1.2">
+                                    <fieldActionGroup>
+                                       <fieldAction description="Store copy of field 'units' in tag 'units'" tN="units" type="2">
+                                          <dataAction type="Copy"/>
+                                       </fieldAction>
+                                    </fieldActionGroup>
+                                 </_c>
+                                 <_c name="lang" sch="-70bdf138:1532d24338b:-7b04" type="7" version="1.2">
+                                    <fieldActionGroup>
+                                       <fieldAction description="Store copy of field 'lang' in tag 'lang'" tN="lang" type="2">
                                           <dataAction type="Copy"/>
                                        </fieldAction>
                                     </fieldActionGroup>
@@ -934,34 +1546,43 @@
                            <_c meTy="Date-Time" name="rcvdTimestamp" sch="Http Subscribe" type="11" version="1.2"/>
                         </headerfilters>
                         <childActions>
-                           <editableResource id="-70bdf138:1534257a94b:-6e6e" selfDescribing="Use a value from the current run to extract information from a test data set." type="test_data_lookup_action" version="1.0">
+                           <editableResource id="-3af80750:15405511ab7:-57a0" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
                               <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
-                              <resourceConfig description="" name="Search &quot;Current Weather&quot; in &quot;apikey&quot; and for &quot;%%lat%%&quot; in &quot;coord_lat&quot; and for &quot;%%lon%%&quot; in &quot;coord_lon&quot; and in &quot;lang&quot; and in &quot;mode&quot; and in &quot;units&quot;">
-                                 <true id="-70bdf138:1534257a94b:-6e6d" selfDescribing="Found" type="test_data_lookup_path_action" version="1.0">
+                              <resourceConfig description="" eval_type="Mozilla Rhino" function="tags[&quot;lang&quot;].toLowerCase()" name="Run &quot;tags[&quot;lang&quot;].toLowerCase()&quot;, store into&quot;lang&quot; (5)">
+                                 <fieldActionGroup>
+                                    <fieldAction description="Store copy of field in tag 'lang'" tN="lang" type="2">
+                                       <dataAction type="Copy"/>
+                                    </fieldAction>
+                                 </fieldActionGroup>
+                              </resourceConfig>
+                           </editableResource>
+                           <editableResource id="-3af80750:15405511ab7:-579f" selfDescribing="Use a value from the current run to extract information from a test data set." type="test_data_lookup_action" version="1.0">
+                              <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                              <resourceConfig description="" name="Search &quot;Recorded&quot; in &quot;apikey&quot; and for &quot;%%lat%%&quot; in &quot;coord_lat&quot; and for &quot;%%lon%%&quot; in &quot;coord_lon&quot; and in &quot;lang&quot; and in &quot;units&quot;">
+                                 <true id="-3af80750:15405511ab7:-579e" selfDescribing="Found" type="test_data_lookup_path_action" version="1.0">
                                     <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
-                                    <resourceConfig description="" name="" path="0">
-                                       <editableResource id="-70bdf138:1534257a94b:-6e6c" selfDescribing="Respond to a previously received request message.  Select the relevant request from the drop-down and edit the content of the message to send." type="send_reply_action" version="1.0">
+                                    <resourceConfig description="" name=" (4)" path="0">
+                                       <editableResource id="-3af80750:15405511ab7:-579d" selfDescribing="Respond to a previously received request message.  Select the relevant request from the drop-down and edit the content of the message to send." type="send_reply_action" version="1.0">
                                           <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
-                                          <resourceConfig bodyLinkId="-70bdf138:1534257a94b:-7a17" description="" headerLinkId="-70bdf138:1534257a94b:-7a17" isBodyLinked="true" isHeaderLinked="true" name="Linked to &quot;Current Weather&quot;, &quot;Text&quot; using schema &quot;Text&quot;" receiverequestid="-70bdf138:1532d24338b:-403e"/>
+                                          <resourceConfig bodyLinkId="3ab6a11c:153fdb0ffc5:-75b7" description="" headerLinkId="3ab6a11c:153fdb0ffc5:-75b7" isBodyLinked="true" isHeaderLinked="true" name="Linked to &quot;Current Weather JSON&quot;, &quot;Text&quot; using schema &quot;Text&quot; (3)" receiverequestid="-70bdf138:1532d24338b:-403e"/>
                                        </editableResource>
                                     </resourceConfig>
                                  </true>
-                                 <false id="-70bdf138:1534257a94b:-6e6b" selfDescribing="Not Found" type="test_data_lookup_path_action" version="1.0">
+                                 <false id="-3af80750:15405511ab7:-579c" selfDescribing="Not Found" type="test_data_lookup_path_action" version="1.0">
                                     <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
-                                    <resourceConfig description="" name="" path="1">
-                                       <editableResource id="-70bdf138:1534257a94b:-6e6a" selfDescribing="Respond to a previously received request message.  Select the relevant request from the drop-down and edit the content of the message to send." type="send_reply_action" version="1.0">
+                                    <resourceConfig description="" name=" (5)" path="1">
+                                       <editableResource id="-3af80750:15405511ab7:-579b" selfDescribing="Respond to a previously received request message.  Select the relevant request from the drop-down and edit the content of the message to send." type="send_reply_action" version="1.0">
                                           <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
-                                          <resourceConfig bodyLinkId="-70bdf138:1534257a94b:-74c8" description="" headerLinkId="-70bdf138:1534257a94b:-74c8" isBodyLinked="true" isHeaderLinked="true" name="Linked to &quot;Current Weather, City Not Found&quot;, &quot;Text&quot; using schema &quot;Text&quot;" receiverequestid="-70bdf138:1532d24338b:-403e"/>
+                                          <resourceConfig bodyLinkId="-70bdf138:1534257a94b:-74c8" description="" headerLinkId="-70bdf138:1534257a94b:-74c8" isBodyLinked="true" isHeaderLinked="true" name="Linked to &quot;City Not Found&quot;, &quot;Text&quot; using schema &quot;Text&quot; (3)" receiverequestid="-70bdf138:1532d24338b:-403e"/>
                                        </editableResource>
                                     </resourceConfig>
                                  </false>
                                  <props allMatches="false">
-                                    <tdsref id="-70bdf138:1532d24338b:-4043" lkname="Current Weather" lkpath="OpenWeatherMap/Current Weather/Current Weather" type="simple_test_data"/>
+                                    <tdsref id="-70bdf138:1532d24338b:-4043" lkname="Recorded" lkpath="OpenWeatherMap/Current Weather/Recorded" type="simple_test_data"/>
                                     <lookups column="apikey" lookupValue="%%apikey%%"/>
                                     <lookups column="coord_lat" lookupValue="%%lat%%"/>
                                     <lookups column="coord_lon" lookupValue="%%lon%%"/>
                                     <lookups column="lang" lookupValue="%%lang%%"/>
-                                    <lookups column="mode" lookupValue="%%mode%%"/>
                                     <lookups column="units" lookupValue="%%units%%"/>
                                  </props>
                                  <mapper disableFiltersWhenEmpty="false" knownColumns="city_name,visibility,huminity,sun_set,lang,city,mode,apikey,temperature,city_id,coord_lon,temperature_unit,last_update,wind_direction_name,humidity_unit,wind_speed_name,weather,weather_number,clouds,pressure,coord_lat,wind_direction,temperature_max,clouds_name,precipitation_unit,temperature_min,wind_speed,pressure_unit,units,country,precipitation_mode,weather_icon,precipitation,wind_direction_code,sun_rise,replyId">
@@ -972,16 +1593,9 @@
                                     <mapping columnName="apikey" tagName="apikey" type="4"/>
                                     <mapping columnName="city_id" tagName="city_id" type="4"/>
                                     <mapping columnName="city_name" tagName="city_name" type="4"/>
-                                    <mapping columnName="coord_lon" tagName="coord_lon" type="4"/>
-                                    <mapping columnName="coord_lat" tagName="coord_lat" type="4"/>
                                     <mapping columnName="country" tagName="country" type="4"/>
                                     <mapping columnName="sun_rise" tagName="sun_rise" type="4"/>
                                     <mapping columnName="sun_set" tagName="sun_set" type="4"/>
-                                    <mapping columnName="temperature" tagName="temperature" type="4"/>
-                                    <mapping columnName="temperature_min" tagName="temperature_min" type="4"/>
-                                    <mapping columnName="temperature_max" tagName="temperature_max" type="4"/>
-                                    <mapping columnName="temperature_unit" tagName="temperature_unit" type="4"/>
-                                    <mapping columnName="huminity" tagName="huminity" type="4"/>
                                     <mapping columnName="pressure" tagName="pressure" type="4"/>
                                     <mapping columnName="wind_speed" tagName="wind_speed" type="4"/>
                                     <mapping columnName="wind_speed_name" tagName="wind_speed_name" type="4"/>
@@ -1014,7 +1628,7 @@
             </resourceConfig>
          </editableResource>
       </testTree>
-      <tagDataStore identifier="-47e24a82:153a9130a57:-402e" inputMode="SELECT" outputMode="NONE">
+      <tagDataStore identifier="-3af80750:15405511ab7:-5870" inputMode="SELECT" outputMode="NONE">
          <tag description="Generated by Recording Studio" name="visibility"/>
          <tag description="Generated by Recording Studio" name="sun_set"/>
          <tag defaultValue="" description="" name="city"/>
@@ -1023,6 +1637,7 @@
          <tag description="Generated by Recording Studio" name="wind_speed_name"/>
          <tag description="Generated by Recording Studio" name="weather"/>
          <tag defaultValue="" description="" name="longitude"/>
+         <tag defaultValue="" description="" name="sun_rise_epoch"/>
          <tag defaultValue="" description="" name="lon"/>
          <tag description="Generated by Recording Studio" name="clouds_name"/>
          <tag description="Generated by Recording Studio" name="precipitation_unit"/>
@@ -1047,6 +1662,7 @@
          <tag description="Generated by Recording Studio" name="wind_direction_name"/>
          <tag description="Generated by Recording Studio" name="weather_number"/>
          <tag defaultValue="" description="" name="lat"/>
+         <tag defaultValue="" description="" name="wind_gusts"/>
          <tag description="Generated by Recording Studio" name="clouds"/>
          <tag defaultValue="" description="" name="temp_unit"/>
          <tag description="Generated by Recording Studio" name="pressure"/>
@@ -1057,6 +1673,7 @@
          <tag defaultValue="" description="" name="temp_max"/>
          <tag description="Generated by Recording Studio" name="precipitation"/>
          <tag defaultValue="" description="" name="temp_min"/>
+         <tag defaultValue="" description="" name="sun_set_epoch"/>
       </tagDataStore>
       <testprops messageClearance="false"/>
       <stubprops behaviourStyle="ONE_TO_ONE" majorVersion="1" messageClearance="false" minorVersion="0" optimise="false" wrks="10">

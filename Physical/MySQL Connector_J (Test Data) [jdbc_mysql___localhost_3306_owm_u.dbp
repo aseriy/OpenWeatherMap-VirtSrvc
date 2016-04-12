@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1458760098944" createdUser="rational" id="320e336e:1539c43e9a8:-4c85" selfDescribing="MySQL Connector/J (Test Data) [jdbc:mysql://localhost:3306/owm_utf8, rational]" type="database_connection_resource" updatedTimestamp="1460434333451" updatedUser="rational" version="1.0">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig maxConnections="1" poolName="DefaultPoolName" transportName="Test Data">
+      <connectionParams CICSEnv="false" MVSEnv="false" ZOSEnv="false" driverClass="com.mysql.jdbc.Driver" password="#com.ghc.1!b28a21397E0112CE4A9E446BE34FA2EB7265" recordFilters="" url="jdbc:mysql://localhost:3306/owm_utf8" user="rational">
+         <stubSettings maxProcCallCount="10000" maxResultSetRowCount="10000" maxRowCount="10000" password="#com.ghc.1!b1e5" procedureLearningBehaviour="1" schema="" url="jdbc:mysql://localhost:3306/&lt;database name&gt;" useIntegratedDB="true" user=""/>
+         <storedProcedureFilter catalogFilterEnabled="false" catalogFilterPattern="" procedureFilterEnabled="false" procedureFilterPattern="" schemaFilterEnabled="true" schemaFilterPattern="" storedProceduresRetrievalEnabled="false" useConnectionUsername="true"/>
+         <timestampFormatting timestampFormatZero="false" timestampFormattingEnabled="false" timestampPrecision="9"/>
+      </connectionParams>
+   </resourceConfig>
+</editableResource>

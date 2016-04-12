@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1456752531586" createdUser="rational" id="-70bdf138:1532d24338b:-7b04" selfDescribing="OpenWeatherMap" type="parameterized_url_schema" updatedTimestamp="1459655782806" updatedUser="rational" version="1.0">
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1456752531586" createdUser="rational" id="-70bdf138:1532d24338b:-7b04" selfDescribing="OpenWeatherMap" type="parameterized_url_schema" updatedTimestamp="1460376408920" updatedUser="rational" version="1.0">
    <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
    <resourceConfig schemaSourceTemplateName="URL">
       <schemaSourceConfig name="OpenWeatherMap">
@@ -10,7 +10,7 @@
             <path isParameterized="false" literal="/" parameterName="" type="7"/>
             <path isParameterized="false" literal="weather" parameterName="" type="7"/>
             <query isNameValuePair="true" isParameterized="true" isRequired="true" literalValue="50b2ae8523a458183982bf56254556dc" parameterName="apikey" queryName="APPID" type="7"/>
-            <query isNameValuePair="true" isParameterized="true" isRequired="false" literalValue="Paris" parameterName="city" queryName="q" type="7"/>
+            <query defaultValue="" isNameValuePair="true" isParameterized="true" isRequired="false" literalValue="Paris" parameterName="city" queryName="q" type="7"/>
             <query isNameValuePair="true" isParameterized="true" isRequired="false" literalValue="" parameterName="id" queryName="id" type="3"/>
             <query isNameValuePair="true" isParameterized="true" isRequired="false" literalValue="imperial" parameterName="units" queryName="units" type="7"/>
             <query isNameValuePair="true" isParameterized="true" isRequired="false" literalValue="en" parameterName="lang" queryName="lang" type="7"/>
