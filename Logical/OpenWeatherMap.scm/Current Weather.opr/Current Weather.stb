@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1456838106185" createdUser="rational" id="-70bdf138:1532d24338b:-4049" type="stub_resource" updatedTimestamp="1460388777251" updatedUser="rational" version="1.1">
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1456838106185" createdUser="rational" id="-70bdf138:1532d24338b:-4049" type="stub_resource" updatedTimestamp="1460605836476" updatedUser="rational" version="1.1">
    <loggingConfiguration debug="true" writeStubEventsToDB="true"/>
    <resourceConfig description="" name="">
       <testTree>
@@ -583,7 +583,7 @@
                                     <lookups column="query" lookupValue="%%city%%"/>
                                     <lookups column="units" lookupValue="%%units%%"/>
                                  </props>
-                                 <mapper disableFiltersWhenEmpty="false" knownColumns="city_name,visibility,query,sun_set,lang,apikey,city_id,last_update,wind_direction_name,humidity_unit,wind_speed_name,weather,longitude,weather_number,sun_rise_epoch,wind_gusts,clouds,temp_unit,pressure,wind_direction,clouds_name,precipitation_unit,wind_speed,pressure_unit,units,country,humidity,precipitation_mode,weather_icon,temp_max,precipitation,temp_min,wind_direction_code,sun_rise,temp,latitude,sun_set_epoch">
+                                 <mapper disableFiltersWhenEmpty="false" knownColumns="city_name,visibility,query,sun_set,lang,apikey,city_id,last_update,humidity_unit,wind_direction_name,wind_speed_name,weather,weather_number,longitude,sun_rise_epoch,clouds,wind_gusts,temp_unit,pressure,wind_direction,clouds_name,precipitation_unit,pressure_unit,wind_speed,units,country,precipitation_mode,humidity,weather_icon,temp_max,precipitation,wind_direction_code,temp_min,temp,sun_rise,sun_set_epoch,latitude">
                                     <mapping columnName="last_update" tagName="last_update" type="4"/>
                                     <mapping columnName="city_id" tagName="city_id" type="4"/>
                                     <mapping columnName="city_name" tagName="city_name" type="4"/>
@@ -800,7 +800,7 @@
                                     <lookups column="query" lookupValue="%%city%%"/>
                                     <lookups column="units" lookupValue="%%units%%"/>
                                  </props>
-                                 <mapper disableFiltersWhenEmpty="false" knownColumns="visibility,query,percipitation_unit,sun_set,lang,apikey,city,city_id,id,humidity_unit,wind_direction_name,wind_speed_name,weather,weather_number,longitude,clouds,temp_unit,pressure,wind_direction,clouds_name,pressure_unit,wind_speed,units,country,humidity,weather_icon,percipitation,temp_max,wind_direction_code,temp_min,temp,sun_rise,latitude,percipitation_mode">
+                                 <mapper disableFiltersWhenEmpty="false" knownColumns="visibility,query,percipitation_unit,sun_set,lang,city,apikey,id,city_id,wind_direction_name,humidity_unit,wind_speed_name,weather,longitude,weather_number,clouds,temp_unit,pressure,wind_direction,clouds_name,wind_speed,pressure_unit,units,country,humidity,weather_icon,temp_max,percipitation,temp_min,wind_direction_code,sun_rise,temp,latitude,percipitation_mode">
                                     <mapping columnName="city" tagName="city" type="4"/>
                                     <mapping columnName="country" tagName="country" type="4"/>
                                     <mapping columnName="longitude" tagName="longitude" type="4"/>
@@ -971,7 +971,7 @@
                            </editableResource>
                            <editableResource id="-70bdf138:1534257a94b:-7f4e" selfDescribing="Use a value from the current run to extract information from a test data set." type="test_data_lookup_action" version="1.0">
                               <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
-                              <resourceConfig description="" name="Search &quot;Recorded&quot; in &quot;apikey&quot; and for &quot;%%id%%&quot; in &quot;city_id&quot; and in &quot;lang&quot; and in &quot;units&quot; (2)">
+                              <resourceConfig description="" name="Search &quot;Current Weather&quot; in &quot;apikey&quot; and for &quot;%%id%%&quot; in &quot;city_id&quot; and in &quot;lang&quot; and in &quot;units&quot;">
                                  <true id="-70bdf138:1534257a94b:-7f4d" selfDescribing="Found" type="test_data_lookup_path_action" version="1.0">
                                     <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
                                     <resourceConfig description="" name="" path="0">
@@ -991,26 +991,35 @@
                                     </resourceConfig>
                                  </false>
                                  <props allMatches="false">
-                                    <tdsref id="-70bdf138:1532d24338b:-4043" lkname="Recorded" lkpath="OpenWeatherMap/Current Weather/Recorded" type="simple_test_data"/>
+                                    <tdsref id="-47e24a82:153a9130a57:-5ad5" lkname="Current Weather" lkpath="OpenWeatherMap/Current Weather/Current Weather" type="db_test_data"/>
                                     <lookups column="apikey" lookupValue="%%apikey%%"/>
                                     <lookups column="city_id" lookupValue="%%id%%"/>
                                     <lookups column="lang" lookupValue="%%lang%%"/>
                                     <lookups column="units" lookupValue="%%units%%"/>
                                  </props>
-                                 <mapper disableFiltersWhenEmpty="false" knownColumns="city_name,visibility,huminity,sun_set,lang,city,mode,apikey,temperature,city_id,coord_lon,temperature_unit,last_update,wind_direction_name,humidity_unit,wind_speed_name,weather,weather_number,clouds,pressure,coord_lat,wind_direction,temperature_max,clouds_name,precipitation_unit,temperature_min,wind_speed,pressure_unit,units,country,precipitation_mode,weather_icon,precipitation,wind_direction_code,sun_rise,replyId">
-                                    <mapping columnName="city" tagName="city" type="4"/>
-                                    <mapping columnName="units" tagName="units" type="4"/>
-                                    <mapping columnName="lang" tagName="lang" type="4"/>
-                                    <mapping columnName="mode" tagName="mode" type="4"/>
-                                    <mapping columnName="apikey" tagName="apikey" type="4"/>
+                                 <mapper disableFiltersWhenEmpty="false" knownColumns="city_name,visibility,query,sun_set,lang,apikey,city_id,last_update,wind_direction_name,humidity_unit,wind_speed_name,weather,longitude,weather_number,sun_rise_epoch,wind_gusts,clouds,temp_unit,pressure,wind_direction,clouds_name,precipitation_unit,wind_speed,pressure_unit,units,country,humidity,precipitation_mode,weather_icon,temp_max,precipitation,temp_min,wind_direction_code,sun_rise,temp,latitude,sun_set_epoch">
+                                    <mapping columnName="last_update" tagName="last_update" type="4"/>
                                     <mapping columnName="city_id" tagName="city_id" type="4"/>
                                     <mapping columnName="city_name" tagName="city_name" type="4"/>
                                     <mapping columnName="country" tagName="country" type="4"/>
+                                    <mapping columnName="longitude" tagName="longitude" type="4"/>
+                                    <mapping columnName="latitude" tagName="latitude" type="4"/>
+                                    <mapping columnName="apikey" tagName="apikey" type="4"/>
+                                    <mapping columnName="units" tagName="units" type="4"/>
+                                    <mapping columnName="lang" tagName="lang" type="4"/>
                                     <mapping columnName="sun_rise" tagName="sun_rise" type="4"/>
+                                    <mapping columnName="sun_rise_epoch" tagName="sun_rise_epoch" type="4"/>
                                     <mapping columnName="sun_set" tagName="sun_set" type="4"/>
+                                    <mapping columnName="sun_set_epoch" tagName="sun_set_epoch" type="4"/>
+                                    <mapping columnName="temp" tagName="temp" type="4"/>
+                                    <mapping columnName="temp_min" tagName="temp_min" type="4"/>
+                                    <mapping columnName="temp_max" tagName="temp_max" type="4"/>
+                                    <mapping columnName="temp_unit" tagName="temp_unit" type="4"/>
+                                    <mapping columnName="humidity" tagName="humidity" type="4"/>
                                     <mapping columnName="pressure" tagName="pressure" type="4"/>
                                     <mapping columnName="wind_speed" tagName="wind_speed" type="4"/>
                                     <mapping columnName="wind_speed_name" tagName="wind_speed_name" type="4"/>
+                                    <mapping columnName="wind_gusts" tagName="wind_gusts" type="4"/>
                                     <mapping columnName="wind_direction" tagName="wind_direction" type="4"/>
                                     <mapping columnName="wind_direction_code" tagName="wind_direction_code" type="4"/>
                                     <mapping columnName="wind_direction_name" tagName="wind_direction_name" type="4"/>
@@ -1023,9 +1032,10 @@
                                     <mapping columnName="weather_number" tagName="weather_number" type="4"/>
                                     <mapping columnName="weather" tagName="weather" type="4"/>
                                     <mapping columnName="weather_icon" tagName="weather_icon" type="4"/>
-                                    <mapping columnName="last_update" tagName="last_update" type="4"/>
                                     <mapping columnName="humidity_unit" tagName="humidity_unit" type="4"/>
                                     <mapping columnName="pressure_unit" tagName="pressure_unit" type="4"/>
+                                    <mapping columnName="city" tagName="city" type="5"/>
+                                    <mapping columnName="mode" tagName="mode" type="5"/>
                                  </mapper>
                               </resourceConfig>
                            </editableResource>
@@ -1156,7 +1166,7 @@
                            </editableResource>
                            <editableResource id="-3af80750:15405511ab7:-5be5" selfDescribing="Use a value from the current run to extract information from a test data set." type="test_data_lookup_action" version="1.0">
                               <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
-                              <resourceConfig description="" name="Search &quot;Recorded&quot; in &quot;apikey&quot; and for &quot;%%id%%&quot; in &quot;city_id&quot; and in &quot;lang&quot; and in &quot;units&quot;">
+                              <resourceConfig description="" name="Search &quot;Current Weather&quot; in &quot;apikey&quot; and for &quot;%%id%%&quot; in &quot;city_id&quot; and in &quot;lang&quot; and in &quot;units&quot; (2)">
                                  <true id="-3af80750:15405511ab7:-5be4" selfDescribing="Found" type="test_data_lookup_path_action" version="1.0">
                                     <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
                                     <resourceConfig description="" name=" (2)" path="0">
@@ -1176,26 +1186,35 @@
                                     </resourceConfig>
                                  </false>
                                  <props allMatches="false">
-                                    <tdsref id="-70bdf138:1532d24338b:-4043" lkname="Recorded" lkpath="OpenWeatherMap/Current Weather/Recorded" type="simple_test_data"/>
+                                    <tdsref id="-47e24a82:153a9130a57:-5ad5" lkname="Current Weather" lkpath="OpenWeatherMap/Current Weather/Current Weather" type="db_test_data"/>
                                     <lookups column="apikey" lookupValue="%%apikey%%"/>
                                     <lookups column="city_id" lookupValue="%%id%%"/>
                                     <lookups column="lang" lookupValue="%%lang%%"/>
                                     <lookups column="units" lookupValue="%%units%%"/>
                                  </props>
-                                 <mapper disableFiltersWhenEmpty="false" knownColumns="city_name,visibility,huminity,sun_set,lang,city,mode,apikey,temperature,city_id,coord_lon,temperature_unit,last_update,wind_direction_name,humidity_unit,wind_speed_name,weather,weather_number,clouds,pressure,coord_lat,wind_direction,temperature_max,clouds_name,precipitation_unit,temperature_min,wind_speed,pressure_unit,units,country,precipitation_mode,weather_icon,precipitation,wind_direction_code,sun_rise,replyId">
-                                    <mapping columnName="city" tagName="city" type="4"/>
-                                    <mapping columnName="units" tagName="units" type="4"/>
-                                    <mapping columnName="lang" tagName="lang" type="4"/>
-                                    <mapping columnName="mode" tagName="mode" type="4"/>
-                                    <mapping columnName="apikey" tagName="apikey" type="4"/>
+                                 <mapper disableFiltersWhenEmpty="false" knownColumns="city_name,visibility,query,sun_set,lang,apikey,city_id,last_update,wind_direction_name,humidity_unit,wind_speed_name,weather,longitude,weather_number,sun_rise_epoch,wind_gusts,clouds,temp_unit,pressure,wind_direction,clouds_name,precipitation_unit,wind_speed,pressure_unit,units,country,humidity,precipitation_mode,weather_icon,temp_max,precipitation,temp_min,wind_direction_code,sun_rise,temp,latitude,sun_set_epoch">
+                                    <mapping columnName="last_update" tagName="last_update" type="4"/>
                                     <mapping columnName="city_id" tagName="city_id" type="4"/>
                                     <mapping columnName="city_name" tagName="city_name" type="4"/>
                                     <mapping columnName="country" tagName="country" type="4"/>
+                                    <mapping columnName="longitude" tagName="longitude" type="4"/>
+                                    <mapping columnName="latitude" tagName="latitude" type="4"/>
+                                    <mapping columnName="apikey" tagName="apikey" type="4"/>
+                                    <mapping columnName="units" tagName="units" type="4"/>
+                                    <mapping columnName="lang" tagName="lang" type="4"/>
                                     <mapping columnName="sun_rise" tagName="sun_rise" type="4"/>
+                                    <mapping columnName="sun_rise_epoch" tagName="sun_rise_epoch" type="4"/>
                                     <mapping columnName="sun_set" tagName="sun_set" type="4"/>
+                                    <mapping columnName="sun_set_epoch" tagName="sun_set_epoch" type="4"/>
+                                    <mapping columnName="temp" tagName="temp" type="4"/>
+                                    <mapping columnName="temp_min" tagName="temp_min" type="4"/>
+                                    <mapping columnName="temp_max" tagName="temp_max" type="4"/>
+                                    <mapping columnName="temp_unit" tagName="temp_unit" type="4"/>
+                                    <mapping columnName="humidity" tagName="humidity" type="4"/>
                                     <mapping columnName="pressure" tagName="pressure" type="4"/>
                                     <mapping columnName="wind_speed" tagName="wind_speed" type="4"/>
                                     <mapping columnName="wind_speed_name" tagName="wind_speed_name" type="4"/>
+                                    <mapping columnName="wind_gusts" tagName="wind_gusts" type="4"/>
                                     <mapping columnName="wind_direction" tagName="wind_direction" type="4"/>
                                     <mapping columnName="wind_direction_code" tagName="wind_direction_code" type="4"/>
                                     <mapping columnName="wind_direction_name" tagName="wind_direction_name" type="4"/>
@@ -1208,9 +1227,10 @@
                                     <mapping columnName="weather_number" tagName="weather_number" type="4"/>
                                     <mapping columnName="weather" tagName="weather" type="4"/>
                                     <mapping columnName="weather_icon" tagName="weather_icon" type="4"/>
-                                    <mapping columnName="last_update" tagName="last_update" type="4"/>
                                     <mapping columnName="humidity_unit" tagName="humidity_unit" type="4"/>
                                     <mapping columnName="pressure_unit" tagName="pressure_unit" type="4"/>
+                                    <mapping columnName="city" tagName="city" type="5"/>
+                                    <mapping columnName="mode" tagName="mode" type="5"/>
                                  </mapper>
                               </resourceConfig>
                            </editableResource>
@@ -1360,7 +1380,7 @@
                            </editableResource>
                            <editableResource id="-70bdf138:1534257a94b:-6e6e" selfDescribing="Use a value from the current run to extract information from a test data set." type="test_data_lookup_action" version="1.0">
                               <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
-                              <resourceConfig description="" name="Search &quot;Recorded&quot; in &quot;apikey&quot; and for &quot;%%lat%%&quot; in &quot;coord_lat&quot; and for &quot;%%lon%%&quot; in &quot;coord_lon&quot; and in &quot;lang&quot; and in &quot;units&quot; (2)">
+                              <resourceConfig description="" name="Search &quot;Current Weather&quot; in &quot;apikey&quot; and in &quot;lang&quot; and in &quot;units&quot;">
                                  <true id="-70bdf138:1534257a94b:-6e6d" selfDescribing="Found" type="test_data_lookup_path_action" version="1.0">
                                     <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
                                     <resourceConfig description="" name="" path="0">
@@ -1380,27 +1400,34 @@
                                     </resourceConfig>
                                  </false>
                                  <props allMatches="false">
-                                    <tdsref id="-70bdf138:1532d24338b:-4043" lkname="Recorded" lkpath="OpenWeatherMap/Current Weather/Recorded" type="simple_test_data"/>
+                                    <tdsref id="-47e24a82:153a9130a57:-5ad5" lkname="Current Weather" lkpath="OpenWeatherMap/Current Weather/Current Weather" type="db_test_data"/>
                                     <lookups column="apikey" lookupValue="%%apikey%%"/>
-                                    <lookups column="coord_lat" lookupValue="%%lat%%"/>
-                                    <lookups column="coord_lon" lookupValue="%%lon%%"/>
                                     <lookups column="lang" lookupValue="%%lang%%"/>
                                     <lookups column="units" lookupValue="%%units%%"/>
                                  </props>
-                                 <mapper disableFiltersWhenEmpty="false" knownColumns="city_name,visibility,huminity,sun_set,lang,city,mode,apikey,temperature,city_id,coord_lon,temperature_unit,last_update,wind_direction_name,humidity_unit,wind_speed_name,weather,weather_number,clouds,pressure,coord_lat,wind_direction,temperature_max,clouds_name,precipitation_unit,temperature_min,wind_speed,pressure_unit,units,country,precipitation_mode,weather_icon,precipitation,wind_direction_code,sun_rise,replyId">
-                                    <mapping columnName="city" tagName="city" type="4"/>
-                                    <mapping columnName="units" tagName="units" type="4"/>
-                                    <mapping columnName="lang" tagName="lang" type="4"/>
-                                    <mapping columnName="mode" tagName="mode" type="4"/>
-                                    <mapping columnName="apikey" tagName="apikey" type="4"/>
+                                 <mapper disableFiltersWhenEmpty="false" knownColumns="city_name,visibility,query,sun_set,lang,apikey,city_id,last_update,wind_direction_name,humidity_unit,wind_speed_name,weather,longitude,weather_number,sun_rise_epoch,wind_gusts,clouds,temp_unit,pressure,wind_direction,clouds_name,precipitation_unit,wind_speed,pressure_unit,units,country,humidity,precipitation_mode,weather_icon,temp_max,precipitation,temp_min,wind_direction_code,sun_rise,temp,latitude,sun_set_epoch">
+                                    <mapping columnName="last_update" tagName="last_update" type="4"/>
                                     <mapping columnName="city_id" tagName="city_id" type="4"/>
                                     <mapping columnName="city_name" tagName="city_name" type="4"/>
                                     <mapping columnName="country" tagName="country" type="4"/>
+                                    <mapping columnName="longitude" tagName="longitude" type="4"/>
+                                    <mapping columnName="latitude" tagName="latitude" type="4"/>
+                                    <mapping columnName="apikey" tagName="apikey" type="4"/>
+                                    <mapping columnName="units" tagName="units" type="4"/>
+                                    <mapping columnName="lang" tagName="lang" type="4"/>
                                     <mapping columnName="sun_rise" tagName="sun_rise" type="4"/>
+                                    <mapping columnName="sun_rise_epoch" tagName="sun_rise_epoch" type="4"/>
                                     <mapping columnName="sun_set" tagName="sun_set" type="4"/>
+                                    <mapping columnName="sun_set_epoch" tagName="sun_set_epoch" type="4"/>
+                                    <mapping columnName="temp" tagName="temp" type="4"/>
+                                    <mapping columnName="temp_min" tagName="temp_min" type="4"/>
+                                    <mapping columnName="temp_max" tagName="temp_max" type="4"/>
+                                    <mapping columnName="temp_unit" tagName="temp_unit" type="4"/>
+                                    <mapping columnName="humidity" tagName="humidity" type="4"/>
                                     <mapping columnName="pressure" tagName="pressure" type="4"/>
                                     <mapping columnName="wind_speed" tagName="wind_speed" type="4"/>
                                     <mapping columnName="wind_speed_name" tagName="wind_speed_name" type="4"/>
+                                    <mapping columnName="wind_gusts" tagName="wind_gusts" type="4"/>
                                     <mapping columnName="wind_direction" tagName="wind_direction" type="4"/>
                                     <mapping columnName="wind_direction_code" tagName="wind_direction_code" type="4"/>
                                     <mapping columnName="wind_direction_name" tagName="wind_direction_name" type="4"/>
@@ -1413,9 +1440,10 @@
                                     <mapping columnName="weather_number" tagName="weather_number" type="4"/>
                                     <mapping columnName="weather" tagName="weather" type="4"/>
                                     <mapping columnName="weather_icon" tagName="weather_icon" type="4"/>
-                                    <mapping columnName="last_update" tagName="last_update" type="4"/>
                                     <mapping columnName="humidity_unit" tagName="humidity_unit" type="4"/>
                                     <mapping columnName="pressure_unit" tagName="pressure_unit" type="4"/>
+                                    <mapping columnName="city" tagName="city" type="5"/>
+                                    <mapping columnName="mode" tagName="mode" type="5"/>
                                  </mapper>
                               </resourceConfig>
                            </editableResource>
@@ -1558,7 +1586,7 @@
                            </editableResource>
                            <editableResource id="-3af80750:15405511ab7:-579f" selfDescribing="Use a value from the current run to extract information from a test data set." type="test_data_lookup_action" version="1.0">
                               <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
-                              <resourceConfig description="" name="Search &quot;Recorded&quot; in &quot;apikey&quot; and for &quot;%%lat%%&quot; in &quot;coord_lat&quot; and for &quot;%%lon%%&quot; in &quot;coord_lon&quot; and in &quot;lang&quot; and in &quot;units&quot;">
+                              <resourceConfig description="" name="Search &quot;Current Weather&quot; in &quot;apikey&quot; and in &quot;lang&quot; and in &quot;units&quot; (2)">
                                  <true id="-3af80750:15405511ab7:-579e" selfDescribing="Found" type="test_data_lookup_path_action" version="1.0">
                                     <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
                                     <resourceConfig description="" name=" (4)" path="0">
@@ -1578,27 +1606,34 @@
                                     </resourceConfig>
                                  </false>
                                  <props allMatches="false">
-                                    <tdsref id="-70bdf138:1532d24338b:-4043" lkname="Recorded" lkpath="OpenWeatherMap/Current Weather/Recorded" type="simple_test_data"/>
+                                    <tdsref id="-47e24a82:153a9130a57:-5ad5" lkname="Current Weather" lkpath="OpenWeatherMap/Current Weather/Current Weather" type="db_test_data"/>
                                     <lookups column="apikey" lookupValue="%%apikey%%"/>
-                                    <lookups column="coord_lat" lookupValue="%%lat%%"/>
-                                    <lookups column="coord_lon" lookupValue="%%lon%%"/>
                                     <lookups column="lang" lookupValue="%%lang%%"/>
                                     <lookups column="units" lookupValue="%%units%%"/>
                                  </props>
-                                 <mapper disableFiltersWhenEmpty="false" knownColumns="city_name,visibility,huminity,sun_set,lang,city,mode,apikey,temperature,city_id,coord_lon,temperature_unit,last_update,wind_direction_name,humidity_unit,wind_speed_name,weather,weather_number,clouds,pressure,coord_lat,wind_direction,temperature_max,clouds_name,precipitation_unit,temperature_min,wind_speed,pressure_unit,units,country,precipitation_mode,weather_icon,precipitation,wind_direction_code,sun_rise,replyId">
-                                    <mapping columnName="city" tagName="city" type="4"/>
-                                    <mapping columnName="units" tagName="units" type="4"/>
-                                    <mapping columnName="lang" tagName="lang" type="4"/>
-                                    <mapping columnName="mode" tagName="mode" type="4"/>
-                                    <mapping columnName="apikey" tagName="apikey" type="4"/>
+                                 <mapper disableFiltersWhenEmpty="false" knownColumns="city_name,visibility,query,sun_set,lang,apikey,city_id,last_update,wind_direction_name,humidity_unit,wind_speed_name,weather,longitude,weather_number,sun_rise_epoch,wind_gusts,clouds,temp_unit,pressure,wind_direction,clouds_name,precipitation_unit,wind_speed,pressure_unit,units,country,humidity,precipitation_mode,weather_icon,temp_max,precipitation,temp_min,wind_direction_code,sun_rise,temp,latitude,sun_set_epoch">
+                                    <mapping columnName="last_update" tagName="last_update" type="4"/>
                                     <mapping columnName="city_id" tagName="city_id" type="4"/>
                                     <mapping columnName="city_name" tagName="city_name" type="4"/>
                                     <mapping columnName="country" tagName="country" type="4"/>
+                                    <mapping columnName="longitude" tagName="longitude" type="4"/>
+                                    <mapping columnName="latitude" tagName="latitude" type="4"/>
+                                    <mapping columnName="apikey" tagName="apikey" type="4"/>
+                                    <mapping columnName="units" tagName="units" type="4"/>
+                                    <mapping columnName="lang" tagName="lang" type="4"/>
                                     <mapping columnName="sun_rise" tagName="sun_rise" type="4"/>
+                                    <mapping columnName="sun_rise_epoch" tagName="sun_rise_epoch" type="4"/>
                                     <mapping columnName="sun_set" tagName="sun_set" type="4"/>
+                                    <mapping columnName="sun_set_epoch" tagName="sun_set_epoch" type="4"/>
+                                    <mapping columnName="temp" tagName="temp" type="4"/>
+                                    <mapping columnName="temp_min" tagName="temp_min" type="4"/>
+                                    <mapping columnName="temp_max" tagName="temp_max" type="4"/>
+                                    <mapping columnName="temp_unit" tagName="temp_unit" type="4"/>
+                                    <mapping columnName="humidity" tagName="humidity" type="4"/>
                                     <mapping columnName="pressure" tagName="pressure" type="4"/>
                                     <mapping columnName="wind_speed" tagName="wind_speed" type="4"/>
                                     <mapping columnName="wind_speed_name" tagName="wind_speed_name" type="4"/>
+                                    <mapping columnName="wind_gusts" tagName="wind_gusts" type="4"/>
                                     <mapping columnName="wind_direction" tagName="wind_direction" type="4"/>
                                     <mapping columnName="wind_direction_code" tagName="wind_direction_code" type="4"/>
                                     <mapping columnName="wind_direction_name" tagName="wind_direction_name" type="4"/>
@@ -1611,9 +1646,10 @@
                                     <mapping columnName="weather_number" tagName="weather_number" type="4"/>
                                     <mapping columnName="weather" tagName="weather" type="4"/>
                                     <mapping columnName="weather_icon" tagName="weather_icon" type="4"/>
-                                    <mapping columnName="last_update" tagName="last_update" type="4"/>
                                     <mapping columnName="humidity_unit" tagName="humidity_unit" type="4"/>
                                     <mapping columnName="pressure_unit" tagName="pressure_unit" type="4"/>
+                                    <mapping columnName="city" tagName="city" type="5"/>
+                                    <mapping columnName="mode" tagName="mode" type="5"/>
                                  </mapper>
                               </resourceConfig>
                            </editableResource>

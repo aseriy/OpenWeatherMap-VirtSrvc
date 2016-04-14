@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1456752531586" createdUser="rational" id="-70bdf138:1532d24338b:-7b04" selfDescribing="OpenWeatherMap" type="parameterized_url_schema" updatedTimestamp="1460376408920" updatedUser="rational" version="1.0">
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1456752531586" createdUser="rational" id="-70bdf138:1532d24338b:-7b04" selfDescribing="OpenWeatherMap" type="parameterized_url_schema" updatedTimestamp="1460606966129" updatedUser="rational" version="1.0">
    <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
    <resourceConfig schemaSourceTemplateName="URL">
       <schemaSourceConfig name="OpenWeatherMap">
@@ -18,7 +18,7 @@
             <query isNameValuePair="true" isParameterized="true" isRequired="false" literalValue="" parameterName="lon" queryName="lon" type="4"/>
             <query isNameValuePair="true" isParameterized="true" isRequired="false" literalValue="" parameterName="lat" queryName="lat" type="4"/>
          </url>
-         <url templateName="Forecase Daily">
+         <url templateName="Forecast Daily">
             <path isParameterized="false" literal="/" parameterName="" type="7"/>
             <path isParameterized="false" literal="data" parameterName="" type="7"/>
             <path isParameterized="false" literal="/" parameterName="" type="7"/>
