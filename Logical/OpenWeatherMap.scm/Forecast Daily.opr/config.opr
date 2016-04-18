@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1458740244005" createdUser="rational" id="320e336e:1539c43e9a8:-6f79" type="operation_resource" updatedTimestamp="1459634298544" updatedUser="rational" version="1.0">
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1458740244005" createdUser="rational" id="320e336e:1539c43e9a8:-6f79" type="operation_resource" updatedTimestamp="1460982167727" updatedUser="rational" version="1.0">
    <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
    <resourceConfig avgTime="0" color="200,255,255" dependencies="3ef6394d:153247ac697:-7eb5" invokeDynamicFormatterID="http.text.message.type" invokeEndDynamicFormatterID="http.text.message.type" invokeEndFormatterID="HTTP_Message" invokeEndTransportID="3ef6394d:153247ac697:-7eb5" invokeFormatterID="HTTP_Message" invokeTransportID="3ef6394d:153247ac697:-7eb5" maxTime="0" mepEndSchemaID="XML" mepEndSchemaNodeFormatter="XML" mepEndSchemaroot="xml.Element" mepEndUsed="true" mepType="IN_OUT" minTime="0" stubDynamicFormatterID="http.text.message.type" stubFormatterID="HTTP_Message" stubTransportID="3ef6394d:153247ac697:-7eb5">
       <invokeHeaderNode meTy="Message" name="" type="12" version="1.2">
@@ -58,7 +58,7 @@
          </_c>
       </invokeHeaderNode>
       <stubHeaderConfig>
-         <_c MessageType="http.text.message.type" Method="GET" URL="/data/2.5/forecast/daily?q=Boston&amp;units=metric&amp;lang=en&amp;mode=xml&amp;APPID=50b2ae8523a458183982bf56254556dc&amp;cnt=16" allowSubPath="false" consumerType="Participate" filterHeaders="false" filterMethod="true" filterResourcePath="false"/>
+         <_c MessageType="http.text.message.type" Method="GET" URL="/data/2.5/forecast/daily" allowSubPath="false" consumerType="Participate" filterHeaders="false" filterMethod="true" filterResourcePath="true"/>
       </stubHeaderConfig>
    </resourceConfig>
 </editableResource>
