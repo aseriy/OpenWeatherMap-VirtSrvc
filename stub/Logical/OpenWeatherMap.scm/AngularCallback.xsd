@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:dfdl="http://www.ogf.org/dfdl/dfdl-1.0/" xmlns:fmt="http://www.ibm.com/dfdl/GeneralPurposeFormat" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions">
+    <xsd:import namespace="http://www.ibm.com/dfdl/GeneralPurposeFormat" schemaLocation="../../IBMdefined/GeneralPurposeFormat.xsd"/>
+    <xsd:annotation>
+		<xsd:appinfo source="http://www.ogf.org/dfdl/">
+			<dfdl:format encoding="US-ASCII" escapeSchemeRef="" ref="fmt:GeneralPurposeFormat"/>
+		</xsd:appinfo>
+	</xsd:annotation>
+	
+	<xsd:element ibmSchExtn:docRoot="true" name="AngularCallback">
+		<xsd:complexType>
+			<xsd:sequence dfdl:separator="">
+				<xsd:element default="%%callback%%(" name="field1" type="xsd:string"/>
+				<xsd:element default="" name="field2" type="xsd:string"/>
+				<xsd:element default=");" name="field3" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

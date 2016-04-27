@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1456752531586" createdUser="rational" id="-70bdf138:1532d24338b:-7b04" selfDescribing="OpenWeatherMap" type="parameterized_url_schema" updatedTimestamp="1461059428357" updatedUser="rational" version="1.0">
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1456752531586" createdUser="rational" id="-70bdf138:1532d24338b:-7b04" selfDescribing="OpenWeatherMap" type="parameterized_url_schema" updatedTimestamp="1461765187450" updatedUser="rational" version="1.0">
    <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
    <resourceConfig schemaSourceTemplateName="URL">
       <schemaSourceConfig name="OpenWeatherMap">
@@ -18,6 +18,7 @@
             <query isNameValuePair="true" isParameterized="true" isRequired="false" literalValue="xml" parameterName="mode" queryName="mode" type="7"/>
             <query isNameValuePair="true" isParameterized="true" isRequired="false" literalValue="" parameterName="lon" queryName="lon" type="4"/>
             <query isNameValuePair="true" isParameterized="true" isRequired="false" literalValue="" parameterName="lat" queryName="lat" type="4"/>
+            <query defaultValue="" isNameValuePair="true" isParameterized="true" isRequired="false" literalValue="" parameterName="zip" queryName="zip" type="7"/>
          </url>
          <url templateName="Forecast Daily">
             <path isParameterized="false" literal="/" parameterName="" type="7"/>
@@ -38,6 +39,7 @@
             <query isNameValuePair="true" isParameterized="true" isRequired="false" literalValue="" parameterName="lon" queryName="lon" type="4"/>
             <query isNameValuePair="true" isParameterized="true" isRequired="false" literalValue="" parameterName="lat" queryName="lat" type="4"/>
             <query defaultValue="" isNameValuePair="true" isParameterized="true" isRequired="false" literalValue="" parameterName="cnt" queryName="cnt" type="2"/>
+            <query defaultValue="" isNameValuePair="true" isParameterized="true" isRequired="false" literalValue="" parameterName="callback" queryName="callback" type="7"/>
          </url>
       </schemaSourceConfig>
    </resourceConfig>

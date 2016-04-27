@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1461728846760" createdUser="rational" id="-40a7886d:15455d05003:-7e88" selfDescribing="AngularCallback" type="schema_spi:dfdl" updatedTimestamp="1461728846760" updatedUser="rational" version="1.0">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig schemaSourceTemplateName="DFDL Schema">
+      <schemaSourceConfig sourceType="101" uri="%%PROJECT/ROOT%%/Logical/OpenWeatherMap.scm/AngularCallback.xsd"/>
+   </resourceConfig>
+</editableResource>

@@ -2,10 +2,11 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <comment>logical.props Diagram Properties</comment>
-<entry key="-70bdf138:1532d24338b:-4121">109.0,89.0</entry>
+<entry key="-70bdf138:1532d24338b:-4121">121.0,343.0</entry>
 <entry key="-fbdd4ef:1532ae26c6c:-7a52">109.0,89.0</entry>
-<entry key="-fbdd4ef:1532ae26c6c:-7aca">174.0,187.5</entry>
-<entry key="320e336e:1539c43e9a8:-4c86">285.0,80.5</entry>
-<entry key="320e336e:1539c43e9a8:-6f79">109.0,211.0</entry>
-<entry key="3ef6394d:153247ac697:-7eb5">109.0,324.5</entry>
+<entry key="-fbdd4ef:1532ae26c6c:-7aca">186.0,319.5</entry>
+<entry key="3039b5a5:1544d745633:-7b05">111.0,326.5</entry>
+<entry key="320e336e:1539c43e9a8:-4c86">297.0,212.5</entry>
+<entry key="320e336e:1539c43e9a8:-6f79">121.0,221.0</entry>
+<entry key="3ef6394d:153247ac697:-7eb5">121.0,456.5</entry>
 </properties>

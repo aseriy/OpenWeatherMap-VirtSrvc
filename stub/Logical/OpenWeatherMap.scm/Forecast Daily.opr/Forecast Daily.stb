@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1459464220221" createdUser="rational" id="79c1b397:153c59ada52:-5c8a" type="stub_resource" updatedTimestamp="1460608326636" updatedUser="rational" version="1.1">
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1459464220221" createdUser="rational" id="79c1b397:153c59ada52:-5c8a" type="stub_resource" updatedTimestamp="1461731203810" updatedUser="rational" version="1.1">
    <loggingConfiguration debug="true" writeStubEventsToDB="true"/>
    <resourceConfig description="" name="">
       <testTree>
          <editableResource id="79c1b397:153c59ada52:-3c98" selfDescribing="Configure a subscriber to pick up a message that can be passed to the child Case Actions" type="message_switch_action" version="1.0">
             <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
-            <resourceConfig description="" formatter="HTTP_Message" name="on resource &quot;/data/2.5/forecast/daily?q=Boston&amp;units=metric&amp;lang=en&amp;mode=xml&amp;APPID=50b2ae8523a458183982bf56254556dc&amp;cnt=16&quot; via &quot;OpenWeatherMap&quot;" src="320e336e:1539c43e9a8:-6f79" transport="3ef6394d:153247ac697:-7eb5">
-               <settings MessageType="http.text.message.type" Method="GET" URL="/data/2.5/forecast/daily?q=Boston&amp;units=metric&amp;lang=en&amp;mode=xml&amp;APPID=50b2ae8523a458183982bf56254556dc&amp;cnt=16" _version="1.1" allowSubPath="false" consumerType="Participate" filterHeaders="false" filterMethod="true" filterResourcePath="false"/>
+            <resourceConfig description="" formatter="HTTP_Message" name="on resource &quot;/data/2.5/forecast/daily&quot; via &quot;OpenWeatherMap&quot;" src="320e336e:1539c43e9a8:-6f79" transport="3ef6394d:153247ac697:-7eb5">
+               <settings MessageType="http.text.message.type" Method="GET" URL="/data/2.5/forecast/daily" _version="1.1" allowSubPath="false" consumerType="Participate" filterHeaders="false" filterMethod="true" filterResourcePath="true"/>
                <passThrough behaviour="DISCARD" componentId="320e336e:1539c43e9a8:-6f79" componentType="OPERATION" templateType="http_transport">
                   <DISCARD delayPeriod="0"/>
                </passThrough>
@@ -117,18 +117,18 @@
                                        <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
                                     </fieldAction>
                                  </fieldActionGroup>
-                                 <_c meTy="String" name="Accept" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Referer" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Accept-Language" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Accept-Encoding" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="If-Modified-Since" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="If-None-Match" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="User-Agent" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Content-Type" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="SOAPAction" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Host" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Connection" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Cookie" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="accept" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="referer" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="accept-language" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="accept-encoding" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="if-modified-since" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="if-none-match" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="user-agent" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="content-type" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="soapaction" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="host" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="connection" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="cookie" sch="Http Subscribe" type="7" version="1.2"/>
                               </_c>
                               <_c meTy="Boolean" name="followRedirects" sch="Http Subscribe" type="8" version="1.2"/>
                            </_c>
@@ -1145,9 +1145,9 @@
                         </childActions>
                      </resourceConfig>
                   </editableResource>
-                  <editableResource id="-435d5f1c:153de24dd37:-4f59" selfDescribing="Configure the filtering and validation for this Case action" type="message_case_action" version="1.0">
+                  <editableResource id="-435d5f1c:153de24dd37:-4122" selfDescribing="Configure the filtering and validation for this Case action" type="message_case_action" version="1.0">
                      <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
-                     <resourceConfig description="by city name, 7 days" name="&quot;Text&quot; using schema &quot;Text&quot; (7)">
+                     <resourceConfig description="by city name, 7 days" name="&quot;Text&quot; using schema &quot;Text&quot; (9)">
                         <FilterExpressions option="NOTHING" type="script:ECMAScript"/>
                         <bodyfilters assocdefid="Text" name="Text" sch="Text" type="12" version="1.2">
                            <fieldActionGroup>
@@ -1215,6 +1215,13 @@
                                        </fieldAction>
                                     </filterActionGroup>
                                  </_c>
+                                 <_c name="callback" sch="-70bdf138:1532d24338b:-7b04" type="7" version="1.2">
+                                    <fieldActionGroup>
+                                       <fieldAction description="Store copy of field 'callback' in tag 'callback'" tN="callback" type="2">
+                                          <dataAction type="Copy"/>
+                                       </fieldAction>
+                                    </fieldActionGroup>
+                                 </_c>
                                  <_c name="body" sch="-70bdf138:1532d24338b:-7b04" type="12" version="1.2">
                                     <fieldActionGroup>
                                        <fieldAction enabled="false" type="1">
@@ -1252,18 +1259,18 @@
                                        <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
                                     </fieldAction>
                                  </fieldActionGroup>
-                                 <_c meTy="String" name="Accept" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Referer" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Accept-Language" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Accept-Encoding" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="If-Modified-Since" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="If-None-Match" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="User-Agent" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Content-Type" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="SOAPAction" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Host" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Connection" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Cookie" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="accept" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="referer" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="accept-language" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="accept-encoding" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="if-modified-since" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="if-none-match" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="user-agent" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="content-type" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="soapaction" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="host" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="connection" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="cookie" sch="Http Subscribe" type="7" version="1.2"/>
                               </_c>
                               <_c meTy="Boolean" name="followRedirects" sch="Http Subscribe" type="8" version="1.2"/>
                            </_c>
@@ -1271,7 +1278,7 @@
                            <_c meTy="Date-Time" name="rcvdTimestamp" sch="Http Subscribe" type="11" version="1.2"/>
                         </headerfilters>
                         <childActions>
-                           <editableResource id="-4e7c7d21:15406108b6e:-51fa" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+                           <editableResource id="-4e7c7d21:15406108b6e:-4e81" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
                               <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
                               <resourceConfig description="" eval_type="Mozilla Rhino" function="tags[&quot;lang&quot;].toLowerCase()" name="Run &quot;tags[&quot;lang&quot;].toLowerCase()&quot;, store into&quot;lang&quot; (9)">
                                  <fieldActionGroup>
@@ -1281,30 +1288,298 @@
                                  </fieldActionGroup>
                               </resourceConfig>
                            </editableResource>
-                           <editableResource id="-435d5f1c:153de24dd37:-4f58" selfDescribing="Use a value from the current run to extract information from a test data set." type="test_data_lookup_action" version="1.0">
+                           <editableResource id="-435d5f1c:153de24dd37:-4121" selfDescribing="Use a value from the current run to extract information from a test data set." type="test_data_lookup_action" version="1.0">
                               <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
-                              <resourceConfig description="" name="Search &quot;Forecast Daily 7&quot; in &quot;apikey&quot; and in &quot;lang&quot; and for &quot;%%city%%&quot; in &quot;query&quot; and in &quot;units&quot;">
-                                 <true id="-435d5f1c:153de24dd37:-4f57" selfDescribing="Found" type="test_data_lookup_path_action" version="1.0">
+                              <resourceConfig description="" name="Search &quot;Forecast Daily by City 7&quot; in &quot;apikey&quot; and in &quot;lang&quot; and for &quot;%%city%%&quot; in &quot;query&quot; and in &quot;units&quot;">
+                                 <true id="-435d5f1c:153de24dd37:-4120" selfDescribing="Found" type="test_data_lookup_path_action" version="1.0">
                                     <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
-                                    <resourceConfig description="" name="" path="0">
-                                       <editableResource id="32b390f2:15408c67197:-3760" selfDescribing="Choose evaluation expressions to determine test execution flow.  Use predefined functions, custom plug-ins and tagged data." type="decision_action" version="1.0">
+                                    <resourceConfig description="" name=" (18)" path="0">
+                                       <editableResource id="32b390f2:15408c67197:-3c3f" selfDescribing="Choose evaluation expressions to determine test execution flow.  Use predefined functions, custom plug-ins and tagged data." type="decision_action" version="1.0">
                                           <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
-                                          <resourceConfig description="" name="tags[&quot;mode&quot;] == &quot;xml&quot; (2)" option="OTHER" script="tags[&quot;mode&quot;] == &quot;xml&quot;" type="script:ECMAScript">
-                                             <true id="32b390f2:15408c67197:-375f" selfDescribing="True" type="decision_path_action" version="1.0">
+                                          <resourceConfig description="" name="tags[&quot;mode&quot;] == &quot;xml&quot; (3)" option="OTHER" script="tags[&quot;mode&quot;] == &quot;xml&quot;" type="script:ECMAScript">
+                                             <true id="32b390f2:15408c67197:-3c3e" selfDescribing="True" type="decision_path_action" version="1.0">
                                                 <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
-                                                <resourceConfig description="" name="" path="0">
-                                                   <editableResource id="32b390f2:15408c67197:-375e" selfDescribing="Respond to a previously received request message.  Select the relevant request from the drop-down and edit the content of the message to send." type="send_reply_action" version="1.0">
+                                                <resourceConfig description="" name=" (19)" path="0">
+                                                   <editableResource id="32b390f2:15408c67197:-3c3d" selfDescribing="Respond to a previously received request message.  Select the relevant request from the drop-down and edit the content of the message to send." type="send_reply_action" version="1.0">
                                                       <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
-                                                      <resourceConfig bodyLinkId="320e336e:1539c43e9a8:-4e1e" description="" headerLinkId="320e336e:1539c43e9a8:-4e1e" isBodyLinked="true" isHeaderLinked="true" name="Linked to &quot;Forecast Daily XML&quot;, &quot;Text&quot; using schema &quot;Text&quot;" receiverequestid="79c1b397:153c59ada52:-3c98"/>
+                                                      <resourceConfig bodyLinkId="320e336e:1539c43e9a8:-4e1e" description="" headerLinkId="320e336e:1539c43e9a8:-4e1e" isBodyLinked="true" isHeaderLinked="true" name="Linked to &quot;Forecast Daily XML&quot;, &quot;Text&quot; using schema &quot;Text&quot; (6)" receiverequestid="79c1b397:153c59ada52:-3c98"/>
                                                    </editableResource>
                                                 </resourceConfig>
                                              </true>
-                                             <false id="32b390f2:15408c67197:-375d" selfDescribing="False" type="decision_path_action" version="1.0">
+                                             <false id="32b390f2:15408c67197:-3c3c" selfDescribing="False" type="decision_path_action" version="1.0">
                                                 <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
-                                                <resourceConfig description="" name="" path="1">
-                                                   <editableResource id="32b390f2:15408c67197:-375c" selfDescribing="Respond to a previously received request message.  Select the relevant request from the drop-down and edit the content of the message to send." type="send_reply_action" version="1.0">
+                                                <resourceConfig description="" name=" (20)" path="1">
+                                                   <editableResource id="3039b5a5:1544d745633:883" selfDescribing="Choose evaluation expressions to determine test execution flow.  Use predefined functions, custom plug-ins and tagged data." type="decision_action" version="1.0">
                                                       <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
-                                                      <resourceConfig bodyLinkId="-4e7c7d21:15406108b6e:-7b91" description="" headerLinkId="-4e7c7d21:15406108b6e:-7b91" isBodyLinked="true" isHeaderLinked="true" name="Linked to &quot;Forecast Daily JSON&quot;, &quot;Text&quot; using schema &quot;Text&quot;" receiverequestid="79c1b397:153c59ada52:-3c98"/>
+                                                      <resourceConfig description="" name="typeof tags[&quot;callback&quot;] === 'undefined'" option="OTHER" script="typeof tags[&quot;callback&quot;] === 'undefined'" type="script:ECMAScript">
+                                                         <true id="3039b5a5:1544d745633:884" selfDescribing="True" type="decision_path_action" version="1.0">
+                                                            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                                                            <resourceConfig description="" name="" path="0">
+                                                               <editableResource id="32b390f2:15408c67197:-3c3b" selfDescribing="Respond to a previously received request message.  Select the relevant request from the drop-down and edit the content of the message to send." type="send_reply_action" version="1.0">
+                                                                  <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                                                                  <resourceConfig bodyLinkId="-4e7c7d21:15406108b6e:-7b91" description="" headerLinkId="-4e7c7d21:15406108b6e:-7b91" isBodyLinked="true" isHeaderLinked="true" name="Linked to &quot;Forecast Daily JSON&quot;, &quot;Text&quot; using schema &quot;Text&quot;" receiverequestid="79c1b397:153c59ada52:-3c98"/>
+                                                               </editableResource>
+                                                            </resourceConfig>
+                                                         </true>
+                                                         <false id="3039b5a5:1544d745633:885" selfDescribing="False" type="decision_path_action" version="1.0">
+                                                            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                                                            <resourceConfig description="" name="" path="1">
+                                                               <editableResource id="3039b5a5:1544d745633:1383" selfDescribing="Respond to a previously received request message.  Select the relevant request from the drop-down and edit the content of the message to send." type="send_reply_action" version="1.0">
+                                                                  <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                                                                  <resourceConfig description="" formatter="HTTP_Message" name="&quot;Text&quot; using schema &quot;Text&quot; (10)" receiverequestid="79c1b397:153c59ada52:-3c98">
+                                                                     <replyHeaderMessage assocdefid="Http Send Reply" meTy="Message" name="" sch="Http Send Reply" type="12" version="1.2">
+                                                                        <fieldActionGroup>
+                                                                           <fieldAction enabled="false" type="1">
+                                                                              <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+                                                                           </fieldAction>
+                                                                        </fieldActionGroup>
+                                                                        <_c meTy="String" name="StatusCode" sch="Http Send Reply" type="7" value="200" version="1.2">
+                                                                           <fieldActionGroup>
+                                                                              <fieldAction type="0">
+                                                                                 <fieldAction exp="200" type="0"/>
+                                                                              </fieldAction>
+                                                                           </fieldActionGroup>
+                                                                        </_c>
+                                                                        <_c meTy="String" name="ReasonPhrase" sch="Http Send Reply" type="7" value="OK" version="1.2">
+                                                                           <fieldActionGroup>
+                                                                              <fieldAction type="0">
+                                                                                 <fieldAction exp="OK" type="0"/>
+                                                                              </fieldAction>
+                                                                           </fieldActionGroup>
+                                                                        </_c>
+                                                                        <_c meTy="String" name="MessageType" sch="Http Send Reply" type="7" value="http.text.message.type" version="1.2">
+                                                                           <fieldActionGroup>
+                                                                              <fieldAction type="0">
+                                                                                 <fieldAction exp="http.text.message.type" type="0"/>
+                                                                              </fieldAction>
+                                                                           </fieldActionGroup>
+                                                                        </_c>
+                                                                        <_c meTy="Message" name="httpDetails" sch="Http Send Reply" type="12" version="1.2">
+                                                                           <fieldActionGroup>
+                                                                              <fieldAction enabled="false" type="1">
+                                                                                 <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+                                                                              </fieldAction>
+                                                                           </fieldActionGroup>
+                                                                           <_c meTy="String" name="Version" sch="Http Send Reply" type="7" value="1.0" version="1.2">
+                                                                              <fieldActionGroup>
+                                                                                 <fieldAction type="0">
+                                                                                    <fieldAction exp="1.0" type="0"/>
+                                                                                 </fieldAction>
+                                                                              </fieldActionGroup>
+                                                                           </_c>
+                                                                           <_c meTy="Message" name="httpHeaders" sch="Http Send Reply" type="12" version="1.2">
+                                                                              <fieldActionGroup>
+                                                                                 <fieldAction enabled="false" type="1">
+                                                                                    <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+                                                                                 </fieldAction>
+                                                                              </fieldActionGroup>
+                                                                              <_c meTy="String" name="Content-Type" sch="Http Send Reply" type="7" value="application/json" version="1.2">
+                                                                                 <fieldActionGroup>
+                                                                                    <fieldAction type="0">
+                                                                                       <fieldAction exp="application/json" type="0"/>
+                                                                                    </fieldAction>
+                                                                                 </fieldActionGroup>
+                                                                              </_c>
+                                                                           </_c>
+                                                                        </_c>
+                                                                     </replyHeaderMessage>
+                                                                     <replyMessage assocdefid="Text" name="Text" sch="Text" type="12" version="1.2">
+                                                                        <fieldActionGroup>
+                                                                           <fieldAction enabled="false" type="1">
+                                                                              <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+                                                                           </fieldAction>
+                                                                        </fieldActionGroup>
+                                                                        <_c coreTypeInt="7" coreTypeName="String" name="text" nodeFormatter="SPI|DFDL Schema" sch="Text" type="12" version="1.2">
+                                                                           <fieldExpander fieldExpanderID="SPI|DFDL Schema" fieldSchema="-40a7886d:15455d05003:-7e88" fieldSchemaRoot="AngularCallback"/>
+                                                                           <fieldActionGroup>
+                                                                              <fieldAction type="0">
+                                                                                 <fieldAction type="4"/>
+                                                                              </fieldAction>
+                                                                              <fieldAction enabled="false" type="1">
+                                                                                 <fieldAction enabled="false" type="7"/>
+                                                                              </fieldAction>
+                                                                           </fieldActionGroup>
+                                                                           <_c assocdefid="AngularCallback" name="AngularCallback" sch="-40a7886d:15455d05003:-7e88" type="12" version="1.2">
+                                                                              <fieldActionGroup>
+                                                                                 <fieldAction enabled="false" type="1">
+                                                                                    <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+                                                                                 </fieldAction>
+                                                                              </fieldActionGroup>
+                                                                              <_c assocdefid="#String" name="field1" sch="-40a7886d:15455d05003:-7e88" type="7" version="1.2">
+                                                                                 <fieldActionGroup>
+                                                                                    <fieldAction type="0">
+                                                                                       <fieldAction exp="%%callback%%(" type="0"/>
+                                                                                    </fieldAction>
+                                                                                 </fieldActionGroup>
+                                                                              </_c>
+                                                                              <_c assocdefid="#String" coreTypeInt="7" coreTypeName="String" name="field2" nodeFormatter="JSON.nodeformatter" sch="-40a7886d:15455d05003:-7e88" type="12" version="1.2">
+                                                                                 <fieldExpander fieldExpanderID="JSON.fieldexpander" fieldSchema="JSON" fieldSchemaRoot="Object"/>
+                                                                                 <contentTree>{"city":{"id":0,"name":"%%city_name%%","coord":{"lon":0.0,"lat":0.0},"country":"%%country%%","population":0},"cod":"200","message":0.0,"cnt":0,"list":[{"dt":0,"temp":{"day":0.0,"min":0.0,"max":0.0,"night":0.0,"eve":0.0,"morn":0.0},"pressure":0.0,"humidity":0,"weather":[{"id":0,"main":"%%symbol_name%%","description":"%%symbol_name%%","icon":"%%symbol_var%%"}],"speed":0.0,"deg":0,"clouds":0}]}<defaultActions>
+                                                                                       <defaultMessageActions>
+                                                                                          <fieldActionGroup>
+                                                                                             <fieldAction enabled="false" type="1">
+                                                                                                <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
+                                                                                             </fieldAction>
+                                                                                             <fieldAction type="0">
+                                                                                                <fieldAction type="100"/>
+                                                                                             </fieldAction>
+                                                                                             <fieldAction enabled="false" type="1">
+                                                                                                <fieldAction enabled="false" type="5"/>
+                                                                                             </fieldAction>
+                                                                                             <fieldAction enabled="false" type="1">
+                                                                                                <fieldAction enabled="false" type="6" typeActionAllType="true" typeActionMetaType="false"/>
+                                                                                             </fieldAction>
+                                                                                          </fieldActionGroup>
+                                                                                       </defaultMessageActions>
+                                                                                       <defaultScalarActions>
+                                                                                          <fieldActionGroup>
+                                                                                             <fieldAction enabled="false" type="1">
+                                                                                                <fieldAction enabled="false" type="0"/>
+                                                                                             </fieldAction>
+                                                                                             <fieldAction type="0">
+                                                                                                <fieldAction type="0"/>
+                                                                                             </fieldAction>
+                                                                                             <fieldAction enabled="false" type="1">
+                                                                                                <fieldAction enabled="false" type="5"/>
+                                                                                             </fieldAction>
+                                                                                             <fieldAction enabled="false" type="1">
+                                                                                                <fieldAction enabled="false" type="6" typeActionAllType="true" typeActionMetaType="false"/>
+                                                                                             </fieldAction>
+                                                                                          </fieldActionGroup>
+                                                                                       </defaultScalarActions>
+                                                                                    </defaultActions>
+                                                                                    <updates>
+                                                                                       <updateField path="/text/AngularCallback/field2/Object">
+                                                                                          <_c assocdefid="Object"/>
+                                                                                       </updateField>
+                                                                                       <setAction index="0" path="/text/AngularCallback/field2/Object/city/id" replaceActionType="0" replaceOuterType="0">
+                                                                                          <fieldAction type="0">
+                                                                                             <fieldAction exp="%%city_id%%" type="0"/>
+                                                                                          </fieldAction>
+                                                                                       </setAction>
+                                                                                       <setAction index="0" path="/text/AngularCallback/field2/Object/city/coord/lon" replaceActionType="0" replaceOuterType="0">
+                                                                                          <fieldAction type="0">
+                                                                                             <fieldAction exp="%%longitude%%" type="0"/>
+                                                                                          </fieldAction>
+                                                                                       </setAction>
+                                                                                       <setAction index="1" path="/text/AngularCallback/field2/Object/city/coord/lat" replaceActionType="0" replaceOuterType="0">
+                                                                                          <fieldAction type="0">
+                                                                                             <fieldAction exp="%%latitude%%" type="0"/>
+                                                                                          </fieldAction>
+                                                                                       </setAction>
+                                                                                       <setAction index="2" path="/text/AngularCallback/field2/Object/message" replaceActionType="0" replaceOuterType="0">
+                                                                                          <fieldAction type="0">
+                                                                                             <fieldAction exp="%%calctime%%" type="0"/>
+                                                                                          </fieldAction>
+                                                                                       </setAction>
+                                                                                       <setAction index="3" path="/text/AngularCallback/field2/Object/cnt" replaceActionType="0" replaceOuterType="0">
+                                                                                          <fieldAction type="0">
+                                                                                             <fieldAction exp="%%day_cnt%%" type="0"/>
+                                                                                          </fieldAction>
+                                                                                       </setAction>
+                                                                                       <updateField path="/text/AngularCallback/field2/Object/list">
+                                                                                          <_c assocdefid="Array"/>
+                                                                                       </updateField>
+                                                                                       <updateField path="/text/AngularCallback/field2/Object/list/0">
+                                                                                          <_c name="0" repeating="true"/>
+                                                                                       </updateField>
+                                                                                       <setAction index="0" path="/text/AngularCallback/field2/Object/list/0/dt" replaceActionType="0" replaceOuterType="0">
+                                                                                          <fieldAction type="0">
+                                                                                             <fieldAction exp="%%last_update_epoch%%" type="0"/>
+                                                                                          </fieldAction>
+                                                                                       </setAction>
+                                                                                       <setAction index="0" path="/text/AngularCallback/field2/Object/list/0/temp/day" replaceActionType="0" replaceOuterType="0">
+                                                                                          <fieldAction type="0">
+                                                                                             <fieldAction exp="%%temp_day%%" type="0"/>
+                                                                                          </fieldAction>
+                                                                                       </setAction>
+                                                                                       <setAction index="1" path="/text/AngularCallback/field2/Object/list/0/temp/min" replaceActionType="0" replaceOuterType="0">
+                                                                                          <fieldAction type="0">
+                                                                                             <fieldAction exp="%%temp_min%%" type="0"/>
+                                                                                          </fieldAction>
+                                                                                       </setAction>
+                                                                                       <setAction index="2" path="/text/AngularCallback/field2/Object/list/0/temp/max" replaceActionType="0" replaceOuterType="0">
+                                                                                          <fieldAction type="0">
+                                                                                             <fieldAction exp="%%temp_max%%" type="0"/>
+                                                                                          </fieldAction>
+                                                                                       </setAction>
+                                                                                       <setAction index="3" path="/text/AngularCallback/field2/Object/list/0/temp/night" replaceActionType="0" replaceOuterType="0">
+                                                                                          <fieldAction type="0">
+                                                                                             <fieldAction exp="%%temp_night%%" type="0"/>
+                                                                                          </fieldAction>
+                                                                                       </setAction>
+                                                                                       <setAction index="4" path="/text/AngularCallback/field2/Object/list/0/temp/eve" replaceActionType="0" replaceOuterType="0">
+                                                                                          <fieldAction type="0">
+                                                                                             <fieldAction exp="%%temp_eve%%" type="0"/>
+                                                                                          </fieldAction>
+                                                                                       </setAction>
+                                                                                       <setAction index="5" path="/text/AngularCallback/field2/Object/list/0/temp/morn" replaceActionType="0" replaceOuterType="0">
+                                                                                          <fieldAction type="0">
+                                                                                             <fieldAction exp="%%temp_morn%%" type="0"/>
+                                                                                          </fieldAction>
+                                                                                       </setAction>
+                                                                                       <setAction index="2" path="/text/AngularCallback/field2/Object/list/0/pressure" replaceActionType="0" replaceOuterType="0">
+                                                                                          <fieldAction type="0">
+                                                                                             <fieldAction exp="%%pressure%%" type="0"/>
+                                                                                          </fieldAction>
+                                                                                       </setAction>
+                                                                                       <setAction index="3" path="/text/AngularCallback/field2/Object/list/0/humidity" replaceActionType="0" replaceOuterType="0">
+                                                                                          <fieldAction type="0">
+                                                                                             <fieldAction exp="%%humidity%%" type="0"/>
+                                                                                          </fieldAction>
+                                                                                       </setAction>
+                                                                                       <updateField path="/text/AngularCallback/field2/Object/list/0/weather">
+                                                                                          <_c assocdefid="Array"/>
+                                                                                       </updateField>
+                                                                                       <updateField path="/text/AngularCallback/field2/Object/list/0/weather/0">
+                                                                                          <_c name="0"/>
+                                                                                       </updateField>
+                                                                                       <setAction index="0" path="/text/AngularCallback/field2/Object/list/0/weather/0/id" replaceActionType="0" replaceOuterType="0">
+                                                                                          <fieldAction type="0">
+                                                                                             <fieldAction exp="%%symbol_number%%" type="0"/>
+                                                                                          </fieldAction>
+                                                                                       </setAction>
+                                                                                       <setAction index="5" path="/text/AngularCallback/field2/Object/list/0/speed" replaceActionType="0" replaceOuterType="0">
+                                                                                          <fieldAction type="0">
+                                                                                             <fieldAction exp="%%wind_speed_mps%%" type="0"/>
+                                                                                          </fieldAction>
+                                                                                       </setAction>
+                                                                                       <setAction index="6" path="/text/AngularCallback/field2/Object/list/0/deg" replaceActionType="0" replaceOuterType="0">
+                                                                                          <fieldAction type="0">
+                                                                                             <fieldAction exp="%%wind_direction_deg%%" type="0"/>
+                                                                                          </fieldAction>
+                                                                                       </setAction>
+                                                                                       <setAction index="7" path="/text/AngularCallback/field2/Object/list/0/clouds" replaceActionType="0" replaceOuterType="0">
+                                                                                          <fieldAction type="0">
+                                                                                             <fieldAction exp="%%humidity_all%%" type="0"/>
+                                                                                          </fieldAction>
+                                                                                       </setAction>
+                                                                                    </updates>
+                                                                                 </contentTree>
+                                                                                 <fieldActionGroup>
+                                                                                    <fieldAction type="0">
+                                                                                       <fieldAction type="4"/>
+                                                                                    </fieldAction>
+                                                                                    <fieldAction enabled="false" type="1">
+                                                                                       <fieldAction enabled="false" type="7"/>
+                                                                                    </fieldAction>
+                                                                                 </fieldActionGroup>
+                                                                              </_c>
+                                                                              <_c assocdefid="#String" name="field3" sch="-40a7886d:15455d05003:-7e88" type="7" version="1.2">
+                                                                                 <fieldActionGroup>
+                                                                                    <fieldAction type="0">
+                                                                                       <fieldAction exp=");" type="0"/>
+                                                                                    </fieldAction>
+                                                                                 </fieldActionGroup>
+                                                                              </_c>
+                                                                           </_c>
+                                                                        </_c>
+                                                                     </replyMessage>
+                                                                  </resourceConfig>
+                                                               </editableResource>
+                                                            </resourceConfig>
+                                                         </false>
+                                                      </resourceConfig>
                                                    </editableResource>
                                                 </resourceConfig>
                                              </false>
@@ -1312,24 +1587,25 @@
                                        </editableResource>
                                     </resourceConfig>
                                  </true>
-                                 <false id="-435d5f1c:153de24dd37:-4f55" selfDescribing="Not Found" type="test_data_lookup_path_action" version="1.0">
+                                 <false id="-435d5f1c:153de24dd37:-411e" selfDescribing="Not Found" type="test_data_lookup_path_action" version="1.0">
                                     <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
-                                    <resourceConfig description="" name="" path="1">
-                                       <editableResource id="-435d5f1c:153de24dd37:-4f54" selfDescribing="Respond to a previously received request message.  Select the relevant request from the drop-down and edit the content of the message to send." type="send_reply_action" version="1.0">
+                                    <resourceConfig description="" name=" (21)" path="1">
+                                       <editableResource id="-435d5f1c:153de24dd37:-411d" selfDescribing="Respond to a previously received request message.  Select the relevant request from the drop-down and edit the content of the message to send." type="send_reply_action" version="1.0">
                                           <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
-                                          <resourceConfig bodyLinkId="79c1b397:153c59ada52:-6b" description="" headerLinkId="79c1b397:153c59ada52:-6b" isBodyLinked="true" isHeaderLinked="true" name="Linked to &quot;City Not Found&quot;, &quot;Text&quot; using schema &quot;Text&quot;" receiverequestid="79c1b397:153c59ada52:-3c98"/>
+                                          <resourceConfig bodyLinkId="79c1b397:153c59ada52:-6b" description="" headerLinkId="79c1b397:153c59ada52:-6b" isBodyLinked="true" isHeaderLinked="true" name="Linked to &quot;City Not Found&quot;, &quot;Text&quot; using schema &quot;Text&quot; (6)" receiverequestid="79c1b397:153c59ada52:-3c98"/>
                                        </editableResource>
                                     </resourceConfig>
                                  </false>
                                  <props allMatches="true">
-                                    <tdsref id="-435d5f1c:153de24dd37:-5632" lkname="Forecast Daily 7" lkpath="OpenWeatherMap/Forecast Daily/Forecast Daily 7" type="db_test_data"/>
+                                    <tdsref id="-435d5f1c:153de24dd37:-5632" lkname="Forecast Daily by City 7" lkpath="OpenWeatherMap/Forecast Daily/Forecast Daily by City 7" type="db_test_data"/>
                                     <lookups column="apikey" lookupValue="%%apikey%%"/>
                                     <lookups column="lang" lookupValue="%%lang%%"/>
                                     <lookups column="query" lookupValue="%%city%%"/>
                                     <lookups column="units" lookupValue="%%units%%"/>
                                  </props>
-                                 <mapper disableFiltersWhenEmpty="false" knownColumns="forecast_day,city_name,query,altitude,temp_day,temp_eve,sun_set,lang,wind_speed_mps,apikey,id,city_id,humidity_unit,precipitation_type,geobase,longitude,clouds,pressure,wind_direction,symbol_name,wind_speed,pressure_unit,temp_morn,units,temp_night,country,symbol_number,symbol_var,humidity,temp_max,calctime,precipitation,wind_direction_deg,wind_direction_code,temp_min,sun_rise,latitude,humidity_all">
+                                 <mapper disableFiltersWhenEmpty="false" knownColumns="forecast_day,city_name,query,altitude,temp_day,temp_eve,last_update_epoch,sun_set,lang,wind_speed_mps,apikey,id,city_id,humidity_unit,precipitation_type,geobase,longitude,clouds,pressure,day_cnt,wind_direction,symbol_name,wind_speed,pressure_unit,temp_morn,units,temp_night,country,symbol_number,symbol_var,humidity,temp_max,calctime,precipitation,wind_direction_deg,wind_direction_code,temp_min,sun_rise,latitude,humidity_all">
                                     <mapping columnName="apikey" tagName="apikey" type="4"/>
+                                    <mapping columnName="last_update_epoch" tagName="last_update_epoch" type="4"/>
                                     <mapping columnName="id" tagName="id" type="4"/>
                                     <mapping columnName="units" tagName="units" type="4"/>
                                     <mapping columnName="lang" tagName="lang" type="4"/>
@@ -1366,6 +1642,7 @@
                                     <mapping columnName="humidity_all" tagName="humidity_all" type="4"/>
                                     <mapping columnName="clouds" tagName="clouds" type="4"/>
                                     <mapping columnName="geobase" tagName="geobase" type="4"/>
+                                    <mapping columnName="day_cnt" tagName="day_cnt" type="4"/>
                                     <mapping columnName="city" tagName="city" type="5"/>
                                  </mapper>
                               </resourceConfig>
@@ -1480,18 +1757,18 @@
                                        <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
                                     </fieldAction>
                                  </fieldActionGroup>
-                                 <_c meTy="String" name="Accept" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Referer" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Accept-Language" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Accept-Encoding" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="If-Modified-Since" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="If-None-Match" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="User-Agent" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Content-Type" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="SOAPAction" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Host" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Connection" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Cookie" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="accept" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="referer" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="accept-language" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="accept-encoding" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="if-modified-since" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="if-none-match" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="user-agent" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="content-type" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="soapaction" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="host" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="connection" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="cookie" sch="Http Subscribe" type="7" version="1.2"/>
                               </_c>
                               <_c meTy="Boolean" name="followRedirects" sch="Http Subscribe" type="8" version="1.2"/>
                            </_c>
@@ -1601,9 +1878,9 @@
                         </childActions>
                      </resourceConfig>
                   </editableResource>
-                  <editableResource id="-435d5f1c:153de24dd37:-4122" selfDescribing="Configure the filtering and validation for this Case action" type="message_case_action" version="1.0">
+                  <editableResource id="3039b5a5:1544d745633:-70c" selfDescribing="Configure the filtering and validation for this Case action" type="message_case_action" version="1.0">
                      <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
-                     <resourceConfig description="by city name, 10 days" name="&quot;Text&quot; using schema &quot;Text&quot; (10)">
+                     <resourceConfig description="by city name, 10 days" name="&quot;Text&quot; using schema &quot;Text&quot; (7)">
                         <FilterExpressions option="NOTHING" type="script:ECMAScript"/>
                         <bodyfilters assocdefid="Text" name="Text" sch="Text" type="12" version="1.2">
                            <fieldActionGroup>
@@ -1708,18 +1985,18 @@
                                        <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
                                     </fieldAction>
                                  </fieldActionGroup>
-                                 <_c meTy="String" name="Accept" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Referer" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Accept-Language" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Accept-Encoding" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="If-Modified-Since" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="If-None-Match" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="User-Agent" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Content-Type" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="SOAPAction" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Host" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Connection" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Cookie" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="accept" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="referer" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="accept-language" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="accept-encoding" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="if-modified-since" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="if-none-match" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="user-agent" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="content-type" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="soapaction" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="host" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="connection" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="cookie" sch="Http Subscribe" type="7" version="1.2"/>
                               </_c>
                               <_c meTy="Boolean" name="followRedirects" sch="Http Subscribe" type="8" version="1.2"/>
                            </_c>
@@ -1727,9 +2004,9 @@
                            <_c meTy="Date-Time" name="rcvdTimestamp" sch="Http Subscribe" type="11" version="1.2"/>
                         </headerfilters>
                         <childActions>
-                           <editableResource id="-4e7c7d21:15406108b6e:-4e81" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+                           <editableResource id="3039b5a5:1544d745633:-70b" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
                               <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
-                              <resourceConfig description="" eval_type="Mozilla Rhino" function="tags[&quot;lang&quot;].toLowerCase()" name="Run &quot;tags[&quot;lang&quot;].toLowerCase()&quot;, store into&quot;lang&quot; (12)">
+                              <resourceConfig description="" eval_type="Mozilla Rhino" function="tags[&quot;lang&quot;].toLowerCase()" name="Run &quot;tags[&quot;lang&quot;].toLowerCase()&quot;, store into&quot;lang&quot; (8)">
                                  <fieldActionGroup>
                                     <fieldAction description="Store copy of field in tag 'lang'" tN="lang" type="2">
                                        <dataAction type="Copy"/>
@@ -1737,30 +2014,30 @@
                                  </fieldActionGroup>
                               </resourceConfig>
                            </editableResource>
-                           <editableResource id="-435d5f1c:153de24dd37:-4121" selfDescribing="Use a value from the current run to extract information from a test data set." type="test_data_lookup_action" version="1.0">
+                           <editableResource id="3039b5a5:1544d745633:-70a" selfDescribing="Use a value from the current run to extract information from a test data set." type="test_data_lookup_action" version="1.0">
                               <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
-                              <resourceConfig description="" name="Search &quot;Forecast Daily 10&quot; in &quot;apikey&quot; and in &quot;lang&quot; and for &quot;%%city%%&quot; in &quot;query&quot; and in &quot;units&quot;">
-                                 <true id="-435d5f1c:153de24dd37:-4120" selfDescribing="Found" type="test_data_lookup_path_action" version="1.0">
+                              <resourceConfig description="" name="Search &quot;Forecast Daily by City 10&quot; in &quot;apikey&quot; and in &quot;lang&quot; and for &quot;%%city%%&quot; in &quot;query&quot; and in &quot;units&quot;">
+                                 <true id="3039b5a5:1544d745633:-709" selfDescribing="Found" type="test_data_lookup_path_action" version="1.0">
                                     <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
-                                    <resourceConfig description="" name="" path="0">
-                                       <editableResource id="32b390f2:15408c67197:-3c3f" selfDescribing="Choose evaluation expressions to determine test execution flow.  Use predefined functions, custom plug-ins and tagged data." type="decision_action" version="1.0">
+                                    <resourceConfig description="" name=" (14)" path="0">
+                                       <editableResource id="3039b5a5:1544d745633:-708" selfDescribing="Choose evaluation expressions to determine test execution flow.  Use predefined functions, custom plug-ins and tagged data." type="decision_action" version="1.0">
                                           <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
-                                          <resourceConfig description="" name="tags[&quot;mode&quot;] == &quot;xml&quot; (3)" option="OTHER" script="tags[&quot;mode&quot;] == &quot;xml&quot;" type="script:ECMAScript">
-                                             <true id="32b390f2:15408c67197:-3c3e" selfDescribing="True" type="decision_path_action" version="1.0">
+                                          <resourceConfig description="" name="tags[&quot;mode&quot;] == &quot;xml&quot; (2)" option="OTHER" script="tags[&quot;mode&quot;] == &quot;xml&quot;" type="script:ECMAScript">
+                                             <true id="3039b5a5:1544d745633:-707" selfDescribing="True" type="decision_path_action" version="1.0">
                                                 <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
-                                                <resourceConfig description="" name="" path="0">
-                                                   <editableResource id="32b390f2:15408c67197:-3c3d" selfDescribing="Respond to a previously received request message.  Select the relevant request from the drop-down and edit the content of the message to send." type="send_reply_action" version="1.0">
+                                                <resourceConfig description="" name=" (15)" path="0">
+                                                   <editableResource id="3039b5a5:1544d745633:-706" selfDescribing="Respond to a previously received request message.  Select the relevant request from the drop-down and edit the content of the message to send." type="send_reply_action" version="1.0">
                                                       <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
-                                                      <resourceConfig bodyLinkId="320e336e:1539c43e9a8:-4e1e" description="" headerLinkId="320e336e:1539c43e9a8:-4e1e" isBodyLinked="true" isHeaderLinked="true" name="Linked to &quot;Forecast Daily XML&quot;, &quot;Text&quot; using schema &quot;Text&quot;" receiverequestid="79c1b397:153c59ada52:-3c98"/>
+                                                      <resourceConfig bodyLinkId="320e336e:1539c43e9a8:-4e1e" description="" headerLinkId="320e336e:1539c43e9a8:-4e1e" isBodyLinked="true" isHeaderLinked="true" name="Linked to &quot;Forecast Daily XML&quot;, &quot;Text&quot; using schema &quot;Text&quot; (5)" receiverequestid="79c1b397:153c59ada52:-3c98"/>
                                                    </editableResource>
                                                 </resourceConfig>
                                              </true>
-                                             <false id="32b390f2:15408c67197:-3c3c" selfDescribing="False" type="decision_path_action" version="1.0">
+                                             <false id="3039b5a5:1544d745633:-705" selfDescribing="False" type="decision_path_action" version="1.0">
                                                 <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
-                                                <resourceConfig description="" name="" path="1">
-                                                   <editableResource id="32b390f2:15408c67197:-3c3b" selfDescribing="Respond to a previously received request message.  Select the relevant request from the drop-down and edit the content of the message to send." type="send_reply_action" version="1.0">
+                                                <resourceConfig description="" name=" (16)" path="1">
+                                                   <editableResource id="3039b5a5:1544d745633:-704" selfDescribing="Respond to a previously received request message.  Select the relevant request from the drop-down and edit the content of the message to send." type="send_reply_action" version="1.0">
                                                       <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
-                                                      <resourceConfig bodyLinkId="-4e7c7d21:15406108b6e:-7b91" description="" headerLinkId="-4e7c7d21:15406108b6e:-7b91" isBodyLinked="true" isHeaderLinked="true" name="Linked to &quot;Forecast Daily JSON&quot;, &quot;Text&quot; using schema &quot;Text&quot;" receiverequestid="79c1b397:153c59ada52:-3c98"/>
+                                                      <resourceConfig bodyLinkId="-4e7c7d21:15406108b6e:-7b91" description="" headerLinkId="-4e7c7d21:15406108b6e:-7b91" isBodyLinked="true" isHeaderLinked="true" name="Linked to &quot;Forecast Daily JSON&quot;, &quot;Text&quot; using schema &quot;Text&quot; (5)" receiverequestid="79c1b397:153c59ada52:-3c98"/>
                                                    </editableResource>
                                                 </resourceConfig>
                                              </false>
@@ -1768,12 +2045,12 @@
                                        </editableResource>
                                     </resourceConfig>
                                  </true>
-                                 <false id="-435d5f1c:153de24dd37:-411e" selfDescribing="Not Found" type="test_data_lookup_path_action" version="1.0">
+                                 <false id="3039b5a5:1544d745633:-703" selfDescribing="Not Found" type="test_data_lookup_path_action" version="1.0">
                                     <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
-                                    <resourceConfig description="" name="" path="1">
-                                       <editableResource id="-435d5f1c:153de24dd37:-411d" selfDescribing="Respond to a previously received request message.  Select the relevant request from the drop-down and edit the content of the message to send." type="send_reply_action" version="1.0">
+                                    <resourceConfig description="" name=" (17)" path="1">
+                                       <editableResource id="3039b5a5:1544d745633:-702" selfDescribing="Respond to a previously received request message.  Select the relevant request from the drop-down and edit the content of the message to send." type="send_reply_action" version="1.0">
                                           <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
-                                          <resourceConfig bodyLinkId="79c1b397:153c59ada52:-6b" description="" headerLinkId="79c1b397:153c59ada52:-6b" isBodyLinked="true" isHeaderLinked="true" name="Linked to &quot;City Not Found&quot;, &quot;Text&quot; using schema &quot;Text&quot;" receiverequestid="79c1b397:153c59ada52:-3c98"/>
+                                          <resourceConfig bodyLinkId="79c1b397:153c59ada52:-6b" description="" headerLinkId="79c1b397:153c59ada52:-6b" isBodyLinked="true" isHeaderLinked="true" name="Linked to &quot;City Not Found&quot;, &quot;Text&quot; using schema &quot;Text&quot; (5)" receiverequestid="79c1b397:153c59ada52:-3c98"/>
                                        </editableResource>
                                     </resourceConfig>
                                  </false>
@@ -1784,7 +2061,7 @@
                                     <lookups column="query" lookupValue="%%city%%"/>
                                     <lookups column="units" lookupValue="%%units%%"/>
                                  </props>
-                                 <mapper disableFiltersWhenEmpty="false" knownColumns="forecast_day,city_name,query,altitude,temp_day,temp_eve,sun_set,lang,wind_speed_mps,apikey,id,city_id,humidity_unit,precipitation_type,geobase,longitude,clouds,pressure,wind_direction,symbol_name,wind_speed,pressure_unit,temp_morn,units,temp_night,country,symbol_number,symbol_var,humidity,temp_max,calctime,precipitation,wind_direction_deg,wind_direction_code,temp_min,sun_rise,latitude,humidity_all">
+                                 <mapper disableFiltersWhenEmpty="false" knownColumns="forecast_day,city_name,altitude,query,temp_eve,temp_day,sun_set,lang,wind_speed_mps,apikey,city_id,id,humidity_unit,precipitation_type,geobase,longitude,clouds,pressure,wind_direction,symbol_name,pressure_unit,wind_speed,temp_morn,temp_night,units,country,humidity,symbol_var,symbol_number,temp_max,precipitation,calctime,wind_direction_deg,temp_min,wind_direction_code,sun_rise,latitude,humidity_all">
                                     <mapping columnName="apikey" tagName="apikey" type="4"/>
                                     <mapping columnName="id" tagName="id" type="4"/>
                                     <mapping columnName="units" tagName="units" type="4"/>
@@ -2065,7 +2342,7 @@
             </resourceConfig>
          </editableResource>
       </testTree>
-      <tagDataStore identifier="-74c0b23e:15408ee9ef1:2d16" inputMode="SELECT" outputMode="NONE">
+      <tagDataStore identifier="-40a7886d:15455d05003:-7381" inputMode="SELECT" outputMode="NONE">
          <tag defaultValue="" description="" name="visibility"/>
          <tag defaultValue="" description="" name="altitude"/>
          <tag defaultValue="" description="" name="wind_speed_mps"/>
@@ -2080,6 +2357,7 @@
                <prop key="interfaceInput" value="true"/>
             </tagProps>
          </tag>
+         <tag defaultValue="" description="" name="day_cnt"/>
          <tag defaultValue="" description="" name="clouds_name"/>
          <tag defaultValue="" description="" name="precipitation_unit"/>
          <tag defaultValue="" description="" name="symbol_var"/>
@@ -2103,24 +2381,31 @@
          <tag defaultValue="" description="" name="clouds"/>
          <tag defaultValue="" description="" name="cnt"/>
          <tag defaultValue="" description="" name="wind_direction"/>
+         <tag defaultValue="" description="" name="sys_id"/>
          <tag defaultValue="" description="" name="symbol_name"/>
          <tag defaultValue="" description="" name="wind_speed"/>
          <tag defaultValue="" description="" name="temp_morn"/>
          <tag defaultValue="" description="" name="temp_max"/>
          <tag defaultValue="" description="" name="precipitation"/>
+         <tag defaultValue="" description="" name="callback"/>
          <tag defaultValue="" description="" name="temp_min"/>
          <tag defaultValue="" description="" name="forecast_day"/>
+         <tag defaultValue="" description="" name="last_update_epoch"/>
          <tag defaultValue="" description="" name="sun_set"/>
+         <tag defaultValue="" description="" name="json_payload"/>
          <tag defaultValue="" description="" name="apikey"/>
          <tag defaultValue="" description="" name="humidity_unit"/>
          <tag defaultValue="" description="" name="wind_speed_name"/>
          <tag defaultValue="" description="" name="longitude"/>
+         <tag defaultValue="" description="" name="sun_rise_epoch"/>
          <tag defaultValue="" description="" name="pressure_unit"/>
          <tag defaultValue="" description="" name="temp_night"/>
          <tag defaultValue="" description="" name="country"/>
+         <tag defaultValue="" description="" name="%%json_payload%%"/>
          <tag defaultValue="" description="" name="precipitation_mode"/>
          <tag defaultValue="" description="" name="sun_rise"/>
          <tag defaultValue="" description="" name="humidity_all"/>
+         <tag defaultValue="" description="" name="%%json-payload%%"/>
          <tag defaultValue="" description="" name="temp_eve"/>
          <tag defaultValue="" description="" name="lang">
             <tagProps>
@@ -2147,8 +2432,10 @@
                <prop key="interfaceInput" value="true"/>
             </tagProps>
          </tag>
+         <tag defaultValue="" description="" name="Text"/>
          <tag defaultValue="" description="" name="symbol_number"/>
          <tag defaultValue="" description="" name="weather_icon"/>
+         <tag defaultValue="" description="" name="sun_set_epoch"/>
       </tagDataStore>
       <testprops messageClearance="false"/>
       <stubprops behaviourStyle="ONE_TO_ONE" majorVersion="1" messageClearance="false" minorVersion="0" optimise="false" wrks="10">

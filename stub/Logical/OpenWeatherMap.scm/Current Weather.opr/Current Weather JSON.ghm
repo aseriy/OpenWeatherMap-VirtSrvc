@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><a3Message _version="1.1" createdTimestamp="1460293463979" createdUser="rational" id="3ab6a11c:153fdb0ffc5:-75b7" type="message_resource" updatedTimestamp="1460928000579" updatedUser="rational" version="1.2">
+<?xml version="1.0" encoding="UTF-8"?><a3Message _version="1.1" createdTimestamp="1460293463979" createdUser="rational" id="3ab6a11c:153fdb0ffc5:-75b7" type="message_resource" updatedTimestamp="1461774313371" updatedUser="rational" version="1.2">
    <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
    <transport name="3ef6394d:153247ac697:-7eb5"/>
    <formatter name="HTTP_Message"/>
@@ -73,7 +73,7 @@
       </fieldActionGroup>
       <_c coreTypeInt="7" coreTypeName="String" name="text" nodeFormatter="JSON.nodeformatter" sch="Text" type="12" version="1.2">
          <fieldExpander fieldExpanderID="JSON.fieldexpander" fieldSchema="JSON" fieldSchemaRoot="Object"/>
-         <contentTree>{"coord":{"lon":0.0,"lat":0.0},"weather":[{"id":0,"main":"Clear","description":"%%weather%%","icon":"%%weather_icon%%"}],"base":"cmc stations","main":{"temp":0.0,"pressure":0,"humidity":0,"temp_min":0.0,"temp_max":0.0},"wind":{"speed":0.0,"deg":0},"clouds":{"all":0},"dt":0,"sys":{"type":1,"id":0,"message":0.0,"country":"%%country%%","sunrise":0,"sunset":0},"id":0,"name":"%%city_name%%","cod":200}<defaultActions>
+         <contentTree>{"coord":{"lon":0.0,"lat":0.0},"weather":[{"id":0,"main":"Clear","description":"%%weather%%","icon":"%%weather_icon%%"}],"base":"cmc stations","main":{"temp":0.0,"pressure":0.0,"humidity":0,"temp_min":0.0,"temp_max":0.0},"wind":{"speed":0.0,"deg":0.0},"clouds":{"all":0},"dt":0,"sys":{"type":1,"id":0,"message":0.0,"country":"%%country%%","sunrise":0,"sunset":0},"id":0,"name":"%%city_name%%","cod":200}<defaultActions>
                <defaultMessageActions>
                   <fieldActionGroup>
                      <fieldAction enabled="false" type="1">

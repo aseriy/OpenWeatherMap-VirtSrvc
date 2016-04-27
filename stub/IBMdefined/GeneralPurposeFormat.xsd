@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+  <!-- ******************************************************************
+	* Licensed Materials - Property of IBM
+	*
+	* (C) Copyright IBM Corp. 2011, 2014
+	*
+	* US Government Users Restricted Rights - Use, duplication, or
+	* disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+	*
+	* Version 1.1 	GeneralPurposeFormat.xsd
+	*
+	* This DFDL schema is supplied by IBM. It provides a set of DFDL property values
+	* and other DFDL constructs to assist in the creation of DFDL schemas that model
+	* text, binary or mixture of text and binary data.
+	* 
+	* 
+	* Example use: 
+	* 
+	*      <xsd:import namespace="http://www.ibm.com/dfdl/GeneralPurposeFormat" schemaLocation="GeneralPurposeFormat.xsd"/>
+	******************************************************************* -->
+	
+
+<xsd:schema targetNamespace="http://www.ibm.com/dfdl/GeneralPurposeFormat"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:dfdl="http://www.ogf.org/dfdl/dfdl-1.0/"
+	xmlns:fn="http://www.w3.org/2005/xpath-functions"
+	xmlns:tns="http://www.ibm.com/dfdl/GeneralPurposeFormat">
+	<xsd:annotation>
+		<xsd:appinfo source="http://www.ogf.org/dfdl/">
+			
+			<dfdl:defineEscapeScheme name="GeneralPurposeEscapeScheme">
+				<dfdl:escapeScheme escapeKind="escapeBlock"
+					escapeBlockStart='"' escapeBlockEnd='"' escapeCharacter='"'
+					escapeEscapeCharacter='"' generateEscapeBlock="whenNeeded"
+					extraEscapedCharacters=", %#x0D; %#x0A;">
+				</dfdl:escapeScheme>
+			</dfdl:defineEscapeScheme>
+
+			<dfdl:defineFormat name="GeneralPurposeFormat">
+				<dfdl:format encoding="US-ASCII" utf16Width="fixed" ignoreCase="no" byteOrder="bigEndian"
+					lengthUnits="characters" prefixIncludesPrefixLength="no" representation="text" textPadKind="none"
+					textStringJustification="left" truncateSpecifiedLengthString="no"
+					decimalSigned="yes" textNumberCheckPolicy="lax"
+					textNumberJustification="right" textZonedSignStyle="asciiStandard"
+					textBooleanJustification="left" sequenceKind="ordered"
+					choiceLengthKind="implicit" separator="," separatorPolicy="required"
+					separatorPosition="infix"
+					documentFinalTerminatorCanBeMissing="no" lengthKind="delimited"
+					textNumberRounding="pattern" textTrimKind="none"
+					textStandardBase="10" textStandardDecimalSeparator="."
+					textStandardExponentCharacter="E" escapeSchemeRef=""
+					alignment="1" alignmentUnits="bytes" leadingSkip="0" trailingSkip="0"
+					fillByte="0" textStringPadCharacter="%SP;" initiatedContent="no"
+					textNumberPadCharacter="%SP;" textBooleanPadCharacter="%SP;"
+					textNumberRep="standard" textStandardGroupingSeparator=","
+					textStandardZeroRep="" textNumberRoundingMode="roundUp"
+					calendarPatternKind="implicit" calendarPattern="yyyy-MM-dd'T'HH:mm:ss"
+					calendarCheckPolicy="lax" calendarTimeZone="UTC"
+					calendarObserveDST="yes" calendarFirstDayOfWeek="Monday"
+					calendarDaysInFirstWeek="4" textCalendarJustification="left"
+					textCalendarPadCharacter="%SP;" calendarCenturyStart="53"
+					calendarLanguage="en-US" occursCountKind="fixed"
+					textStandardInfinityRep="Inf" textStandardNaNRep="NaN"
+					textBooleanTrueRep="true" textBooleanFalseRep="false"
+					initiator="" terminator="" 
+					nilKind="literalValue" useNilForDefault="no"
+					nilValueDelimiterPolicy="none"
+					outputNewLine="%CR;%LF;"
+					binaryNumberRep="binary" binaryPackedSignCodes="C D F C"
+					binaryDecimalVirtualPoint="0" binaryNumberCheckPolicy="lax"
+					binaryCalendarRep="bcd"  binaryBooleanTrueRep="1"  binaryBooleanFalseRep="0"
+					binaryFloatRep="ieee" textBidi="no"    emptyValueDelimiterPolicy="none" floating="no" >
+				</dfdl:format>
+			</dfdl:defineFormat>
+			
+			
+		</xsd:appinfo>
+	</xsd:annotation>
+</xsd:schema>

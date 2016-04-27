@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><a3Message _version="1.1" createdTimestamp="1460391297338" createdUser="rational" id="-4e7c7d21:15406108b6e:-7b91" type="message_resource" updatedTimestamp="1460927422140" updatedUser="rational" version="1.2">
+<?xml version="1.0" encoding="UTF-8"?><a3Message _version="1.1" createdTimestamp="1460391297338" createdUser="rational" id="-4e7c7d21:15406108b6e:-7b91" type="message_resource" updatedTimestamp="1461596039560" updatedUser="rational" version="1.2">
    <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
    <transport name="3ef6394d:153247ac697:-7eb5"/>
    <formatter name="HTTP_Message"/>
@@ -8,14 +8,14 @@
             <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
          </fieldAction>
       </fieldActionGroup>
-      <_c meTy="String" name="Method" sch="Http Publish" type="7" value="POST" version="1.2">
+      <_c meTy="String" name="Method" sch="Http Publish" type="7" version="1.2">
          <fieldActionGroup>
             <fieldAction type="0">
                <fieldAction exp="POST" type="0"/>
             </fieldAction>
          </fieldActionGroup>
       </_c>
-      <_c meTy="String" name="URL" sch="Http Publish" type="7" value="" version="1.2">
+      <_c meTy="String" name="URL" sch="Http Publish" type="7" version="1.2">
          <fieldActionGroup>
             <fieldAction type="0">
                <fieldAction type="0"/>
@@ -41,7 +41,7 @@
                   <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
                </fieldAction>
             </fieldActionGroup>
-            <_c meTy="String" name="content-type" sch="Http Publish" type="7" value="application/json; charset=utf-8" version="1.2">
+            <_c meTy="String" name="content-type" sch="Http Publish" type="7" version="1.2">
                <fieldActionGroup>
                   <fieldAction type="0">
                      <fieldAction exp="application/json; charset=utf-8" type="0"/>
@@ -49,7 +49,7 @@
                </fieldActionGroup>
             </_c>
          </_c>
-         <_c meTy="Boolean" name="followRedirects" sch="Http Publish" type="8" value="true" version="1.2">
+         <_c meTy="Boolean" name="followRedirects" sch="Http Publish" type="8" version="1.2">
             <fieldActionGroup>
                <fieldAction type="0">
                   <fieldAction exp="true" type="0"/>
@@ -57,7 +57,7 @@
             </fieldActionGroup>
          </_c>
       </_c>
-      <_c meTy="String" name="MessageType" sch="Http Publish" type="7" value="http.text.message.type" version="1.2">
+      <_c meTy="String" name="MessageType" sch="Http Publish" type="7" version="1.2">
          <fieldActionGroup>
             <fieldAction type="0">
                <fieldAction exp="http.text.message.type" type="0"/>
@@ -313,6 +313,7 @@
             <prop key="interfaceOutput" value="true"/>
          </tagProps>
       </tag>
+      <tag defaultValue="" description="" name="%%json-payload%%"/>
       <tag defaultValue="" description="" name="city_name">
          <tagProps>
             <prop key="interfaceOutput" value="true"/>
