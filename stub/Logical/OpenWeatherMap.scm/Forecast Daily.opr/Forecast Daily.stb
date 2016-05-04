@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1459464220221" createdUser="rational" id="79c1b397:153c59ada52:-5c8a" type="stub_resource" updatedTimestamp="1461731203810" updatedUser="rational" version="1.1">
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1459464220221" createdUser="rational" id="79c1b397:153c59ada52:-5c8a" type="stub_resource" updatedTimestamp="1462339645565" updatedUser="rational" version="1.1">
    <loggingConfiguration debug="true" writeStubEventsToDB="true"/>
    <resourceConfig description="" name="">
       <testTree>
@@ -193,7 +193,7 @@
                                     <lookups column="query" lookupValue="%%city%%"/>
                                     <lookups column="units" lookupValue="%%units%%"/>
                                  </props>
-                                 <mapper disableFiltersWhenEmpty="false" knownColumns="forecast_day,city_name,query,altitude,temp_day,temp_eve,sun_set,lang,wind_speed_mps,apikey,id,city_id,humidity_unit,precipitation_type,geobase,longitude,clouds,pressure,wind_direction,symbol_name,wind_speed,pressure_unit,temp_morn,units,temp_night,country,symbol_number,symbol_var,humidity,temp_max,calctime,precipitation,wind_direction_deg,wind_direction_code,temp_min,sun_rise,latitude,humidity_all">
+                                 <mapper disableFiltersWhenEmpty="false" knownColumns="forecast_day,city_name,altitude,query,temp_eve,temp_day,sun_set,lang,wind_speed_mps,apikey,city_id,id,humidity_unit,precipitation_type,geobase,longitude,clouds,pressure,wind_direction,symbol_name,pressure_unit,wind_speed,temp_morn,temp_night,units,country,humidity,symbol_var,symbol_number,temp_max,precipitation,calctime,wind_direction_deg,temp_min,wind_direction_code,sun_rise,latitude,humidity_all">
                                     <mapping columnName="apikey" tagName="apikey" type="4"/>
                                     <mapping columnName="id" tagName="id" type="4"/>
                                     <mapping columnName="units" tagName="units" type="4"/>
@@ -419,7 +419,7 @@
                                     <lookups column="query" lookupValue="%%city%%"/>
                                     <lookups column="units" lookupValue="%%units%%"/>
                                  </props>
-                                 <mapper disableFiltersWhenEmpty="false" knownColumns="forecast_day,city_name,altitude,query,temp_eve,temp_day,sun_set,lang,wind_speed_mps,apikey,city_id,id,humidity_unit,precipitation_type,geobase,longitude,clouds,pressure,wind_direction,symbol_name,pressure_unit,wind_speed,temp_morn,temp_night,units,country,humidity,symbol_var,symbol_number,temp_max,precipitation,calctime,wind_direction_deg,temp_min,wind_direction_code,sun_rise,latitude,humidity_all">
+                                 <mapper disableFiltersWhenEmpty="false" knownColumns="forecast_day,city_name,query,altitude,temp_day,temp_eve,sun_set,lang,wind_speed_mps,apikey,id,city_id,humidity_unit,precipitation_type,geobase,longitude,clouds,pressure,wind_direction,symbol_name,wind_speed,pressure_unit,temp_morn,units,temp_night,country,symbol_number,symbol_var,humidity,temp_max,calctime,precipitation,wind_direction_deg,wind_direction_code,temp_min,sun_rise,latitude,humidity_all">
                                     <mapping columnName="apikey" tagName="apikey" type="4"/>
                                     <mapping columnName="id" tagName="id" type="4"/>
                                     <mapping columnName="units" tagName="units" type="4"/>
@@ -644,7 +644,7 @@
                                     <lookups column="query" lookupValue="%%city%%"/>
                                     <lookups column="units" lookupValue="%%units%%"/>
                                  </props>
-                                 <mapper disableFiltersWhenEmpty="false" knownColumns="forecast_day,city_name,query,altitude,temp_day,temp_eve,sun_set,lang,wind_speed_mps,apikey,id,city_id,humidity_unit,precipitation_type,geobase,longitude,clouds,pressure,wind_direction,symbol_name,wind_speed,pressure_unit,temp_morn,units,temp_night,country,symbol_number,symbol_var,humidity,temp_max,calctime,precipitation,wind_direction_deg,wind_direction_code,temp_min,sun_rise,latitude,humidity_all">
+                                 <mapper disableFiltersWhenEmpty="false" knownColumns="forecast_day,city_name,altitude,query,temp_eve,temp_day,sun_set,lang,wind_speed_mps,apikey,city_id,id,humidity_unit,precipitation_type,geobase,longitude,clouds,pressure,wind_direction,symbol_name,pressure_unit,wind_speed,temp_morn,temp_night,units,country,humidity,symbol_var,symbol_number,temp_max,precipitation,calctime,wind_direction_deg,temp_min,wind_direction_code,sun_rise,latitude,humidity_all">
                                     <mapping columnName="apikey" tagName="apikey" type="4"/>
                                     <mapping columnName="id" tagName="id" type="4"/>
                                     <mapping columnName="units" tagName="units" type="4"/>
@@ -872,7 +872,7 @@
                                     <lookups column="lang" lookupValue="%%lang%%"/>
                                     <lookups column="units" lookupValue="%%units%%"/>
                                  </props>
-                                 <mapper disableFiltersWhenEmpty="false" knownColumns="forecast_day,city_name,altitude,temp_day,temp_eve,sun_set,lang,wind_speed_mps,apikey,id,city_id,humidity_unit,precipitation_type,geobase,longitude,clouds,pressure,wind_direction,symbol_name,wind_speed,pressure_unit,temp_morn,units,temp_night,country,symbol_number,symbol_var,humidity,temp_max,calctime,precipitation,wind_direction_deg,wind_direction_code,temp_min,sun_rise,latitude,humidity_all">
+                                 <mapper disableFiltersWhenEmpty="false" knownColumns="forecast_day,city_name,altitude,temp_eve,temp_day,sun_set,lang,wind_speed_mps,apikey,city_id,id,humidity_unit,precipitation_type,geobase,longitude,clouds,pressure,wind_direction,symbol_name,pressure_unit,wind_speed,temp_morn,temp_night,units,country,humidity,symbol_var,symbol_number,temp_max,precipitation,calctime,wind_direction_deg,temp_min,wind_direction_code,sun_rise,latitude,humidity_all">
                                     <mapping columnName="apikey" tagName="apikey" type="4"/>
                                     <mapping columnName="id" tagName="id" type="4"/>
                                     <mapping columnName="units" tagName="units" type="4"/>
@@ -1100,7 +1100,7 @@
                                     <lookups column="query" lookupValue="%%city%%"/>
                                     <lookups column="units" lookupValue="%%units%%"/>
                                  </props>
-                                 <mapper disableFiltersWhenEmpty="false" knownColumns="forecast_day,city_name,query,altitude,temp_day,temp_eve,sun_set,lang,wind_speed_mps,apikey,id,city_id,humidity_unit,precipitation_type,geobase,longitude,clouds,pressure,wind_direction,symbol_name,wind_speed,pressure_unit,temp_morn,units,temp_night,country,symbol_number,symbol_var,humidity,temp_max,calctime,precipitation,wind_direction_deg,wind_direction_code,temp_min,sun_rise,latitude,humidity_all">
+                                 <mapper disableFiltersWhenEmpty="false" knownColumns="forecast_day,city_name,altitude,query,temp_eve,temp_day,sun_set,lang,wind_speed_mps,apikey,city_id,id,humidity_unit,precipitation_type,geobase,longitude,clouds,pressure,wind_direction,symbol_name,pressure_unit,wind_speed,temp_morn,temp_night,units,country,humidity,symbol_var,symbol_number,temp_max,precipitation,calctime,wind_direction_deg,temp_min,wind_direction_code,sun_rise,latitude,humidity_all">
                                     <mapping columnName="apikey" tagName="apikey" type="4"/>
                                     <mapping columnName="id" tagName="id" type="4"/>
                                     <mapping columnName="units" tagName="units" type="4"/>
@@ -1311,19 +1311,10 @@
                                                 <resourceConfig description="" name=" (20)" path="1">
                                                    <editableResource id="3039b5a5:1544d745633:883" selfDescribing="Choose evaluation expressions to determine test execution flow.  Use predefined functions, custom plug-ins and tagged data." type="decision_action" version="1.0">
                                                       <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
-                                                      <resourceConfig description="" name="typeof tags[&quot;callback&quot;] === 'undefined'" option="OTHER" script="typeof tags[&quot;callback&quot;] === 'undefined'" type="script:ECMAScript">
+                                                      <resourceConfig description="" name="tags['callback']" option="OTHER" script="tags['callback']" type="script:ECMAScript">
                                                          <true id="3039b5a5:1544d745633:884" selfDescribing="True" type="decision_path_action" version="1.0">
                                                             <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
                                                             <resourceConfig description="" name="" path="0">
-                                                               <editableResource id="32b390f2:15408c67197:-3c3b" selfDescribing="Respond to a previously received request message.  Select the relevant request from the drop-down and edit the content of the message to send." type="send_reply_action" version="1.0">
-                                                                  <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
-                                                                  <resourceConfig bodyLinkId="-4e7c7d21:15406108b6e:-7b91" description="" headerLinkId="-4e7c7d21:15406108b6e:-7b91" isBodyLinked="true" isHeaderLinked="true" name="Linked to &quot;Forecast Daily JSON&quot;, &quot;Text&quot; using schema &quot;Text&quot;" receiverequestid="79c1b397:153c59ada52:-3c98"/>
-                                                               </editableResource>
-                                                            </resourceConfig>
-                                                         </true>
-                                                         <false id="3039b5a5:1544d745633:885" selfDescribing="False" type="decision_path_action" version="1.0">
-                                                            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
-                                                            <resourceConfig description="" name="" path="1">
                                                                <editableResource id="3039b5a5:1544d745633:1383" selfDescribing="Respond to a previously received request message.  Select the relevant request from the drop-down and edit the content of the message to send." type="send_reply_action" version="1.0">
                                                                   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
                                                                   <resourceConfig description="" formatter="HTTP_Message" name="&quot;Text&quot; using schema &quot;Text&quot; (10)" receiverequestid="79c1b397:153c59ada52:-3c98">
@@ -1485,7 +1476,7 @@
                                                                                        </updateField>
                                                                                        <setAction index="0" path="/text/AngularCallback/field2/Object/list/0/dt" replaceActionType="0" replaceOuterType="0">
                                                                                           <fieldAction type="0">
-                                                                                             <fieldAction exp="%%last_update_epoch%%" type="0"/>
+                                                                                             <fieldAction exp="%%forecast_day_epoch%%" type="0"/>
                                                                                           </fieldAction>
                                                                                        </setAction>
                                                                                        <setAction index="0" path="/text/AngularCallback/field2/Object/list/0/temp/day" replaceActionType="0" replaceOuterType="0">
@@ -1578,6 +1569,15 @@
                                                                   </resourceConfig>
                                                                </editableResource>
                                                             </resourceConfig>
+                                                         </true>
+                                                         <false id="3039b5a5:1544d745633:885" selfDescribing="False" type="decision_path_action" version="1.0">
+                                                            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                                                            <resourceConfig description="" name="" path="1">
+                                                               <editableResource id="32b390f2:15408c67197:-3c3b" selfDescribing="Respond to a previously received request message.  Select the relevant request from the drop-down and edit the content of the message to send." type="send_reply_action" version="1.0">
+                                                                  <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                                                                  <resourceConfig bodyLinkId="-4e7c7d21:15406108b6e:-7b91" description="" headerLinkId="-4e7c7d21:15406108b6e:-7b91" isBodyLinked="true" isHeaderLinked="true" name="Linked to &quot;Forecast Daily JSON&quot;, &quot;Text&quot; using schema &quot;Text&quot;" receiverequestid="79c1b397:153c59ada52:-3c98"/>
+                                                               </editableResource>
+                                                            </resourceConfig>
                                                          </false>
                                                       </resourceConfig>
                                                    </editableResource>
@@ -1603,7 +1603,7 @@
                                     <lookups column="query" lookupValue="%%city%%"/>
                                     <lookups column="units" lookupValue="%%units%%"/>
                                  </props>
-                                 <mapper disableFiltersWhenEmpty="false" knownColumns="forecast_day,city_name,query,altitude,temp_day,temp_eve,last_update_epoch,sun_set,lang,wind_speed_mps,apikey,id,city_id,humidity_unit,precipitation_type,geobase,longitude,clouds,pressure,day_cnt,wind_direction,symbol_name,wind_speed,pressure_unit,temp_morn,units,temp_night,country,symbol_number,symbol_var,humidity,temp_max,calctime,precipitation,wind_direction_deg,wind_direction_code,temp_min,sun_rise,latitude,humidity_all">
+                                 <mapper disableFiltersWhenEmpty="false" knownColumns="forecast_day,city_name,altitude,query,temp_eve,temp_day,sun_set,last_update_epoch,lang,wind_speed_mps,apikey,city_id,id,humidity_unit,precipitation_type,geobase,longitude,clouds,day_cnt,pressure,wind_direction,symbol_name,pressure_unit,wind_speed,temp_morn,temp_night,units,country,humidity,symbol_var,symbol_number,temp_max,precipitation,calctime,wind_direction_deg,temp_min,wind_direction_code,sun_rise,latitude,humidity_all">
                                     <mapping columnName="apikey" tagName="apikey" type="4"/>
                                     <mapping columnName="last_update_epoch" tagName="last_update_epoch" type="4"/>
                                     <mapping columnName="id" tagName="id" type="4"/>
@@ -1833,7 +1833,7 @@
                                     <lookups column="lang" lookupValue="%%lang%%"/>
                                     <lookups column="units" lookupValue="%%units%%"/>
                                  </props>
-                                 <mapper disableFiltersWhenEmpty="false" knownColumns="forecast_day,city_name,altitude,temp_day,temp_eve,sun_set,lang,wind_speed_mps,apikey,id,city_id,humidity_unit,precipitation_type,geobase,longitude,clouds,pressure,wind_direction,symbol_name,wind_speed,pressure_unit,temp_morn,units,temp_night,country,symbol_number,symbol_var,humidity,temp_max,calctime,precipitation,wind_direction_deg,wind_direction_code,temp_min,sun_rise,latitude,humidity_all">
+                                 <mapper disableFiltersWhenEmpty="false" knownColumns="forecast_day,city_name,altitude,temp_eve,temp_day,sun_set,lang,wind_speed_mps,apikey,city_id,id,humidity_unit,precipitation_type,geobase,longitude,clouds,pressure,wind_direction,symbol_name,pressure_unit,wind_speed,temp_morn,temp_night,units,country,humidity,symbol_var,symbol_number,temp_max,precipitation,calctime,wind_direction_deg,temp_min,wind_direction_code,sun_rise,latitude,humidity_all">
                                     <mapping columnName="apikey" tagName="apikey" type="4"/>
                                     <mapping columnName="id" tagName="id" type="4"/>
                                     <mapping columnName="units" tagName="units" type="4"/>
@@ -2061,7 +2061,7 @@
                                     <lookups column="query" lookupValue="%%city%%"/>
                                     <lookups column="units" lookupValue="%%units%%"/>
                                  </props>
-                                 <mapper disableFiltersWhenEmpty="false" knownColumns="forecast_day,city_name,altitude,query,temp_eve,temp_day,sun_set,lang,wind_speed_mps,apikey,city_id,id,humidity_unit,precipitation_type,geobase,longitude,clouds,pressure,wind_direction,symbol_name,pressure_unit,wind_speed,temp_morn,temp_night,units,country,humidity,symbol_var,symbol_number,temp_max,precipitation,calctime,wind_direction_deg,temp_min,wind_direction_code,sun_rise,latitude,humidity_all">
+                                 <mapper disableFiltersWhenEmpty="false" knownColumns="forecast_day,city_name,query,altitude,temp_day,temp_eve,sun_set,lang,wind_speed_mps,apikey,id,city_id,humidity_unit,precipitation_type,geobase,longitude,clouds,pressure,wind_direction,symbol_name,wind_speed,pressure_unit,temp_morn,units,temp_night,country,symbol_number,symbol_var,humidity,temp_max,calctime,precipitation,wind_direction_deg,wind_direction_code,temp_min,sun_rise,latitude,humidity_all">
                                     <mapping columnName="apikey" tagName="apikey" type="4"/>
                                     <mapping columnName="id" tagName="id" type="4"/>
                                     <mapping columnName="units" tagName="units" type="4"/>
@@ -2289,7 +2289,7 @@
                                     <lookups column="lang" lookupValue="%%lang%%"/>
                                     <lookups column="units" lookupValue="%%units%%"/>
                                  </props>
-                                 <mapper disableFiltersWhenEmpty="false" knownColumns="forecast_day,city_name,altitude,temp_day,temp_eve,sun_set,lang,wind_speed_mps,apikey,id,city_id,humidity_unit,precipitation_type,geobase,longitude,clouds,pressure,wind_direction,symbol_name,wind_speed,pressure_unit,temp_morn,units,temp_night,country,symbol_number,symbol_var,humidity,temp_max,calctime,precipitation,wind_direction_deg,wind_direction_code,temp_min,sun_rise,latitude,humidity_all">
+                                 <mapper disableFiltersWhenEmpty="false" knownColumns="forecast_day,city_name,altitude,temp_eve,temp_day,sun_set,lang,wind_speed_mps,apikey,city_id,id,humidity_unit,precipitation_type,geobase,longitude,clouds,pressure,wind_direction,symbol_name,pressure_unit,wind_speed,temp_morn,temp_night,units,country,humidity,symbol_var,symbol_number,temp_max,precipitation,calctime,wind_direction_deg,temp_min,wind_direction_code,sun_rise,latitude,humidity_all">
                                     <mapping columnName="apikey" tagName="apikey" type="4"/>
                                     <mapping columnName="id" tagName="id" type="4"/>
                                     <mapping columnName="units" tagName="units" type="4"/>
@@ -2342,7 +2342,7 @@
             </resourceConfig>
          </editableResource>
       </testTree>
-      <tagDataStore identifier="-40a7886d:15455d05003:-7381" inputMode="SELECT" outputMode="NONE">
+      <tagDataStore identifier="797f9a3c:15479ca4bcd:-5fff" inputMode="SELECT" outputMode="NONE">
          <tag defaultValue="" description="" name="visibility"/>
          <tag defaultValue="" description="" name="altitude"/>
          <tag defaultValue="" description="" name="wind_speed_mps"/>
@@ -2378,6 +2378,7 @@
          <tag defaultValue="" description="" name="precipitation_type"/>
          <tag defaultValue="" description="" name="weather_number"/>
          <tag defaultValue="" description="" name="wind_gusts"/>
+         <tag defaultValue="" description="" name="forecast_day_epoch"/>
          <tag defaultValue="" description="" name="clouds"/>
          <tag defaultValue="" description="" name="cnt"/>
          <tag defaultValue="" description="" name="wind_direction"/>

@@ -4,7 +4,7 @@ A virtuallized service for [OpenWeatherMap API](http://openweathermap.org/api). 
 ## GitHub Projects That Use This Service
 + [OpenWeatherMap-PHP-Api](https://github.com/cmfcmf/OpenWeatherMap-PHP-Api): [PHP](http://php.net/) interface for OWM
 + [openweathermap](https://github.com/briandowns/openweathermap): [Go](https://golang.org/) (golang) interface for OWM
-+ [ROpenWeatherMap](https://github.com/mukul13/ROpenWeatherMap) (planning): R interface to OWM
++ [ROpenWeatherMap](https://github.com/mukul13/ROpenWeatherMap) (planning): R interface for OWM
 + [PyOWM](https://github.com/csparpa/pyowm) (planning): Python interface for OWM
 
 If you would like to be the next project to take advantage of this resource on GitHub, just create a new [Issue](https://github.com/aseriy/OpenWeatherMap-VirtSrvc/issues) and express your interest.
@@ -16,11 +16,20 @@ The following API calls are currently support:
 + [Current Weather](http://openweathermap.org/current)
   - By city name
   - By city ID
-  - By geographic coordinats
+  - By geographic coordinates
+  - By ZIP code in USA (limited at this time, with the following values available:
+
+| ZIP      | City         |
+|----------|--------------|
+| 19125,US | Philadelphia |
+| 60290,US | Chicago      |
+| 02108,US | Boston       |
+| 30301,US | Atlanta      |
+
 + [Daily Forecase](http://openweathermap.org/forecast16) for 1, 2, 3, 5, 7 and 10 days
   - By city name
   - By city ID
-  - By geographic coordinats
+  - By geographic coordinates
 
 All API calls can return XML or JSON response for metric and imperial units, as well as the following languages are implemented: bg, de, en, fr, it, nl, pl, pt, ru, se, sp, tr, zh_cn, zh_tw.
 
