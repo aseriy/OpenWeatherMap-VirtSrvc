@@ -152,6 +152,110 @@ INSERT INTO `forecast_daily` VALUES (1,803,2,5391959,'metric','bg','0.0925','14:
 UNLOCK TABLES;
 
 --
+-- Temporary table structure for view `view_weather`
+--
+
+DROP TABLE IF EXISTS `view_weather`;
+/*!50001 DROP VIEW IF EXISTS `view_weather`*/;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+/*!50001 CREATE TABLE `view_weather` (
+ `last_update` tinyint NOT NULL,
+  `last_update_epoch` tinyint NOT NULL,
+  `query` tinyint NOT NULL,
+  `city_id` tinyint NOT NULL,
+  `sys_id` tinyint NOT NULL,
+  `city_name` tinyint NOT NULL,
+  `country` tinyint NOT NULL,
+  `longitude` tinyint NOT NULL,
+  `latitude` tinyint NOT NULL,
+  `apikey` tinyint NOT NULL,
+  `units` tinyint NOT NULL,
+  `lang` tinyint NOT NULL,
+  `calctime` tinyint NOT NULL,
+  `sun_rise` tinyint NOT NULL,
+  `sun_rise_epoch` tinyint NOT NULL,
+  `sun_set` tinyint NOT NULL,
+  `sun_set_epoch` tinyint NOT NULL,
+  `temp` tinyint NOT NULL,
+  `temp_min` tinyint NOT NULL,
+  `temp_max` tinyint NOT NULL,
+  `temp_unit` tinyint NOT NULL,
+  `humidity` tinyint NOT NULL,
+  `pressure` tinyint NOT NULL,
+  `wind_speed` tinyint NOT NULL,
+  `wind_speed_name` tinyint NOT NULL,
+  `wind_gusts` tinyint NOT NULL,
+  `wind_direction` tinyint NOT NULL,
+  `wind_direction_code` tinyint NOT NULL,
+  `wind_direction_name` tinyint NOT NULL,
+  `clouds` tinyint NOT NULL,
+  `clouds_name` tinyint NOT NULL,
+  `visibility` tinyint NOT NULL,
+  `precipitation` tinyint NOT NULL,
+  `precipitation_mode` tinyint NOT NULL,
+  `precipitation_unit` tinyint NOT NULL,
+  `weather_number` tinyint NOT NULL,
+  `weather` tinyint NOT NULL,
+  `weather_icon` tinyint NOT NULL,
+  `humidity_unit` tinyint NOT NULL,
+  `pressure_unit` tinyint NOT NULL
+) ENGINE=MyISAM */;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary table structure for view `view_weather_by_zip`
+--
+
+DROP TABLE IF EXISTS `view_weather_by_zip`;
+/*!50001 DROP VIEW IF EXISTS `view_weather_by_zip`*/;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+/*!50001 CREATE TABLE `view_weather_by_zip` (
+ `last_update` tinyint NOT NULL,
+  `last_update_epoch` tinyint NOT NULL,
+  `zip` tinyint NOT NULL,
+  `city_id` tinyint NOT NULL,
+  `sys_id` tinyint NOT NULL,
+  `city_name` tinyint NOT NULL,
+  `country` tinyint NOT NULL,
+  `longitude` tinyint NOT NULL,
+  `latitude` tinyint NOT NULL,
+  `apikey` tinyint NOT NULL,
+  `units` tinyint NOT NULL,
+  `lang` tinyint NOT NULL,
+  `calctime` tinyint NOT NULL,
+  `sun_rise` tinyint NOT NULL,
+  `sun_rise_epoch` tinyint NOT NULL,
+  `sun_set` tinyint NOT NULL,
+  `sun_set_epoch` tinyint NOT NULL,
+  `temp` tinyint NOT NULL,
+  `temp_min` tinyint NOT NULL,
+  `temp_max` tinyint NOT NULL,
+  `temp_unit` tinyint NOT NULL,
+  `humidity` tinyint NOT NULL,
+  `pressure` tinyint NOT NULL,
+  `wind_speed` tinyint NOT NULL,
+  `wind_speed_name` tinyint NOT NULL,
+  `wind_gusts` tinyint NOT NULL,
+  `wind_direction` tinyint NOT NULL,
+  `wind_direction_code` tinyint NOT NULL,
+  `wind_direction_name` tinyint NOT NULL,
+  `clouds` tinyint NOT NULL,
+  `clouds_name` tinyint NOT NULL,
+  `visibility` tinyint NOT NULL,
+  `precipitation` tinyint NOT NULL,
+  `precipitation_mode` tinyint NOT NULL,
+  `precipitation_unit` tinyint NOT NULL,
+  `weather_number` tinyint NOT NULL,
+  `weather` tinyint NOT NULL,
+  `weather_icon` tinyint NOT NULL,
+  `humidity_unit` tinyint NOT NULL,
+  `pressure_unit` tinyint NOT NULL
+) ENGINE=MyISAM */;
+SET character_set_client = @saved_cs_client;
+
+--
 -- Table structure for table `weather`
 --
 
@@ -225,6 +329,44 @@ LOCK TABLES `zip_search` WRITE;
 INSERT INTO `zip_search` VALUES ('19125,US',4560349),('60290,US',4887398),('02108,US',4930956),('30301,US',4180439);
 /*!40000 ALTER TABLE `zip_search` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Final view structure for view `view_weather`
+--
+
+/*!50001 DROP TABLE IF EXISTS `view_weather`*/;
+/*!50001 DROP VIEW IF EXISTS `view_weather`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8 */;
+/*!50001 SET character_set_results     = utf8 */;
+/*!50001 SET collation_connection      = utf8_general_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`rational`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `view_weather` AS select date_format(from_unixtime((truncate((unix_timestamp(now()) / 900),0) * 900)),'%Y-%m-%dT%T') AS `last_update`,(truncate((unix_timestamp(now()) / 900),0) * 900) AS `last_update_epoch`,`cs`.`query` AS `query`,`c`.`id` AS `city_id`,`c`.`sys_id` AS `sys_id`,`c`.`city` AS `city_name`,`c`.`country` AS `country`,trim(trailing '.' from trim(trailing '0' from cast(cast(`c`.`longitude` as decimal(20,2)) as char(20) charset utf8))) AS `longitude`,trim(trailing '.' from trim(trailing '0' from cast(cast(`c`.`latitude` as decimal(20,2)) as char(20) charset utf8))) AS `latitude`,`ds`.`apikey` AS `apikey`,`w`.`units` AS `units`,`w`.`lang` AS `lang`,`w`.`calctime` AS `calctime`,concat(date_format(curdate(),'%Y-%m-%d'),'T',time_format(`w`.`sun_rise`,'%T')) AS `sun_rise`,unix_timestamp(concat(date_format(curdate(),'%Y-%m-%d'),'T',time_format(`w`.`sun_rise`,'%T'))) AS `sun_rise_epoch`,concat(date_format(if((`w`.`sun_rise` < `w`.`sun_set`),curdate(),(curdate() + interval 1 day)),'%Y-%m-%d'),'T',time_format(`w`.`sun_set`,'%T')) AS `sun_set`,unix_timestamp(concat(date_format(if((`w`.`sun_rise` < `w`.`sun_set`),curdate(),(curdate() + interval 1 day)),'%Y-%m-%d'),'T',time_format(`w`.`sun_set`,'%T'))) AS `sun_set_epoch`,`w`.`temp` AS `temp`,`w`.`temp_min` AS `temp_min`,`w`.`temp_max` AS `temp_max`,`w`.`temp_unit` AS `temp_unit`,`w`.`humidity` AS `humidity`,`w`.`pressure` AS `pressure`,`w`.`wind_speed` AS `wind_speed`,`w`.`wind_speed_name` AS `wind_speed_name`,`w`.`wind_gusts` AS `wind_gusts`,`w`.`wind_direction` AS `wind_direction`,`w`.`wind_direction_code` AS `wind_direction_code`,`w`.`wind_direction_name` AS `wind_direction_name`,`w`.`clouds` AS `clouds`,`w`.`clouds_name` AS `clouds_name`,`w`.`visibility` AS `visibility`,`w`.`precipitation` AS `precipitation`,`w`.`precipitation_mode` AS `precipitation_mode`,`w`.`precipitation_unit` AS `precipitation_unit`,`w`.`weather_number` AS `weather_number`,`w`.`weather` AS `weather`,`w`.`weather_icon` AS `weather_icon`,`w`.`humidity_unit` AS `humidity_unit`,`w`.`pressure_unit` AS `pressure_unit` from (((`data_set` `ds` join `weather` `w` on((`ds`.`id` = `w`.`data_set_id`))) join `city` `c` on((`c`.`id` = `w`.`city_id`))) join `city_search` `cs` on((`cs`.`city_id` = `c`.`id`))) */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `view_weather_by_zip`
+--
+
+/*!50001 DROP TABLE IF EXISTS `view_weather_by_zip`*/;
+/*!50001 DROP VIEW IF EXISTS `view_weather_by_zip`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8 */;
+/*!50001 SET character_set_results     = utf8 */;
+/*!50001 SET collation_connection      = utf8_general_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`rational`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `view_weather_by_zip` AS select date_format(from_unixtime((truncate((unix_timestamp(now()) / 900),0) * 900)),'%Y-%m-%dT%T') AS `last_update`,(truncate((unix_timestamp(now()) / 900),0) * 900) AS `last_update_epoch`,`z`.`zip` AS `zip`,`c`.`id` AS `city_id`,`c`.`sys_id` AS `sys_id`,`c`.`city` AS `city_name`,`c`.`country` AS `country`,trim(trailing '.' from trim(trailing '0' from cast(cast(`c`.`longitude` as decimal(20,2)) as char(20) charset utf8))) AS `longitude`,trim(trailing '.' from trim(trailing '0' from cast(cast(`c`.`latitude` as decimal(20,2)) as char(20) charset utf8))) AS `latitude`,`ds`.`apikey` AS `apikey`,`w`.`units` AS `units`,`w`.`lang` AS `lang`,`w`.`calctime` AS `calctime`,concat(date_format(curdate(),'%Y-%m-%d'),'T',time_format(`w`.`sun_rise`,'%T')) AS `sun_rise`,unix_timestamp(concat(date_format(curdate(),'%Y-%m-%d'),'T',time_format(`w`.`sun_rise`,'%T'))) AS `sun_rise_epoch`,concat(date_format(if((`w`.`sun_rise` < `w`.`sun_set`),curdate(),(curdate() + interval 1 day)),'%Y-%m-%d'),'T',time_format(`w`.`sun_set`,'%T')) AS `sun_set`,unix_timestamp(concat(date_format(if((`w`.`sun_rise` < `w`.`sun_set`),curdate(),(curdate() + interval 1 day)),'%Y-%m-%d'),'T',time_format(`w`.`sun_set`,'%T'))) AS `sun_set_epoch`,`w`.`temp` AS `temp`,`w`.`temp_min` AS `temp_min`,`w`.`temp_max` AS `temp_max`,`w`.`temp_unit` AS `temp_unit`,`w`.`humidity` AS `humidity`,`w`.`pressure` AS `pressure`,`w`.`wind_speed` AS `wind_speed`,`w`.`wind_speed_name` AS `wind_speed_name`,`w`.`wind_gusts` AS `wind_gusts`,`w`.`wind_direction` AS `wind_direction`,`w`.`wind_direction_code` AS `wind_direction_code`,`w`.`wind_direction_name` AS `wind_direction_name`,`w`.`clouds` AS `clouds`,`w`.`clouds_name` AS `clouds_name`,`w`.`visibility` AS `visibility`,`w`.`precipitation` AS `precipitation`,`w`.`precipitation_mode` AS `precipitation_mode`,`w`.`precipitation_unit` AS `precipitation_unit`,`w`.`weather_number` AS `weather_number`,`w`.`weather` AS `weather`,`w`.`weather_icon` AS `weather_icon`,`w`.`humidity_unit` AS `humidity_unit`,`w`.`pressure_unit` AS `pressure_unit` from (((`data_set` `ds` join `weather` `w` on((`ds`.`id` = `w`.`data_set_id`))) join `city` `c` on((`c`.`id` = `w`.`city_id`))) join `zip_search` `z` on((`z`.`city_id` = `c`.`id`))) */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -235,4 +377,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-04-27 12:54:32
+-- Dump completed on 2016-05-08 10:56:52
