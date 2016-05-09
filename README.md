@@ -6,6 +6,7 @@ A virtuallized service for [OpenWeatherMap API](http://openweathermap.org/api). 
 + [openweathermap](https://github.com/briandowns/openweathermap): [Go](https://golang.org/) (golang) interface for OWM
 + [ROpenWeatherMap](https://github.com/mukul13/ROpenWeatherMap) (planning): R interface for OWM
 + [PyOWM](https://github.com/csparpa/pyowm) (planning): Python interface for OWM
++ [angular-openweather-app](https://github.com/aseriy/angular-openweather-app): A weather forecast app written in AngularJS (Alex Seriy's DEV fork)
 
 If you would like to be the next project to take advantage of this resource on GitHub, just create a new [Issue](https://github.com/aseriy/OpenWeatherMap-VirtSrvc/issues) and express your interest.
 
