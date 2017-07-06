@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1458760098944" createdUser="rational" id="320e336e:1539c43e9a8:-4c85" selfDescribing="MySQL Connector/J (Test Data) [jdbc:mysql://localhost:3306/owm, rational]" type="database_connection_resource" updatedTimestamp="1461096639743" updatedUser="rational" version="1.0">
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1458760098944" createdUser="rational" id="320e336e:1539c43e9a8:-4c85" selfDescribing="MySQL Connector/J (Test Data) [jdbc:mysql://localhost:3306/owm, rational]" type="database_connection_resource" updatedTimestamp="1499351351591" updatedUser="rational" version="1.0">
    <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
    <resourceConfig maxConnections="1" poolName="DefaultPoolName" transportName="Test Data">
-      <connectionParams CICSEnv="false" MVSEnv="false" ZOSEnv="false" driverClass="com.mysql.jdbc.Driver" password="#com.ghc.1!b28a21397E0112CE4A9E446BE34FA2EB7265" recordFilters="" url="jdbc:mysql://localhost:3306/owm" user="rational">
-         <stubSettings maxProcCallCount="10000" maxResultSetRowCount="10000" maxRowCount="10000" password="#com.ghc.1!3289" procedureLearningBehaviour="1" schema="" url="jdbc:mysql://localhost:3306/&lt;database name&gt;" useIntegratedDB="true" user=""/>
+      <connectionParams CICSEnv="false" MVSEnv="false" ZOSEnv="false" driverClass="com.mysql.jdbc.Driver" password="#com.ghc.1!b2ebA2CD7263112255700CB36A5940E1210A7E2C12B54AEE4449" recordFilters="" url="jdbc:mysql://localhost:3306/owm" user="rational">
+         <stubSettings maxProcCallCount="10000" maxResultSetRowCount="10000" maxRowCount="10000" password="#com.ghc.1!d71d" procedureLearningBehaviour="1" schema="" url="jdbc:mysql://localhost:3306/&lt;database name&gt;" useIntegratedDB="true" user=""/>
          <storedProcedureFilter catalogFilterEnabled="false" catalogFilterPattern="" procedureFilterEnabled="false" procedureFilterPattern="" schemaFilterEnabled="true" schemaFilterPattern="" storedProceduresRetrievalEnabled="false" useConnectionUsername="true"/>
          <timestampFormatting timestampFormatZero="false" timestampFormattingEnabled="false" timestampPrecision="9"/>
       </connectionParams>
