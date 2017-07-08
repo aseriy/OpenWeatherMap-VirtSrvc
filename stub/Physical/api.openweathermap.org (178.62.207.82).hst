@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1499543612872" createdUser="c_hag" id="-7213deaa:15d23c3a17f:-7eae" selfDescribing="api.openweathermap.org (178.62.207.82)" type="host_machine_resource" updatedTimestamp="1499543612872" updatedUser="c_hag" version="1.0">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig host_address="178.62.207.82" user_host_name="api.openweathermap.org"/>
+</editableResource>

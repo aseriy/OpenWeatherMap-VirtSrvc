@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1456838106185" createdUser="rational" id="-70bdf138:1532d24338b:-4049" type="stub_resource" updatedTimestamp="1461769339863" updatedUser="rational" version="1.1">
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1456838106185" createdUser="rational" id="-70bdf138:1532d24338b:-4049" type="stub_resource" updatedTimestamp="1499544681318" updatedUser="c_hag" version="1.1">
    <loggingConfiguration debug="true" writeStubEventsToDB="true"/>
    <resourceConfig description="" name="">
       <testTree>
@@ -524,7 +524,7 @@
                                     <lookups column="query" lookupValue="%%city%%"/>
                                     <lookups column="units" lookupValue="%%units%%"/>
                                  </props>
-                                 <mapper disableFiltersWhenEmpty="false" knownColumns="city_name,visibility,query,sun_set,lang,apikey,city_id,last_update,humidity_unit,wind_direction_name,wind_speed_name,weather,weather_number,longitude,sun_rise_epoch,clouds,wind_gusts,temp_unit,pressure,wind_direction,clouds_name,precipitation_unit,pressure_unit,wind_speed,units,country,precipitation_mode,humidity,weather_icon,temp_max,precipitation,wind_direction_code,temp_min,temp,sun_rise,sun_set_epoch,latitude">
+                                 <mapper disableFiltersWhenEmpty="false" knownColumns="country,latitude,clouds,units,weather_icon,temp_max,humidity_unit,precipitation_mode,clouds_name,precipitation,city_name,precipitation_unit,temp_min,last_update,weather,humidity,sun_rise,wind_speed,lang,wind_direction_code,longitude,sun_set_epoch,sun_set,pressure_unit,temp,visibility,apikey,query,wind_speed_name,wind_gusts,wind_direction,weather_number,pressure,wind_direction_name,city_id,sun_rise_epoch,temp_unit">
                                     <mapping columnName="last_update" tagName="last_update" type="4"/>
                                     <mapping columnName="city_id" tagName="city_id" type="4"/>
                                     <mapping columnName="city_name" tagName="city_name" type="4"/>
@@ -744,7 +744,7 @@
                                     <lookups column="lang" lookupValue="%%lang%%"/>
                                     <lookups column="units" lookupValue="%%units%%"/>
                                  </props>
-                                 <mapper disableFiltersWhenEmpty="false" knownColumns="city_name,visibility,query,sun_set,lang,apikey,city_id,last_update,wind_direction_name,humidity_unit,wind_speed_name,weather,longitude,weather_number,sun_rise_epoch,wind_gusts,clouds,temp_unit,pressure,wind_direction,clouds_name,precipitation_unit,wind_speed,pressure_unit,units,country,humidity,precipitation_mode,weather_icon,temp_max,precipitation,temp_min,wind_direction_code,sun_rise,temp,latitude,sun_set_epoch">
+                                 <mapper disableFiltersWhenEmpty="false" knownColumns="country,latitude,clouds,units,weather_icon,temp_max,humidity_unit,precipitation_mode,clouds_name,precipitation,city_name,precipitation_unit,temp_min,last_update,weather,humidity,sun_rise,wind_speed,lang,wind_direction_code,longitude,sun_set_epoch,sun_set,pressure_unit,temp,visibility,apikey,query,wind_speed_name,wind_gusts,wind_direction,weather_number,pressure,wind_direction_name,city_id,sun_rise_epoch,temp_unit">
                                     <mapping columnName="last_update" tagName="last_update" type="4"/>
                                     <mapping columnName="city_id" tagName="city_id" type="4"/>
                                     <mapping columnName="city_name" tagName="city_name" type="4"/>
@@ -901,18 +901,18 @@
                                        <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
                                     </fieldAction>
                                  </fieldActionGroup>
-                                 <_c meTy="String" name="Accept" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Referer" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Accept-Language" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Accept-Encoding" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="If-Modified-Since" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="If-None-Match" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="User-Agent" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Content-Type" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="SOAPAction" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Host" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Connection" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Cookie" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="accept" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="referer" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="accept-language" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="accept-encoding" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="if-modified-since" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="if-none-match" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="user-agent" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="content-type" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="soapaction" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="host" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="connection" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="cookie" sch="Http Subscribe" type="7" version="1.2"/>
                               </_c>
                               <_c meTy="Boolean" name="followRedirects" sch="Http Subscribe" type="8" version="1.2"/>
                            </_c>
@@ -978,7 +978,7 @@
                                     <lookups column="longitude" lookupValue="%%lon%%"/>
                                     <lookups column="units" lookupValue="%%units%%"/>
                                  </props>
-                                 <mapper disableFiltersWhenEmpty="false" knownColumns="city_name,visibility,query,sun_set,lang,apikey,city_id,last_update,humidity_unit,wind_direction_name,wind_speed_name,weather,weather_number,longitude,sun_rise_epoch,clouds,wind_gusts,temp_unit,pressure,wind_direction,clouds_name,precipitation_unit,pressure_unit,wind_speed,units,country,precipitation_mode,humidity,weather_icon,temp_max,precipitation,wind_direction_code,temp_min,temp,sun_rise,sun_set_epoch,latitude">
+                                 <mapper disableFiltersWhenEmpty="false" knownColumns="country,latitude,clouds,units,weather_icon,temp_max,humidity_unit,precipitation_mode,clouds_name,precipitation,city_name,precipitation_unit,temp_min,last_update,weather,humidity,sun_rise,wind_speed,lang,wind_direction_code,longitude,sun_set_epoch,sun_set,pressure_unit,temp,visibility,apikey,query,wind_speed_name,wind_gusts,wind_direction,weather_number,pressure,wind_direction_name,city_id,sun_rise_epoch,temp_unit">
                                     <mapping columnName="last_update" tagName="last_update" type="4"/>
                                     <mapping columnName="city_id" tagName="city_id" type="4"/>
                                     <mapping columnName="city_name" tagName="city_name" type="4"/>
@@ -1222,7 +1222,7 @@
                                     <lookups column="units" lookupValue="%%units%%"/>
                                     <lookups column="zip" lookupValue="%%zip%%"/>
                                  </props>
-                                 <mapper disableFiltersWhenEmpty="false" knownColumns="city_name,visibility,last_update_epoch,sun_set,lang,apikey,city_id,last_update,wind_direction_name,humidity_unit,wind_speed_name,weather,longitude,weather_number,sun_rise_epoch,wind_gusts,clouds,zip,temp_unit,pressure,wind_direction,clouds_name,sys_id,precipitation_unit,wind_speed,pressure_unit,units,country,humidity,precipitation_mode,weather_icon,temp_max,calctime,precipitation,temp_min,wind_direction_code,sun_rise,temp,latitude,sun_set_epoch">
+                                 <mapper disableFiltersWhenEmpty="false" knownColumns="country,latitude,clouds,units,weather_icon,temp_max,humidity_unit,precipitation_mode,clouds_name,sys_id,precipitation,city_name,precipitation_unit,temp_min,last_update,weather,humidity,sun_rise,wind_speed,lang,wind_direction_code,longitude,zip,sun_set_epoch,sun_set,pressure_unit,temp,visibility,apikey,last_update_epoch,calctime,wind_speed_name,wind_gusts,wind_direction,weather_number,pressure,wind_direction_name,city_id,sun_rise_epoch,temp_unit">
                                     <mapping columnName="last_update" tagName="last_update" type="4"/>
                                     <mapping columnName="last_update_epoch" tagName="last_update_epoch" type="4"/>
                                     <mapping columnName="zip" tagName="zip" type="4"/>
@@ -1278,70 +1278,74 @@
             </resourceConfig>
          </editableResource>
       </testTree>
-      <tagDataStore identifier="7595e2d5:15456f239bd:-7233" inputMode="SELECT" outputMode="NONE">
-         <tag description="Generated by Recording Studio" name="visibility"/>
-         <tag defaultValue="" description="" name="altitude"/>
-         <tag defaultValue="" description="" name="wind_speed_mps"/>
-         <tag defaultValue="" description="" name="city"/>
-         <tag description="Generated by Recording Studio" name="weather"/>
-         <tag defaultValue="" description="" name="lon"/>
-         <tag description="Generated by Recording Studio" name="clouds_name"/>
-         <tag description="Generated by Recording Studio" name="precipitation_unit"/>
-         <tag defaultValue="" description="" name="symbol_var"/>
-         <tag defaultValue="" description="" name="humidity"/>
-         <tag defaultValue="" description="" name="calctime"/>
-         <tag defaultValue="" description="" name="wind_direction_deg"/>
-         <tag description="Generated by Recording Studio" name="wind_direction_code"/>
-         <tag defaultValue="" description="" name="temp"/>
-         <tag defaultValue="" description="" name="latitude"/>
-         <tag description="Generated by Recording Studio" name="city_name"/>
-         <tag defaultValue="" description="" name="temp_day"/>
-         <tag description="Generated by Recording Studio" name="mode"/>
-         <tag description="Generated by Recording Studio" name="wind_direction_name"/>
-         <tag defaultValue="" description="" name="precipitation_type"/>
-         <tag description="Generated by Recording Studio" name="weather_number"/>
-         <tag defaultValue="" description="" name="wind_gusts"/>
-         <tag description="Generated by Recording Studio" name="clouds"/>
-         <tag description="Generated by Recording Studio" name="wind_direction"/>
-         <tag defaultValue="" description="" name="sys_id"/>
-         <tag defaultValue="" description="" name="symbol_name"/>
-         <tag description="Generated by Recording Studio" name="wind_speed"/>
-         <tag defaultValue="" description="" name="temp_morn"/>
-         <tag defaultValue="" description="" name="temp_max"/>
-         <tag description="Generated by Recording Studio" name="precipitation"/>
-         <tag defaultValue="" description="" name="temp_min"/>
-         <tag defaultValue="" description="" name="forecast_day"/>
-         <tag defaultValue="" description="" name="last_update_epoch"/>
-         <tag description="Generated by Recording Studio" name="sun_set"/>
-         <tag description="Generated by Recording Studio" name="apikey"/>
-         <tag description="Generated by Recording Studio" name="humidity_unit"/>
-         <tag description="Generated by Recording Studio" name="wind_speed_name"/>
-         <tag defaultValue="" description="" name="longitude"/>
-         <tag defaultValue="" description="" name="sun_rise_epoch"/>
-         <tag description="Generated by Recording Studio" name="pressure_unit"/>
-         <tag defaultValue="" description="" name="temp_night"/>
-         <tag description="Generated by Recording Studio" name="country"/>
+      <tagDataStore identifier="-7213deaa:15d23c3a17f:-4380" inputMode="SELECT" outputMode="NONE">
+         <tag description="Generated by Recording Studio" name="weather_icon"/>
          <tag description="Generated by Recording Studio" name="precipitation_mode"/>
-         <tag description="Generated by Recording Studio" name="sun_rise"/>
-         <tag defaultValue="" description="" name="humidity_all"/>
-         <tag defaultValue="" description="" name="temp_eve"/>
-         <tag description="Generated by Recording Studio" name="lang"/>
+         <tag description="Generated by Recording Studio" name="precipitation"/>
+         <tag description="Generated by Recording Studio" name="precipitation_unit"/>
+         <tag defaultValue="" description="" name="symbol_number"/>
+         <tag description="Generated by Recording Studio" name="last_update"/>
+         <tag description="Generated by Recording Studio" name="weather"/>
+         <tag defaultValue="" description="" name="humidity"/>
          <tag defaultValue="" description="Internal OWM CIty ID" name="id">
             <tagProps>
                <prop key="interfaceInput" value="true"/>
             </tagProps>
          </tag>
-         <tag defaultValue="" description="" name="city_id"/>
-         <tag description="Generated by Recording Studio" name="last_update"/>
-         <tag defaultValue="" description="" name="geobase"/>
-         <tag defaultValue="" description="" name="lat"/>
+         <tag description="Generated by Recording Studio" name="wind_direction_code"/>
          <tag defaultValue="" description="" name="zip"/>
-         <tag defaultValue="" description="" name="temp_unit"/>
-         <tag description="Generated by Recording Studio" name="pressure"/>
-         <tag description="Generated by Recording Studio" name="units"/>
-         <tag defaultValue="" description="" name="symbol_number"/>
-         <tag description="Generated by Recording Studio" name="weather_icon"/>
+         <tag defaultValue="" description="" name="wind_speed_mps"/>
+         <tag defaultValue="" description="" name="humidity_all"/>
+         <tag description="Generated by Recording Studio" name="wind_speed_name"/>
+         <tag defaultValue="" description="" name="sun_rise_epoch"/>
+         <tag defaultValue="" description="" name="city"/>
+         <tag defaultValue="" description="" name="latitude"/>
+         <tag defaultValue="" description="" name="lon"/>
+         <tag defaultValue="" description="" name="temp_max"/>
+         <tag defaultValue="" description="" name="temp_min"/>
+         <tag description="Generated by Recording Studio" name="sun_rise"/>
          <tag defaultValue="" description="" name="sun_set_epoch"/>
+         <tag defaultValue="" description="" name="wind_gusts"/>
+         <tag description="Generated by Recording Studio" name="wind_direction"/>
+         <tag description="Generated by Recording Studio" name="weather_number"/>
+         <tag defaultValue="" description="" name="temp_unit"/>
+         <tag description="Generated by Recording Studio" name="country"/>
+         <tag defaultValue="" description="" name="symbol_name"/>
+         <tag defaultValue="" description="" name="temp_day"/>
+         <tag defaultValue="" description="" name="temp_morn"/>
+         <tag description="Generated by Recording Studio" name="mode"/>
+         <tag defaultValue="" description="" name="forecast_day"/>
+         <tag defaultValue="" description="" name="lat"/>
+         <tag defaultValue="" description="" name="longitude"/>
+         <tag description="Generated by Recording Studio" name="sun_set"/>
+         <tag description="Generated by Recording Studio" name="pressure_unit"/>
+         <tag description="Generated by Recording Studio" name="visibility"/>
+         <tag defaultValue="" description="" name="precipitation_type"/>
+         <tag defaultValue="" description="" name="last_update_epoch"/>
+         <tag description="Generated by Recording Studio" name="pressure"/>
+         <tag description="Generated by Recording Studio" name="wind_direction_name"/>
+         <tag defaultValue="" description="" name="city_id"/>
+         <tag defaultValue="" description="" name="altitude"/>
+         <tag description="Generated by Recording Studio" name="clouds"/>
+         <tag description="Generated by Recording Studio" name="units"/>
+         <tag description="Generated by Recording Studio" name="humidity_unit"/>
+         <tag description="Generated by Recording Studio" name="clouds_name"/>
+         <tag defaultValue="" description="" name="sys_id"/>
+         <tag defaultValue="" description="" name="temp_night"/>
+         <tag description="Generated by Recording Studio" name="city_name"/>
+         <tag defaultValue="" description="" name="wind_direction_deg"/>
+         <tag description="Generated by Recording Studio" name="wind_speed"/>
+         <tag defaultValue="" description="" name="lang">
+            <tagProps>
+               <prop key="interfaceInput" value="true"/>
+            </tagProps>
+         </tag>
+         <tag defaultValue="" description="" name="temp_eve"/>
+         <tag defaultValue="" description="" name="symbol_var"/>
+         <tag defaultValue="" description="" name="temp"/>
+         <tag description="Generated by Recording Studio" name="apikey"/>
+         <tag defaultValue="" description="" name="calctime"/>
+         <tag defaultValue="" description="" name="geobase"/>
       </tagDataStore>
       <testprops messageClearance="false"/>
       <stubprops behaviourStyle="ONE_TO_ONE" majorVersion="1" messageClearance="false" minorVersion="0" optimise="false" wrks="10">

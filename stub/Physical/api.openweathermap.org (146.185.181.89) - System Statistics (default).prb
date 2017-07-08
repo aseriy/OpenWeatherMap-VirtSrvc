@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1499544648094" createdUser="c_hag" id="349c79d6:15d23d37169:-7e9c" selfDescribing="api.openweathermap.org (146.185.181.89) - System Statistics (default)" type="probe_resource" updatedTimestamp="1499544648094" updatedUser="c_hag" version="1.0">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig defaultFlag="true" name="default" physicalResourceID="349c79d6:15d23d37169:-7ea4" probeID="plugin.custom.SysStat">
+      <SysStatDatasource allProcesses="true" configuration="default"/>
+   </resourceConfig>
+</editableResource>
