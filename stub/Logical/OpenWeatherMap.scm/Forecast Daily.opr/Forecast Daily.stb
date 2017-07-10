@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1459464220221" createdUser="rational" id="79c1b397:153c59ada52:-5c8a" type="stub_resource" updatedTimestamp="1462339645565" updatedUser="rational" version="1.1">
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1459464220221" createdUser="rational" id="79c1b397:153c59ada52:-5c8a" type="stub_resource" updatedTimestamp="1499544695611" updatedUser="c_hag" version="1.1">
    <loggingConfiguration debug="true" writeStubEventsToDB="true"/>
    <resourceConfig description="" name="">
       <testTree>
@@ -193,7 +193,7 @@
                                     <lookups column="query" lookupValue="%%city%%"/>
                                     <lookups column="units" lookupValue="%%units%%"/>
                                  </props>
-                                 <mapper disableFiltersWhenEmpty="false" knownColumns="forecast_day,city_name,altitude,query,temp_eve,temp_day,sun_set,lang,wind_speed_mps,apikey,city_id,id,humidity_unit,precipitation_type,geobase,longitude,clouds,pressure,wind_direction,symbol_name,pressure_unit,wind_speed,temp_morn,temp_night,units,country,humidity,symbol_var,symbol_number,temp_max,precipitation,calctime,wind_direction_deg,temp_min,wind_direction_code,sun_rise,latitude,humidity_all">
+                                 <mapper disableFiltersWhenEmpty="false" knownColumns="altitude,country,symbol_name,temp_day,temp_morn,latitude,clouds,units,temp_max,humidity_unit,temp_night,precipitation,city_name,temp_min,symbol_number,wind_direction_deg,humidity,sun_rise,wind_speed,forecast_day,id,lang,temp_eve,wind_direction_code,longitude,sun_set,wind_speed_mps,pressure_unit,symbol_var,apikey,precipitation_type,humidity_all,query,geobase,calctime,wind_direction,pressure,city_id">
                                     <mapping columnName="apikey" tagName="apikey" type="4"/>
                                     <mapping columnName="id" tagName="id" type="4"/>
                                     <mapping columnName="units" tagName="units" type="4"/>
@@ -343,18 +343,18 @@
                                        <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
                                     </fieldAction>
                                  </fieldActionGroup>
-                                 <_c meTy="String" name="Accept" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Referer" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Accept-Language" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Accept-Encoding" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="If-Modified-Since" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="If-None-Match" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="User-Agent" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Content-Type" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="SOAPAction" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Host" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Connection" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Cookie" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="accept" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="referer" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="accept-language" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="accept-encoding" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="if-modified-since" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="if-none-match" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="user-agent" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="content-type" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="soapaction" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="host" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="connection" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="cookie" sch="Http Subscribe" type="7" version="1.2"/>
                               </_c>
                               <_c meTy="Boolean" name="followRedirects" sch="Http Subscribe" type="8" version="1.2"/>
                            </_c>
@@ -419,7 +419,7 @@
                                     <lookups column="query" lookupValue="%%city%%"/>
                                     <lookups column="units" lookupValue="%%units%%"/>
                                  </props>
-                                 <mapper disableFiltersWhenEmpty="false" knownColumns="forecast_day,city_name,query,altitude,temp_day,temp_eve,sun_set,lang,wind_speed_mps,apikey,id,city_id,humidity_unit,precipitation_type,geobase,longitude,clouds,pressure,wind_direction,symbol_name,wind_speed,pressure_unit,temp_morn,units,temp_night,country,symbol_number,symbol_var,humidity,temp_max,calctime,precipitation,wind_direction_deg,wind_direction_code,temp_min,sun_rise,latitude,humidity_all">
+                                 <mapper disableFiltersWhenEmpty="false" knownColumns="altitude,country,symbol_name,temp_day,temp_morn,latitude,clouds,units,temp_max,humidity_unit,temp_night,precipitation,city_name,temp_min,symbol_number,wind_direction_deg,humidity,sun_rise,wind_speed,forecast_day,id,lang,temp_eve,wind_direction_code,longitude,sun_set,wind_speed_mps,pressure_unit,symbol_var,apikey,precipitation_type,humidity_all,query,geobase,calctime,wind_direction,pressure,city_id">
                                     <mapping columnName="apikey" tagName="apikey" type="4"/>
                                     <mapping columnName="id" tagName="id" type="4"/>
                                     <mapping columnName="units" tagName="units" type="4"/>
@@ -568,18 +568,18 @@
                                        <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
                                     </fieldAction>
                                  </fieldActionGroup>
-                                 <_c meTy="String" name="Accept" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Referer" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Accept-Language" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Accept-Encoding" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="If-Modified-Since" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="If-None-Match" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="User-Agent" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Content-Type" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="SOAPAction" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Host" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Connection" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Cookie" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="accept" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="referer" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="accept-language" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="accept-encoding" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="if-modified-since" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="if-none-match" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="user-agent" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="content-type" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="soapaction" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="host" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="connection" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="cookie" sch="Http Subscribe" type="7" version="1.2"/>
                               </_c>
                               <_c meTy="Boolean" name="followRedirects" sch="Http Subscribe" type="8" version="1.2"/>
                            </_c>
@@ -644,7 +644,7 @@
                                     <lookups column="query" lookupValue="%%city%%"/>
                                     <lookups column="units" lookupValue="%%units%%"/>
                                  </props>
-                                 <mapper disableFiltersWhenEmpty="false" knownColumns="forecast_day,city_name,altitude,query,temp_eve,temp_day,sun_set,lang,wind_speed_mps,apikey,city_id,id,humidity_unit,precipitation_type,geobase,longitude,clouds,pressure,wind_direction,symbol_name,pressure_unit,wind_speed,temp_morn,temp_night,units,country,humidity,symbol_var,symbol_number,temp_max,precipitation,calctime,wind_direction_deg,temp_min,wind_direction_code,sun_rise,latitude,humidity_all">
+                                 <mapper disableFiltersWhenEmpty="false" knownColumns="altitude,country,symbol_name,temp_day,temp_morn,latitude,clouds,units,temp_max,humidity_unit,temp_night,precipitation,city_name,temp_min,symbol_number,wind_direction_deg,humidity,sun_rise,wind_speed,forecast_day,id,lang,temp_eve,wind_direction_code,longitude,sun_set,wind_speed_mps,pressure_unit,symbol_var,apikey,precipitation_type,humidity_all,query,geobase,calctime,wind_direction,pressure,city_id">
                                     <mapping columnName="apikey" tagName="apikey" type="4"/>
                                     <mapping columnName="id" tagName="id" type="4"/>
                                     <mapping columnName="units" tagName="units" type="4"/>
@@ -796,18 +796,18 @@
                                        <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
                                     </fieldAction>
                                  </fieldActionGroup>
-                                 <_c meTy="String" name="Accept" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Referer" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Accept-Language" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Accept-Encoding" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="If-Modified-Since" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="If-None-Match" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="User-Agent" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Content-Type" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="SOAPAction" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Host" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Connection" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Cookie" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="accept" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="referer" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="accept-language" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="accept-encoding" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="if-modified-since" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="if-none-match" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="user-agent" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="content-type" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="soapaction" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="host" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="connection" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="cookie" sch="Http Subscribe" type="7" version="1.2"/>
                               </_c>
                               <_c meTy="Boolean" name="followRedirects" sch="Http Subscribe" type="8" version="1.2"/>
                            </_c>
@@ -872,7 +872,7 @@
                                     <lookups column="lang" lookupValue="%%lang%%"/>
                                     <lookups column="units" lookupValue="%%units%%"/>
                                  </props>
-                                 <mapper disableFiltersWhenEmpty="false" knownColumns="forecast_day,city_name,altitude,temp_eve,temp_day,sun_set,lang,wind_speed_mps,apikey,city_id,id,humidity_unit,precipitation_type,geobase,longitude,clouds,pressure,wind_direction,symbol_name,pressure_unit,wind_speed,temp_morn,temp_night,units,country,humidity,symbol_var,symbol_number,temp_max,precipitation,calctime,wind_direction_deg,temp_min,wind_direction_code,sun_rise,latitude,humidity_all">
+                                 <mapper disableFiltersWhenEmpty="false" knownColumns="altitude,country,symbol_name,temp_day,temp_morn,latitude,clouds,units,temp_max,humidity_unit,temp_night,precipitation,city_name,temp_min,symbol_number,wind_direction_deg,humidity,sun_rise,wind_speed,forecast_day,id,lang,temp_eve,wind_direction_code,longitude,sun_set,wind_speed_mps,pressure_unit,symbol_var,apikey,precipitation_type,humidity_all,geobase,calctime,wind_direction,pressure,city_id">
                                     <mapping columnName="apikey" tagName="apikey" type="4"/>
                                     <mapping columnName="id" tagName="id" type="4"/>
                                     <mapping columnName="units" tagName="units" type="4"/>
@@ -1024,18 +1024,18 @@
                                        <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
                                     </fieldAction>
                                  </fieldActionGroup>
-                                 <_c meTy="String" name="Accept" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Referer" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Accept-Language" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Accept-Encoding" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="If-Modified-Since" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="If-None-Match" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="User-Agent" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Content-Type" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="SOAPAction" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Host" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Connection" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Cookie" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="accept" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="referer" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="accept-language" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="accept-encoding" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="if-modified-since" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="if-none-match" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="user-agent" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="content-type" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="soapaction" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="host" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="connection" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="cookie" sch="Http Subscribe" type="7" version="1.2"/>
                               </_c>
                               <_c meTy="Boolean" name="followRedirects" sch="Http Subscribe" type="8" version="1.2"/>
                            </_c>
@@ -1100,7 +1100,7 @@
                                     <lookups column="query" lookupValue="%%city%%"/>
                                     <lookups column="units" lookupValue="%%units%%"/>
                                  </props>
-                                 <mapper disableFiltersWhenEmpty="false" knownColumns="forecast_day,city_name,altitude,query,temp_eve,temp_day,sun_set,lang,wind_speed_mps,apikey,city_id,id,humidity_unit,precipitation_type,geobase,longitude,clouds,pressure,wind_direction,symbol_name,pressure_unit,wind_speed,temp_morn,temp_night,units,country,humidity,symbol_var,symbol_number,temp_max,precipitation,calctime,wind_direction_deg,temp_min,wind_direction_code,sun_rise,latitude,humidity_all">
+                                 <mapper disableFiltersWhenEmpty="false" knownColumns="altitude,country,symbol_name,temp_day,temp_morn,latitude,clouds,units,temp_max,humidity_unit,temp_night,precipitation,city_name,temp_min,symbol_number,wind_direction_deg,humidity,sun_rise,wind_speed,forecast_day,id,lang,temp_eve,wind_direction_code,longitude,sun_set,wind_speed_mps,pressure_unit,symbol_var,apikey,precipitation_type,humidity_all,query,geobase,calctime,wind_direction,pressure,city_id">
                                     <mapping columnName="apikey" tagName="apikey" type="4"/>
                                     <mapping columnName="id" tagName="id" type="4"/>
                                     <mapping columnName="units" tagName="units" type="4"/>
@@ -1603,7 +1603,7 @@
                                     <lookups column="query" lookupValue="%%city%%"/>
                                     <lookups column="units" lookupValue="%%units%%"/>
                                  </props>
-                                 <mapper disableFiltersWhenEmpty="false" knownColumns="forecast_day,city_name,altitude,query,temp_eve,temp_day,sun_set,last_update_epoch,lang,wind_speed_mps,apikey,city_id,id,humidity_unit,precipitation_type,geobase,longitude,clouds,day_cnt,pressure,wind_direction,symbol_name,pressure_unit,wind_speed,temp_morn,temp_night,units,country,humidity,symbol_var,symbol_number,temp_max,precipitation,calctime,wind_direction_deg,temp_min,wind_direction_code,sun_rise,latitude,humidity_all">
+                                 <mapper disableFiltersWhenEmpty="false" knownColumns="altitude,country,symbol_name,temp_day,temp_morn,latitude,clouds,units,temp_max,day_cnt,humidity_unit,temp_night,precipitation,city_name,temp_min,symbol_number,wind_direction_deg,humidity,sun_rise,wind_speed,forecast_day,id,lang,temp_eve,wind_direction_code,longitude,sun_set,wind_speed_mps,pressure_unit,symbol_var,apikey,precipitation_type,last_update_epoch,humidity_all,query,geobase,calctime,wind_direction,pressure,city_id">
                                     <mapping columnName="apikey" tagName="apikey" type="4"/>
                                     <mapping columnName="last_update_epoch" tagName="last_update_epoch" type="4"/>
                                     <mapping columnName="id" tagName="id" type="4"/>
@@ -1833,7 +1833,7 @@
                                     <lookups column="lang" lookupValue="%%lang%%"/>
                                     <lookups column="units" lookupValue="%%units%%"/>
                                  </props>
-                                 <mapper disableFiltersWhenEmpty="false" knownColumns="forecast_day,city_name,altitude,temp_eve,temp_day,sun_set,lang,wind_speed_mps,apikey,city_id,id,humidity_unit,precipitation_type,geobase,longitude,clouds,pressure,wind_direction,symbol_name,pressure_unit,wind_speed,temp_morn,temp_night,units,country,humidity,symbol_var,symbol_number,temp_max,precipitation,calctime,wind_direction_deg,temp_min,wind_direction_code,sun_rise,latitude,humidity_all">
+                                 <mapper disableFiltersWhenEmpty="false" knownColumns="altitude,country,symbol_name,temp_day,temp_morn,latitude,clouds,units,temp_max,humidity_unit,temp_night,precipitation,city_name,temp_min,symbol_number,wind_direction_deg,humidity,sun_rise,wind_speed,forecast_day,id,lang,temp_eve,wind_direction_code,longitude,sun_set,wind_speed_mps,pressure_unit,symbol_var,apikey,precipitation_type,humidity_all,geobase,calctime,wind_direction,pressure,city_id">
                                     <mapping columnName="apikey" tagName="apikey" type="4"/>
                                     <mapping columnName="id" tagName="id" type="4"/>
                                     <mapping columnName="units" tagName="units" type="4"/>
@@ -2061,7 +2061,7 @@
                                     <lookups column="query" lookupValue="%%city%%"/>
                                     <lookups column="units" lookupValue="%%units%%"/>
                                  </props>
-                                 <mapper disableFiltersWhenEmpty="false" knownColumns="forecast_day,city_name,query,altitude,temp_day,temp_eve,sun_set,lang,wind_speed_mps,apikey,id,city_id,humidity_unit,precipitation_type,geobase,longitude,clouds,pressure,wind_direction,symbol_name,wind_speed,pressure_unit,temp_morn,units,temp_night,country,symbol_number,symbol_var,humidity,temp_max,calctime,precipitation,wind_direction_deg,wind_direction_code,temp_min,sun_rise,latitude,humidity_all">
+                                 <mapper disableFiltersWhenEmpty="false" knownColumns="altitude,country,symbol_name,temp_day,temp_morn,latitude,clouds,units,temp_max,humidity_unit,temp_night,precipitation,city_name,temp_min,symbol_number,wind_direction_deg,humidity,sun_rise,wind_speed,forecast_day,id,lang,temp_eve,wind_direction_code,longitude,sun_set,wind_speed_mps,pressure_unit,symbol_var,apikey,precipitation_type,humidity_all,query,geobase,calctime,wind_direction,pressure,city_id">
                                     <mapping columnName="apikey" tagName="apikey" type="4"/>
                                     <mapping columnName="id" tagName="id" type="4"/>
                                     <mapping columnName="units" tagName="units" type="4"/>
@@ -2213,18 +2213,18 @@
                                        <fieldAction anyOrder="false" enabled="false" ignoreExtra="false" ignoreNonPresent="false" type="100"/>
                                     </fieldAction>
                                  </fieldActionGroup>
-                                 <_c meTy="String" name="Accept" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Referer" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Accept-Language" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Accept-Encoding" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="If-Modified-Since" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="If-None-Match" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="User-Agent" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Content-Type" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="SOAPAction" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Host" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Connection" sch="Http Subscribe" type="7" version="1.2"/>
-                                 <_c meTy="String" name="Cookie" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="accept" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="referer" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="accept-language" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="accept-encoding" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="if-modified-since" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="if-none-match" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="user-agent" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="content-type" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="soapaction" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="host" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="connection" sch="Http Subscribe" type="7" version="1.2"/>
+                                 <_c meTy="String" name="cookie" sch="Http Subscribe" type="7" version="1.2"/>
                               </_c>
                               <_c meTy="Boolean" name="followRedirects" sch="Http Subscribe" type="8" version="1.2"/>
                            </_c>
@@ -2289,7 +2289,7 @@
                                     <lookups column="lang" lookupValue="%%lang%%"/>
                                     <lookups column="units" lookupValue="%%units%%"/>
                                  </props>
-                                 <mapper disableFiltersWhenEmpty="false" knownColumns="forecast_day,city_name,altitude,temp_eve,temp_day,sun_set,lang,wind_speed_mps,apikey,city_id,id,humidity_unit,precipitation_type,geobase,longitude,clouds,pressure,wind_direction,symbol_name,pressure_unit,wind_speed,temp_morn,temp_night,units,country,humidity,symbol_var,symbol_number,temp_max,precipitation,calctime,wind_direction_deg,temp_min,wind_direction_code,sun_rise,latitude,humidity_all">
+                                 <mapper disableFiltersWhenEmpty="false" knownColumns="altitude,country,symbol_name,temp_day,temp_morn,latitude,clouds,units,temp_max,humidity_unit,temp_night,precipitation,city_name,temp_min,symbol_number,wind_direction_deg,humidity,sun_rise,wind_speed,forecast_day,id,lang,temp_eve,wind_direction_code,longitude,sun_set,wind_speed_mps,pressure_unit,symbol_var,apikey,precipitation_type,humidity_all,geobase,calctime,wind_direction,pressure,city_id">
                                     <mapping columnName="apikey" tagName="apikey" type="4"/>
                                     <mapping columnName="id" tagName="id" type="4"/>
                                     <mapping columnName="units" tagName="units" type="4"/>
@@ -2342,109 +2342,109 @@
             </resourceConfig>
          </editableResource>
       </testTree>
-      <tagDataStore identifier="797f9a3c:15479ca4bcd:-5fff" inputMode="SELECT" outputMode="NONE">
-         <tag defaultValue="" description="" name="visibility"/>
-         <tag defaultValue="" description="" name="altitude"/>
-         <tag defaultValue="" description="" name="wind_speed_mps"/>
-         <tag defaultValue="" description="" name="city">
-            <tagProps>
-               <prop key="interfaceInput" value="true"/>
-            </tagProps>
-         </tag>
-         <tag defaultValue="" description="" name="weather"/>
-         <tag defaultValue="" description="" name="lon">
-            <tagProps>
-               <prop key="interfaceInput" value="true"/>
-            </tagProps>
-         </tag>
-         <tag defaultValue="" description="" name="day_cnt"/>
-         <tag defaultValue="" description="" name="clouds_name"/>
-         <tag defaultValue="" description="" name="precipitation_unit"/>
-         <tag defaultValue="" description="" name="symbol_var"/>
-         <tag defaultValue="" description="" name="humidity"/>
-         <tag defaultValue="" description="" name="calctime"/>
-         <tag defaultValue="" description="" name="wind_direction_deg"/>
-         <tag defaultValue="" description="" name="wind_direction_code"/>
-         <tag defaultValue="" description="" name="temp"/>
-         <tag defaultValue="" description="" name="latitude"/>
-         <tag defaultValue="" description="" name="city_name"/>
-         <tag defaultValue="" description="" name="temp_day"/>
-         <tag defaultValue="" description="" name="mode">
-            <tagProps>
-               <prop key="interfaceInput" value="true"/>
-            </tagProps>
-         </tag>
-         <tag defaultValue="" description="" name="wind_direction_name"/>
-         <tag defaultValue="" description="" name="precipitation_type"/>
-         <tag defaultValue="" description="" name="weather_number"/>
-         <tag defaultValue="" description="" name="wind_gusts"/>
-         <tag defaultValue="" description="" name="forecast_day_epoch"/>
-         <tag defaultValue="" description="" name="clouds"/>
-         <tag defaultValue="" description="" name="cnt"/>
-         <tag defaultValue="" description="" name="wind_direction"/>
-         <tag defaultValue="" description="" name="sys_id"/>
-         <tag defaultValue="" description="" name="symbol_name"/>
-         <tag defaultValue="" description="" name="wind_speed"/>
-         <tag defaultValue="" description="" name="temp_morn"/>
-         <tag defaultValue="" description="" name="temp_max"/>
-         <tag defaultValue="" description="" name="precipitation"/>
-         <tag defaultValue="" description="" name="callback"/>
-         <tag defaultValue="" description="" name="temp_min"/>
-         <tag defaultValue="" description="" name="forecast_day"/>
-         <tag defaultValue="" description="" name="last_update_epoch"/>
-         <tag defaultValue="" description="" name="sun_set"/>
+      <tagDataStore identifier="-7213deaa:15d23c3a17f:-6ed2" inputMode="SELECT" outputMode="NONE">
          <tag defaultValue="" description="" name="json_payload"/>
-         <tag defaultValue="" description="" name="apikey"/>
-         <tag defaultValue="" description="" name="humidity_unit"/>
-         <tag defaultValue="" description="" name="wind_speed_name"/>
-         <tag defaultValue="" description="" name="longitude"/>
-         <tag defaultValue="" description="" name="sun_rise_epoch"/>
-         <tag defaultValue="" description="" name="pressure_unit"/>
-         <tag defaultValue="" description="" name="temp_night"/>
-         <tag defaultValue="" description="" name="country"/>
          <tag defaultValue="" description="" name="%%json_payload%%"/>
+         <tag defaultValue="" description="" name="weather_icon"/>
+         <tag defaultValue="" description="" name="day_cnt"/>
          <tag defaultValue="" description="" name="precipitation_mode"/>
-         <tag defaultValue="" description="" name="sun_rise"/>
-         <tag defaultValue="" description="" name="humidity_all"/>
-         <tag defaultValue="" description="" name="%%json-payload%%"/>
-         <tag defaultValue="" description="" name="temp_eve"/>
-         <tag defaultValue="" description="" name="lang">
-            <tagProps>
-               <prop key="interfaceInput" value="true"/>
-            </tagProps>
-         </tag>
+         <tag defaultValue="" description="" name="precipitation"/>
+         <tag defaultValue="" description="" name="precipitation_unit"/>
+         <tag defaultValue="" description="" name="symbol_number"/>
+         <tag defaultValue="" description="" name="last_update"/>
+         <tag defaultValue="" description="" name="weather"/>
+         <tag defaultValue="" description="" name="humidity"/>
          <tag defaultValue="" description="" name="id">
             <tagProps>
                <prop key="interfaceInput" value="true"/>
             </tagProps>
          </tag>
-         <tag defaultValue="" description="" name="city_id"/>
-         <tag defaultValue="" description="" name="last_update"/>
-         <tag defaultValue="" description="" name="geobase"/>
+         <tag defaultValue="" description="" name="wind_direction_code"/>
+         <tag defaultValue="" description="" name="wind_speed_mps"/>
+         <tag defaultValue="" description="" name="humidity_all"/>
+         <tag defaultValue="" description="" name="wind_speed_name"/>
+         <tag defaultValue="" description="" name="sun_rise_epoch"/>
+         <tag defaultValue="" description="" name="city">
+            <tagProps>
+               <prop key="interfaceInput" value="true"/>
+            </tagProps>
+         </tag>
+         <tag defaultValue="" description="" name="latitude"/>
+         <tag defaultValue="" description="" name="lon">
+            <tagProps>
+               <prop key="interfaceInput" value="true"/>
+            </tagProps>
+         </tag>
+         <tag defaultValue="" description="" name="temp_max"/>
+         <tag defaultValue="" description="" name="temp_min"/>
+         <tag defaultValue="" description="" name="sun_rise"/>
+         <tag defaultValue="" description="" name="sun_set_epoch"/>
+         <tag defaultValue="" description="" name="cnt"/>
+         <tag defaultValue="" description="" name="wind_gusts"/>
+         <tag defaultValue="" description="" name="wind_direction"/>
+         <tag defaultValue="" description="" name="Text"/>
+         <tag defaultValue="" description="" name="weather_number"/>
+         <tag defaultValue="" description="" name="temp_unit"/>
+         <tag defaultValue="" description="" name="country"/>
+         <tag defaultValue="" description="" name="symbol_name"/>
+         <tag defaultValue="" description="" name="temp_day"/>
+         <tag defaultValue="" description="" name="temp_morn"/>
+         <tag defaultValue="" description="" name="mode">
+            <tagProps>
+               <prop key="interfaceInput" value="true"/>
+            </tagProps>
+         </tag>
+         <tag defaultValue="" description="" name="forecast_day"/>
          <tag defaultValue="" description="" name="lat">
             <tagProps>
                <prop key="interfaceInput" value="true"/>
             </tagProps>
          </tag>
-         <tag defaultValue="" description="" name="temp_unit"/>
+         <tag defaultValue="" description="" name="longitude"/>
+         <tag defaultValue="" description="" name="sun_set"/>
+         <tag defaultValue="" description="" name="pressure_unit"/>
+         <tag defaultValue="" description="" name="visibility"/>
+         <tag defaultValue="" description="" name="precipitation_type"/>
+         <tag defaultValue="" description="" name="last_update_epoch"/>
          <tag defaultValue="" description="" name="pressure"/>
+         <tag defaultValue="" description="" name="wind_direction_name"/>
+         <tag defaultValue="" description="" name="city_id"/>
+         <tag defaultValue="" description="" name="altitude"/>
+         <tag defaultValue="" description="" name="forecast_day_epoch"/>
+         <tag defaultValue="" description="" name="clouds"/>
          <tag defaultValue="" description="" name="units">
             <tagProps>
                <prop key="interfaceInput" value="true"/>
             </tagProps>
          </tag>
-         <tag defaultValue="" description="" name="Text"/>
-         <tag defaultValue="" description="" name="symbol_number"/>
-         <tag defaultValue="" description="" name="weather_icon"/>
-         <tag defaultValue="" description="" name="sun_set_epoch"/>
+         <tag defaultValue="" description="" name="humidity_unit"/>
+         <tag defaultValue="" description="" name="clouds_name"/>
+         <tag defaultValue="" description="" name="sys_id"/>
+         <tag defaultValue="" description="" name="temp_night"/>
+         <tag defaultValue="" description="" name="city_name"/>
+         <tag defaultValue="" description="" name="wind_direction_deg"/>
+         <tag defaultValue="" description="" name="wind_speed"/>
+         <tag defaultValue="" description="" name="lang">
+            <tagProps>
+               <prop key="interfaceInput" value="true"/>
+            </tagProps>
+         </tag>
+         <tag defaultValue="" description="" name="temp_eve"/>
+         <tag defaultValue="" description="" name="symbol_var"/>
+         <tag defaultValue="" description="" name="temp"/>
+         <tag defaultValue="" description="" name="apikey"/>
+         <tag defaultValue="" description="" name="calctime"/>
+         <tag defaultValue="" description="" name="geobase"/>
+         <tag defaultValue="" description="" name="%%json-payload%%"/>
+         <tag defaultValue="" description="" name="callback"/>
       </tagDataStore>
       <testprops messageClearance="false"/>
       <stubprops behaviourStyle="ONE_TO_ONE" majorVersion="1" messageClearance="false" minorVersion="0" optimise="false" wrks="10">
          <responseTimeTable>
-            <entry key="320e336e:1539c43e9a8:-6f79">
+            <entry key="-70bdf138:1532d24338b:-4121">
                <value type="NO_DELAY"/>
             </entry>
-            <entry key="-70bdf138:1532d24338b:-4121">
+            <entry key="320e336e:1539c43e9a8:-6f79">
                <value type="NO_DELAY"/>
             </entry>
          </responseTimeTable>

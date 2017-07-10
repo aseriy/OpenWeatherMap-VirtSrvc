@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1499544648102" createdUser="c_hag" id="349c79d6:15d23d37169:-7e9b" selfDescribing="api.openweathermap.org (146.185.181.89) - Windows Performance Monitor (default)" type="probe_resource" updatedTimestamp="1499544648102" updatedUser="c_hag" version="1.0">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig defaultFlag="true" name="default" physicalResourceID="349c79d6:15d23d37169:-7ea4" probeID="ghviewer.plugin.perfmon">
+      <PerfMonDatasource configuration="default"/>
+   </resourceConfig>
+</editableResource>
